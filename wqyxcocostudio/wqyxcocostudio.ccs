@@ -1,0 +1,84 @@
+<Solution>
+  <PropertyGroup Name="wqyxcocostudio" Version="2.3.3.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="MainScene.csd" Type="Scene" />
+        <Image Name="HelloWorld.png" />
+        <Project Name="Home.csd" Type="Scene" />
+        <Folder Name="home">
+          <Image Name="baoshi0.png" />
+          <Image Name="baoxiang0.png" />
+          <Image Name="homebeijing.png" />
+          <Image Name="daoju0.png" />
+          <Image Name="duanzao0.png" />
+          <Image Name="duanzaodi.png" />
+          <Image Name="huodong0.png" />
+          <Image Name="jia0.png" />
+          <Image Name="jiaofu1.png" />
+          <Image Name="jiaofu2.png" />
+          <Image Name="jiaofu3.png" />
+          <Image Name="jiaoshe0.png" />
+          <Image Name="jinbi0.png" />
+          <Image Name="jindutiao.png" />
+          <Image Name="jindutiao1.png" />
+          <Image Name="junzhutouxiang.png" />
+          <Image Name="kewancheng0.png" />
+          <Image Name="liaotian0.png" />
+          <Image Name="maoxian0.png" />
+          <Image Name="paihang0.png" />
+          <Image Name="qiandao0.png" />
+          <Image Name="renwu0.png" />
+          <Image Name="shangcheng0.png" />
+          <Image Name="shezhi0.png" />
+          <Image Name="shichang0.png" />
+          <Image Name="shouchong0.png" />
+          <Image Name="tili0.png" />
+          <Image Name="weiwancheng0.png" />
+          <Image Name="yingxiong0.png" />
+          <Image Name="youjian0.png" />
+          <Image Name="youjiantou.png" />
+          <Image Name="zhuangbeidi0.png" />
+          <Image Name="zhuangbeidi1.png" />
+          <Image Name="zhuangbeijia0.png" />
+          <Image Name="zhuangbeisuo0.png" />
+          <Image Name="ziyuan0.png" />
+          <Image Name="zuojiantou.png" />
+        </Folder>
+        <TTF Name="FZY4JW.TTF" />
+        <Folder Name="hero">
+          <Image Name="anniuda.png" />
+          <Image Name="anniudaxuanzhong.png" />
+          <Image Name="anniuxiao.png" />
+          <Image Name="anniuxiaoxuanzhong.png" />
+          <Image Name="baoshi.png" />
+          <Image Name="biaoti.png" />
+          <Image Name="daojishi.png" />
+          <Image Name="exp.png" />
+          <Image Name="genghuan.png" />
+          <Image Name="guanbi.png" />
+          <Image Name="haogan.png" />
+          <Image Name="jianglikuang.png" />
+          <Image Name="jiaofudi.png" />
+          <Image Name="jinbi.png" />
+          <Image Name="jineng.png" />
+          <Image Name="starda.png" />
+          <Image Name="starxiao.png" />
+          <Image Name="wancheng.png" />
+          <Image Name="wenzidi.png" />
+          <Image Name="wodeyingxiong1.png" />
+          <Image Name="wodeyingxiong2.png" />
+          <Image Name="x2.png" />
+          <Image Name="yingxiongbeijing.png" />
+          <Image Name="zhaomu.png" />
+          <Image Name="zhaomuyingxiong1.png" />
+          <Image Name="zhaomuyingxiong2.png" />
+          <Image Name="zhiliao.png" />
+        </Folder>
+        <Project Name="Hero.csd" Type="Layer" />
+        <Project Name="equipRequest.csd" Type="Node" />
+        <Project Name="CallHero.csd" Type="Node" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
