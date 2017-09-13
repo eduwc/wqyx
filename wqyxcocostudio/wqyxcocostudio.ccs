@@ -78,6 +78,29 @@
         <Project Name="Hero.csd" Type="Layer" />
         <Project Name="equipRequest.csd" Type="Node" />
         <Project Name="CallHero.csd" Type="Node" />
+        <Project Name="Login.csd" Type="Scene" />
+        <Folder Name="login">
+          <Image Name="beijing0.png" />
+          <Image Name="denglu.png" />
+          <Image Name="denglurukou.png" />
+          <Image Name="dianjihuanqu.png" />
+          <Image Name="fengexian.png" />
+          <Image Name="fuwuqixuanzekuang.png" />
+          <Image Name="gonggao.png" />
+          <Image Name="gou.png" />
+          <Image Name="gouxuankuang.png" />
+          <Image Name="huobao.png" />
+          <Image Name="jinruyouxi.png" />
+          <Image Name="mima.png" />
+          <Image Name="morenfuwuqikuang.png" />
+          <Image Name="shurukuang.png" />
+          <Image Name="xinqu.png" />
+          <Image Name="youkerukou.png" />
+          <Image Name="zhanghao.png" />
+          <Image Name="zhuce.png" />
+          <Image Name="zhucedenglukuang.png" />
+          <Image Name="zhucerukou.png" />
+        </Folder>
       </RootFolder>
     </Group>
   </SolutionFolder>
