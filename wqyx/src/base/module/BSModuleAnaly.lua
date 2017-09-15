@@ -22,7 +22,7 @@ function BSModuleAnaly:receiveData(jsondata)
 	elseif headRule == "ERROR" then
 	    self.errorModule:receiveData(headInfo,js)
 	elseif headRule == "OTHER" then
-		self.BSModuleAnaly:receiveData(headInfo,js)
+		self.otherModule:receiveData(headInfo,js)
 	end
 end
 

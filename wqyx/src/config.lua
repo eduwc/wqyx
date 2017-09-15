@@ -32,4 +32,7 @@ BASE64_USE = false
 LOGIN_HTTP = "ws://127.0.0.1:9635"
 WEB_SOCKET = "ws://127.0.0.1:9635"
 
+--记载csb地址
+CSB_ADDRESS = "res/ui/"
+
 

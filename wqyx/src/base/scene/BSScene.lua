@@ -1,4 +1,4 @@
-local BSScene = class("BSScene",cc.load("mvc").AppBase)
+local BSScene = class("BSScene",require "base.scene.BaseNode")
 BSScene.gameScene		= nil
 BSScene.bgLayer 		= nil    --背景层
 BSScene.uiLayer 		= nil	 --UI层	
@@ -6,6 +6,10 @@ BSScene.windowLayer 	= nil	 --窗口层
 BSScene.guideLayer 		= nil    --引导层
 BSScene.effectLayer 	= nil    --特效层
 BSScene.tipLayer 		= nil    --消息提示层
+
+function BSScene:init(node,nodeName)
+	BSScene.super:init(node,nodeName)
+end
 
 
 function BSScene:onCreate()

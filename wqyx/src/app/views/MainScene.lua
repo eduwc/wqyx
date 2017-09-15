@@ -72,7 +72,7 @@ function MainScene:onCreate()
 
     
 
-    local scene = cc.CSLoader:createNode("MainScene.csb")
+    local scene = cc.CSLoader:createNode(CSB_ADDRESS.."MainScene.csb")
     self:addChild(scene)
 
 
@@ -95,17 +95,24 @@ function MainScene:onCreate()
  --            sp:setScale(0.5)
  --        end)
  --    end
-  
+
+       
+    --   local toolsManager =  require ("base.tools.ToolsManager"):getInstance()
+       local btn = G_ToolsManager:seekChildByName(scene,"Button_Confirm")
+       
+         
+        -- local btn
+        -- scene:enumerateChildren("//Button_Confirm",function(node)
+        --     btn = node
+        -- end)
 
 
-
-
-    local btn = scene:getChildByName("Button_Confirm")
+       -- local btn = scene:seekWidgetByName("Panel_1.")
         btn:addTouchEventListener(function(sender, state)
         if state == 0 then
-             account:setString("began")
+        --     account:setString("began")
         elseif state == 1 then
-            account:setString("moved")
+         --   account:setString("moved")
         elseif state == 2 then
             --     local js = {}
             -- js["head"] = "DPRegister"
@@ -129,18 +136,18 @@ function MainScene:onCreate()
 
 
 
-            account:setString("end")
+        --    account:setString("end")
         else
-            account:setString("cancelled")
+         --   account:setString("cancelled")
         end
 
-    end)
- --    -- btn:addClickEventListener(function(sender)
+     end)
+ -- --    -- btn:addClickEventListener(function(sender)
          
- --    --           -- require("mime")
- --    --           --  y=mime.b64("diego:password")
- --    --             wsSendText:sendString(account:getString()) 
- --    --     end)
+ -- --    --           -- require("mime")
+ -- --    --           --  y=mime.b64("diego:password")
+ -- --    --             wsSendText:sendString(account:getString()) 
+ -- --    --     end)
 
 
 

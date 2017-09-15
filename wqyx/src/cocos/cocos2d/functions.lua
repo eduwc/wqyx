@@ -246,6 +246,8 @@ function class(classname, ...)
     return cls
 end
 
+
+
 local iskindof_
 iskindof_ = function(cls, name)
     local __index = rawget(cls, "__index")

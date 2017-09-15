@@ -5,8 +5,11 @@ require "config"
 require "cocos.init"
 
 local function main()
-	require "global.GlobalVar"
 
+	--初始化框架(必要)
+	require "base.InitBase"
+	InitBase:init()
+	require "global.GlobalVar"
 
 	--初始化网络
 	G_WebSocketManager = require ("net.websocket.WebSocketManager"):create()
