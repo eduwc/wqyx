@@ -3,18 +3,27 @@ local SceneLogin 			= class("SceneLogin",require "base.scene.BSScene")
 SceneLogin.isRegist 		= false
 SceneLogin.loginScene 		= nil
 SceneLogin.nodeName			= "SceneLogin"
+SceneLogin.mLogin           = nil
 local frame 		        = nil
 
 
 
-
+-- --必须要实现
 function SceneLogin:init(node,nodeName)
 	SceneLogin.super:init(node,nodeName)
 end
 
 function SceneLogin:onCreate()
+	--必须要调用
 	self:init(self,self.nodeName)
 	SceneLogin.super:onCreate()
+
+	--可不调用，最好调用
+	self.mLogin  = require ("module.login.MLogin"):create()
+	self.mLogin:init(self)
+
+
+
 
 	self.loginScene = cc.CSLoader:createNode(CSB_ADDRESS.."csb_login/Login.csb")
 	self:addToBgLayer(self.loginScene)
@@ -88,8 +97,14 @@ function SceneLogin:loadFrame()
   
 end
 
+--初始化服务器列表
+function SceneLogin:initList()
+	print("chushuha SceneLogin")
+end
+
+
 function SceneLogin:receive(json)
-	print(json)
+	self.mLogin:receive(json)
 end
 
 

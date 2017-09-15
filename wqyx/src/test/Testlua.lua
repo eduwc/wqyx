@@ -1,10 +1,18 @@
-Testlua = Testlua2:new()
+
+local Testlua  = class("Testlua",cc.load("mvc").AppBase)
 
 
-function Testlua:setNumber(nu)
-	self.number = nu
+
+-- function Testlua:create()
+-- 	-- body
+-- end
+
+function Testlua:init(node)
+	G_Test = node
 end
 
 function Testlua:out()
-	print("result-------"..self.number)
+	print("result-------Testlua:out()")
 end
+
+return Testlua

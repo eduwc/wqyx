@@ -15,8 +15,9 @@ function NodeManager:addNode(node,nodeName)
 		error("your nodeName is nil")
 		return
 	else
+		--TODO 这边要是不释放 会出现内存泄漏
 		self.nodeTable[nodeName] = node
-		G_GameLog("NodeManager-addNode NodeName is"..nodeName)
+		G_GameLog("NodeManager-addNode NodeName is->"..nodeName)
 	end
 
 end
@@ -38,6 +39,15 @@ function NodeManager:removeAllNode()
 	for k,v in pairs(self.nodeTable) do
 		v = nil
 	end
+end
+
+
+function NodeManager:getNodeCount()
+	local count = 0  
+	for k,v in pairs(self.nodeTable) do  
+	    count = count + 1  
+	end  
+	return count
 end
 
 

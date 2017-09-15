@@ -236,6 +236,7 @@ function class(classname, ...)
         end
         setmetatableindex(instance, cls)
         instance.class = cls
+        print("---------xxxx"..classname)
         instance:ctor(...)
         return instance
     end

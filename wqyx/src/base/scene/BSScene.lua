@@ -1,4 +1,4 @@
-local BSScene = class("BSScene",require "base.scene.BaseNode")
+local BSScene 			= class("BSScene",require "base.scene.BaseNode")
 BSScene.gameScene		= nil
 BSScene.bgLayer 		= nil    --背景层
 BSScene.uiLayer 		= nil	 --UI层	
@@ -61,6 +61,9 @@ function BSScene:addToTipLayer(node)
 	self.tipLayer:addChild(node)
 end
 
+
+function BSScene:receive(json)
+end
 
 
 return BSScene

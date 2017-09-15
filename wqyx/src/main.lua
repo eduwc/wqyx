@@ -11,9 +11,6 @@ local function main()
 	InitBase:init()
 	require "global.GlobalVar"
 
-	--初始化网络
-	G_WebSocketManager = require ("net.websocket.WebSocketManager"):create()
-
 
 
 

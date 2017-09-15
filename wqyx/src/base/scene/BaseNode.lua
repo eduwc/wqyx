@@ -3,15 +3,11 @@ BaseNode.nodeName = nil
 
 
 function BaseNode:receive(json)
-	
 end
 
--- function BaseNode:onCreate()
--- 	G_NodeManager:addNode(self)
--- end
 
 function BaseNode:init(node,nodeName)
-	G_NodeManager:addNode(self,nodeName)
+	G_NodeManager:addNode(node,nodeName)
 end
 
 
