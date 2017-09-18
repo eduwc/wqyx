@@ -39,4 +39,8 @@ function HttpManager:sendLoginMessage(message)
 	self:sendMessage("http://localhost/wqyxweb/login/WqyxYMLogin.php?",message)
 end
 
+function HttpManager:sendEnterGameMessage(message)
+    self:sendMessage("http://localhost/wqyxweb/login/EnterGame.php?",message)
+end
+
 return HttpManager

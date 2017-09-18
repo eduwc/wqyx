@@ -22,12 +22,12 @@ function NodeManager:addNode(node,nodeName)
 
 end
 
-function NodeManager:notify(json,nodeName)
+function NodeManager:notify(json,nodeName,...)
     if nodeName == nil then
 		error("your nodeName is nil")
 		return
 	else
-		self.nodeTable[nodeName]:receive(json)
+		self.nodeTable[nodeName]:receive(json,...)
 	end
 end
 

@@ -13,7 +13,6 @@ local function main()
 
 
 
-
     require("app.MyApp"):create():run()
 end
 
