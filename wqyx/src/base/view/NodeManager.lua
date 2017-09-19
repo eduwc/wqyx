@@ -1,4 +1,4 @@
-local NodeManager  = class("NodeManager",cc.load("mvc").AppBase)
+local NodeManager  			= class("NodeManager")
 NodeManager.nodeTable 		= {}
 NodeManager.instance 		= nil
 
@@ -36,8 +36,10 @@ function NodeManager:removeNode(nodeName)
 end
 
 function NodeManager:removeAllNode()
-	for k,v in pairs(self.nodeTable) do
-		v = nil
+	if self.nodeTable ~= nil then
+		for k,v in pairs(self.nodeTable) do
+			v = nil
+		end
 	end
 end
 

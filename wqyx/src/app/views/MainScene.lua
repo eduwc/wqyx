@@ -130,7 +130,12 @@ function MainScene:onCreate()
   --  print("headRule"..headRule)
    -- print("headInfo"..headInfo)
 
-            require ("scene.login.SceneLogin"):create()
+
+            --千万不要写成require ("scene.login.SceneLogin"):create()  create()会自动在changeScene中调用
+            G_SceneManager:changeScene(require ("scene.login.SceneLogin"))
+
+
+            
 
   
 

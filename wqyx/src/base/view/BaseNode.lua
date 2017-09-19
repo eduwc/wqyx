@@ -1,4 +1,4 @@
-local BaseNode = class("BaseNode",cc.load("mvc").AppBase)
+local BaseNode = class("BaseNode")
 BaseNode.nodeName = nil
 
 

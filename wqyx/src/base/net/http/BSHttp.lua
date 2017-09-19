@@ -1,4 +1,4 @@
-local BSHttp = class("BSHttp",cc.load("mvc").AppBase)
+local BSHttp = class("BSHttp")
 BSHttp.xhr = nil
 BSHttp.bsModuleAnaly = require("base.module.BSModuleAnaly"):create()
 
@@ -6,7 +6,7 @@ BSHttp.bsModuleAnaly = require("base.module.BSModuleAnaly"):create()
 
 
 
-function BSHttp:onCreate()
+function BSHttp:ctor()
 	  self.xhr = cc.XMLHttpRequest:new() -- http请求  
     self.xhr.responseType = cc.XMLHTTPREQUEST_RESPONSE_STRING -- 响应类型  
        

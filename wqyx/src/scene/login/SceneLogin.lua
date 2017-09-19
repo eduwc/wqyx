@@ -1,5 +1,5 @@
 -----------------***********登录界面********************----------------------
-local SceneLogin 				= class("SceneLogin",require "base.scene.BSScene")
+local SceneLogin 				= class("SceneLogin",require "base.view.BSScene")
 SceneLogin.isRegist 			= false
 SceneLogin.loginScene 			= nil
 SceneLogin.nodeName				= "SceneLogin"
@@ -13,6 +13,7 @@ SceneLogin.bt_enterGame			= nil
 
 SceneLogin.lastCheckBox			= nil   --上一个选中的checkBox
 SceneLogin.lyNotice				= nil   --notic公告
+SceneLogin.tip 					= nil	--tip
 
 
 
@@ -22,21 +23,25 @@ function SceneLogin:init(node,nodeName)
 	SceneLogin.super:init(node,nodeName)
 end
 
-function SceneLogin:onCreate()
+function SceneLogin:ctor()
 	--必须要调用
 	self:init(self,self.nodeName)
-	SceneLogin.super:onCreate()
+	SceneLogin.super:ctor()
 
 	--可不调用，最好调用
 	self.mLogin  = require ("module.login.MLogin"):create()
-	self.mLogin:init(self)
+	self.mLogin:connectView(self)
 
 
+	self.tip = cc.CSLoader:createNode(CSB_ADDRESS.."csb_public/Tip.csb")
+	self.tip:setVisible(false)
+	self:addToTipLayer(self.tip)
 
 
 	self.loginScene = cc.CSLoader:createNode(CSB_ADDRESS.."csb_login/Login.csb")
 	self:addToBgLayer(self.loginScene)
 	self:loadFrame()
+
 
 	local bt_tourist = G_ToolsManager:seekChildByName(self.loginScene,"bt_tourist")
 		bt_tourist:addTouchEventListener(function(sender, state)
@@ -200,6 +205,7 @@ function SceneLogin:showServerList()
 
 		--把上次登录过的服务器标注为打钩
 		if self.selectedServerID >0 and serverIndex == self.selectedServerID then
+			self.lastCheckBox = cb_selectServer
 			cb_selectServer:setSelectedState(true)
 		end
 
@@ -249,9 +255,19 @@ function SceneLogin:showNotice()
 end
 
 
+function SceneLogin:showTip(str)
+	local tt_tip   =  G_ToolsManager:seekChildByName(self.tip,"tt_tip")
+	tt_tip:setString(str)
+	self.tip:setPosition(50,400)
+	self.tip:setVisible(true)
 
-function SceneLogin:receive(json,...)
-	self.mLogin:receive(json,...)
+	local  callbackEntry = nil
+	local function callback(dt)
+		cc.Director:getInstance():getScheduler():unscheduleScriptEntry(callbackEntry)
+		self.tip:setVisible(false)
+	end
+
+	callbackEntry = cc.Director:getInstance():getScheduler():scheduleScriptFunc(callback, 1, false)
 end
 
 

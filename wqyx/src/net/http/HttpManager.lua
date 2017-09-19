@@ -8,8 +8,8 @@ function HttpManager:getInstance()
     return self.instance
 end
 
-function HttpManager:onCreate()
-	  HttpManager.super:onCreate()
+function HttpManager:ctor()
+	  HttpManager.super:ctor()
 end
 
 --messageHead 代表参数头  默认userInfo=

@@ -1,4 +1,4 @@
-local BSWebsocket = class("BSWebsocket",cc.load("mvc").AppBase)
+local BSWebsocket = class("BSWebsocket")
 local wsSendText = nil
 local bsModuleAnaly = require("base.module.BSModuleAnaly"):create()
 
@@ -26,7 +26,7 @@ local function wsSendTextError(strData)
 end 
 
 
-function BSWebsocket:onCreate()
+function BSWebsocket:ctor()
     wsSendText = cc.WebSocket:create("ws://127.0.0.1:9635")     
 	if nil ~= wsSendText then 
 	    wsSendText:registerScriptHandler(wsSendTextOpen,cc.WEBSOCKET_OPEN) 

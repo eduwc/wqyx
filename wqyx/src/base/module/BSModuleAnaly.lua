@@ -1,7 +1,8 @@
-local BSModuleAnaly = class("BSModuleAnaly",cc.load("mvc").AppBase)
+local BSModuleAnaly = class("BSModuleAnaly")
 local switchModule = require("module.SwitchModule"):create()
 BSModuleAnaly.otherModule = require("module.OtherModule"):create()
-BSModuleAnaly.errorModule = require("module.ErrorModule"):create()
+BSModuleAnaly.errorModule = require("module.ErrorModule"):create()   --弹出提示框，并禁止用户一切操作
+BSModuleAnaly.tipModule = require("module.TipModule"):create()	 --弹出提示框	
 
 --目前只支持json格式
 function BSModuleAnaly:receiveData(jsondata)
@@ -16,6 +17,7 @@ function BSModuleAnaly:receiveData(jsondata)
 	
 	if headRule == "OPEN" then
 	elseif headRule == "TIP" then
+		self.errorModule:receiveData(headInfo,js)
 	elseif headRule == "UPDATE" then
 	elseif headRule == "SWITCH" then	
 		switchModule:receiveData(headInfo,js)

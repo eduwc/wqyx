@@ -1,9 +1,9 @@
-local OtherModule = class("OtherModule",cc.load("mvc").AppBase)
+local OtherModule = class("OtherModule")
 
 
 function OtherModule:receiveData(head,jsondata)	
 	if head == "SERVERLIST" then
-		G_NodeManager:notify(jsondata,"SceneLogin")
+		G_ModuleManager:notify(jsondata,"MLogin",head)
 	end
 end
 

@@ -1,4 +1,4 @@
-local SwitchModule = class("SwitchModule",cc.load("mvc").AppBase)
+local SwitchModule = class("SwitchModule")
 
 
 function SwitchModule:receiveData(head,jsondata)	

@@ -1,4 +1,4 @@
-local BSScene 			= class("BSScene",require "base.scene.BaseNode")
+local BSScene 			= class("BSScene",cc.Scene)
 BSScene.gameScene		= nil
 BSScene.bgLayer 		= nil    --背景层
 BSScene.uiLayer 		= nil	 --UI层	
@@ -8,14 +8,25 @@ BSScene.effectLayer 	= nil    --特效层
 BSScene.tipLayer 		= nil    --消息提示层
 
 function BSScene:init(node,nodeName)
-	BSScene.super:init(node,nodeName)
+	BSScene:init(node,nodeName)
+end
+
+function BSScene:receive(json)
 end
 
 
-function BSScene:onCreate()
-	self.gameScene = cc.Scene:create()
+function BSScene:init(node,nodeName)
+	G_NodeManager:addNode(node,nodeName)
+end
+
+
+
+function BSScene:ctor()
+--	self.gameScene = cc.Scene:create()
 	--cc.Director:getInstance():getRunningScene()
-	cc.Director:getInstance():replaceScene(self.gameScene)
+--	cc.Director:getInstance():replaceScene(self.gameScene)
+--	self.gameScene = G_SceneManager:changeScene(self)
+	self.gameScene = G_SceneManager:getRunScene()
 
 	self.bgLayer = cc.Layer:create()
 	self.gameScene:addChild(self.bgLayer,5)
@@ -63,6 +74,9 @@ end
 
 
 function BSScene:receive(json)
+end
+
+function BSScene:showTip(str)
 end
 
 

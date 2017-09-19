@@ -1,4 +1,4 @@
-local ToolsManager = class("ToolsManager",cc.load("mvc").AppBase)
+local ToolsManager = class("ToolsManager")
 ToolsManager.instance = nil
 
 function ToolsManager:getInstance()

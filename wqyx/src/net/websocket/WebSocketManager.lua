@@ -1,8 +1,8 @@
-local WebSocketManager = class("BaseWebsocket",cc.load("mvc").AppBase)
+local WebSocketManager = class("BaseWebsocket")
 local websocket = nil
 
-function WebSocketManager:onCreate()
-	websocket = require ("base.net.websocket.BSWebsocket"):create()
+function WebSocketManager:ctor()
+	websocket = require ("base.net.websocket.BSWebsocket"):ctor()
 end
 
 function WebSocketManager:sendMessage(message)
