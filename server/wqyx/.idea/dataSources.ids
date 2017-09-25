@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - wqyx@localhost" uuid="81027947-d479-4b33-a70a-75064ed2c0d1">
+    <database-info product="MySQL" version="5.6.21" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="wqyx"/>
+      <table id="2" parent="1" name="userinfo"/>
+      <table id="3" parent="1" name="test"/>
+      <column id="4" parent="2" name="username">
+        <data-type>char(255)</data-type>
+      </column>
+      <column id="5" parent="2" name="password">
+        <data-type>char(255)</data-type>
+      </column>
+      <column id="6" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11) unsigned</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="7" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="8" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="9" parent="3" name="std">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="10" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

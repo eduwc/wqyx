@@ -1,0 +1,46 @@
+{
+  "serversList": [
+    {
+      "action": "zzy",
+      "id": 1,
+      "name": "霸业初征",
+      "port": "5555",
+      "ip": "127.0.0.1:9635",
+      "state": 2,
+      "orders": 1,
+      "sign": 0,
+      "isRecommend": 1,
+      "startTime": "Apr 12, 2017 11:00:00 PM",
+      "openTime": "2017-4-12 11:00:00",
+      "clientVer": "0.0.9.1",
+      "clientMiniVer": "0.0.4.0",
+      "clientUpdateUrl": "http://112.74.198.92:8089/apk/{gameKey}_{qdKey}_{version}.apk",
+      "currentResourceVer": "0.0.0.1",
+      "iosVer": "0.0.9.1",
+      "iosMiniVer": "0.0.4.0",
+      "currentMainVer": 1,
+      "transferServerId": 0
+    },
+      {
+      "action": "test",
+      "id": 1,
+      "name": "霸业初征2",
+      "port": "5555",
+      "ip": "127.0.0.1:9635",
+      "state": 2,
+      "orders": 1,
+      "sign": 0,
+      "isRecommend": 1,
+      "startTime": "Apr 12, 2017 11:00:00 PM",
+      "openTime": "2017-4-12 11:00:00",
+      "clientVer": "0.0.9.1",
+      "clientMiniVer": "0.0.4.0",
+      "clientUpdateUrl": "http://112.74.198.92:8089/apk/{gameKey}_{qdKey}_{version}.apk",
+      "currentResourceVer": "0.0.0.1",
+      "iosVer": "0.0.9.1",
+      "iosMiniVer": "0.0.4.0",
+      "currentMainVer": 1,
+      "transferServerId": 0
+    }
+  ]
+}
