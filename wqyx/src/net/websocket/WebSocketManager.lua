@@ -1,12 +1,9 @@
-local WebSocketManager = class("BaseWebsocket")
-local websocket = nil
+local WebSocketManager = class("WebSocketManager",require ("base.net.websocket.BSWebsocket"))
+WebSocketManager.websocket = nil
+WebSocketManager.ip = ""
 
 function WebSocketManager:ctor()
-	websocket = require ("base.net.websocket.BSWebsocket"):ctor()
 end
 
-function WebSocketManager:sendMessage(message)
-	websocket:sendMessage(message)
-end
 
 return WebSocketManager

@@ -30,4 +30,10 @@ function MLogin:receive(msg,head)
 end
 
 
+function MLogin:getIp(serverID)
+	return self.serverList["serversList"][serverID]["ip"]
+end
+
+
+
 return MLogin

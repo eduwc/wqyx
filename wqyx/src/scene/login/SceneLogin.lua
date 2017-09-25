@@ -1,8 +1,8 @@
 -----------------***********登录界面********************----------------------
 local SceneLogin 				= class("SceneLogin",require "base.view.BSScene")
+SceneLogin.nodeName				= "SceneLogin"
 SceneLogin.isRegist 			= false
 SceneLogin.loginScene 			= nil
-SceneLogin.nodeName				= "SceneLogin"
 SceneLogin.mLogin           	= nil
 SceneLogin.frame 		    	= nil
 SceneLogin.pl_selectedServer	= nil
@@ -150,6 +150,16 @@ function SceneLogin:showSelected(serverName,serverID)
 	            jsEnterGame["userName"] = self.userName
 	            jsEnterGame["serverID"] = self.selectedServerID
          		G_HttpManager:sendEnterGameMessage(json.encode(jsEnterGame))  
+
+
+         		--发送给java服务器
+         		G_WebSocketManager:connect(self.mLogin:getIp(self.selectedServerID))
+         		local jsMsg = {}
+	            jsMsg["head"] = CS_DPEnterGame
+	            jsMsg["userName"] = self.userName
+	            jsMsg["serverID"] = self.selectedServerID
+             	G_WebSocketManager:sendMessage(jsMsg)
+
 	        end
 	end)
 	self:controlEnterGameBtn(true)

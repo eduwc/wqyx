@@ -1,10 +1,11 @@
 local BSWebsocket = class("BSWebsocket")
 local wsSendText = nil
 local bsModuleAnaly = require("base.module.BSModuleAnaly"):create()
+local isConnect = false
 
 local function wsSendTextOpen(strData) 
-
-
+    print("get wsSendTextOpen %s")
+    isConnect = true
 end 
   
 local function wsSendTextMessage(strData) 
@@ -27,13 +28,19 @@ end
 
 
 function BSWebsocket:ctor()
-    wsSendText = cc.WebSocket:create("ws://127.0.0.1:9635")     
-	if nil ~= wsSendText then 
-	    wsSendText:registerScriptHandler(wsSendTextOpen,cc.WEBSOCKET_OPEN) 
-	    wsSendText:registerScriptHandler(wsSendTextMessage,cc.WEBSOCKET_MESSAGE) 
-	    wsSendText:registerScriptHandler(wsSendTextClose,cc.WEBSOCKET_CLOSE) 
-	    wsSendText:registerScriptHandler(wsSendTextError,cc.WEBSOCKET_ERROR) 
-	end 
+
+end
+
+
+function BSWebsocket:connect(ip)
+    G_GameLog("BSWebsocket-connect ip->"..ip)
+    wsSendText = cc.WebSocket:create("ws://"..ip)     
+    if nil ~= wsSendText then 
+        wsSendText:registerScriptHandler(wsSendTextOpen,cc.WEBSOCKET_OPEN) 
+        wsSendText:registerScriptHandler(wsSendTextMessage,cc.WEBSOCKET_MESSAGE) 
+        wsSendText:registerScriptHandler(wsSendTextClose,cc.WEBSOCKET_CLOSE) 
+        wsSendText:registerScriptHandler(wsSendTextError,cc.WEBSOCKET_ERROR) 
+    end 
 end
 
 
@@ -46,8 +53,24 @@ function BSWebsocket:sendMessage(message)
      end
 
 
-     wsSendText:sendString(json.encode(message)) 
-     print("sendMessage-----"..json.encode(message))
+    --防止还没连接成功 就发送消息
+    if isConnect == false then
+        local  callbackEntry = nil
+        local function callback(dt)
+            if isConnect == true then
+                cc.Director:getInstance():getScheduler():unscheduleScriptEntry(callbackEntry)
+                wsSendText:sendString(json.encode(message))
+                print("sendMessage-----"..json.encode(message))
+            end
+        end
+
+        callbackEntry = cc.Director:getInstance():getScheduler():scheduleScriptFunc(callback,0.5,false)
+    else
+        wsSendText:sendString(json.encode(message))
+        print("sendMessage-----"..json.encode(message))
+    end
+
+     
 end
 
 
