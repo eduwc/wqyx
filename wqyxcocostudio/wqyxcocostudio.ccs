@@ -14,33 +14,6 @@
             <Project Name="Notice.csd" Type="Layer" />
           </Folder>
           <Folder Name="hero">
-            <Image Name="anniuda.png" />
-            <Image Name="anniudaxuanzhong.png" />
-            <Image Name="anniuxiao.png" />
-            <Image Name="anniuxiaoxuanzhong.png" />
-            <Image Name="baoshi.png" />
-            <Image Name="biaoti.png" />
-            <Image Name="daojishi.png" />
-            <Image Name="exp.png" />
-            <Image Name="genghuan.png" />
-            <Image Name="guanbi.png" />
-            <Image Name="haogan.png" />
-            <Image Name="jianglikuang.png" />
-            <Image Name="jiaofudi.png" />
-            <Image Name="jinbi.png" />
-            <Image Name="jineng.png" />
-            <Image Name="starda.png" />
-            <Image Name="starxiao.png" />
-            <Image Name="wancheng.png" />
-            <Image Name="wenzidi.png" />
-            <Image Name="wodeyingxiong1.png" />
-            <Image Name="wodeyingxiong2.png" />
-            <Image Name="x2.png" />
-            <Image Name="yingxiongbeijing.png" />
-            <Image Name="zhaomu.png" />
-            <Image Name="zhaomuyingxiong1.png" />
-            <Image Name="zhaomuyingxiong2.png" />
-            <Image Name="zhiliao.png" />
             <Image Name="aodingdao1.png" />
             <Image Name="aodingdao2.png" />
             <Image Name="chongzhijieguo.png" />
@@ -48,6 +21,8 @@
             <Image Name="fuwuqi1.png" />
             <Image Name="jiejiao6.png" />
             <Image Name="jiejiaoshilian.png" />
+            <Image Name="jiejiaotujian.png" />
+            <Image Name="jiejiaotujian2.png" />
             <Image Name="jineng7.png" />
             <Image Name="jineng8.png" />
             <Image Name="jingtong.png" />
@@ -65,14 +40,22 @@
             <Image Name="shangyi.png" />
             <Image Name="shipin1.png" />
             <Image Name="shizhuang1.png" />
+            <Image Name="wodeyingxiong1.png" />
+            <Image Name="wodeyingxiong2.png" />
             <Image Name="xinxi7.png" />
             <Image Name="xinxi8.png" />
             <Image Name="xuezi1.png" />
+            <Image Name="yiban.png" />
+            <Image Name="yingxiongbeijing.png" />
             <Image Name="yingxiongkuang1.png" />
             <Image Name="yingxiongkuang2.png" />
             <Image Name="yingxiongkuang3.png" />
             <Image Name="yingxiongkuorong6.png" />
             <Image Name="yizhaomu.png" />
+            <Image Name="yuejizhaomu5.png" />
+            <Image Name="zhaomu5.png" />
+            <Image Name="zhaomuyingxiong1.png" />
+            <Image Name="zhaomuyingxiong2.png" />
             <Image Name="zhiliao6.png" />
             <Image Name="zhuangbei7.png" />
             <Image Name="zhuanjing.png" />
@@ -117,6 +100,30 @@
             <Image Name="zhuangbeisuo0.png" />
             <Image Name="ziyuan0.png" />
             <Image Name="zuojiantou.png" />
+            <Image Name="baoshi1.png" />
+            <Image Name="beijing.png" />
+            <Image Name="huodong01.png" />
+            <Image Name="jinbi1.png" />
+            <Image Name="shijian1.png" />
+            <Image Name="starda1.png" />
+            <Image Name="starda2.png" />
+            <Image Name="starda3.png" />
+            <Image Name="starda4.png" />
+            <Image Name="starda5.png" />
+            <Image Name="stardada1.png" />
+            <Image Name="stardada2.png" />
+            <Image Name="stardada3.png" />
+            <Image Name="stardada4.png" />
+            <Image Name="stardada5.png" />
+            <Image Name="starxiao1.png" />
+            <Image Name="starxiao2.png" />
+            <Image Name="starxiao3.png" />
+            <Image Name="starxiao4.png" />
+            <Image Name="starxiao5.png" />
+            <Image Name="tili1.png" />
+            <Image Name="yuankuang.png" />
+            <Image Name="zhuangbeidi2.png" />
+            <Image Name="zhuangbeidifufei.png" />
           </Folder>
           <Folder Name="login">
             <Image Name="beijing0.png" />
@@ -140,7 +147,6 @@
             <Image Name="zhucedenglukuang.png" />
             <Image Name="zhucerukou.png" />
           </Folder>
-          <Project Name="CallHero.csd" Type="Node" />
           <Project Name="equipRequest.csd" Type="Node" />
           <TTF Name="FZY4JW.TTF" />
           <Image Name="HelloWorld.png" />
@@ -169,15 +175,53 @@
             <Image Name="yingxiong3.png" />
             <Image Name="ziyuan3.png" />
             <Image Name="cangku5.png" />
+            <Image Name="anniu3.png" />
+            <Image Name="cangku6.png" />
+            <Image Name="dangqianmancang.png" />
+            <Image Name="guanbi3.png" />
+            <Image Name="jianzao3.png" />
+            <Image Name="jianzaocangku0.png" />
+            <Image Name="jianzaocangku1.png" />
+            <Image Name="kaiqi3.png" />
+            <Image Name="mancang4.png" />
+            <Image Name="num1.png" />
+            <Image Name="num2.png" />
+            <Image Name="num3.png" />
+            <Image Name="num4.png" />
+            <Image Name="num5.png" />
+            <Image Name="num6.png" />
+            <Image Name="num7.png" />
+            <Image Name="num8.png" />
+            <Image Name="num9.png" />
+            <Image Name="queding4.png" />
+            <Image Name="shengji4.png" />
+            <Image Name="shengjixuyao.png" />
+            <Image Name="shunjianshengji4.png" />
+            <Image Name="suoyoumancang.png" />
+            <Image Name="wodecangku0.png" />
+            <Image Name="wodecangku1.png" />
+            <Image Name="xiangtongmancang.png" />
+            <Image Name="yijianshouhuo.png" />
+            <Image Name="yikaiqi.png" />
+            <Image Name="zhuyi6.png" />
+            <Image Name="ziyuan5.png" />
+            <Image Name="ziyuan6.png" />
+            <Image Name="ziyuanbeijing.png" />
+            <Image Name="zhanlidi.png" />
           </Folder>
           <Folder Name="csb_public">
             <Project Name="Tip.csd" Type="Layer" />
+            <Project Name="WaitNet.csd" Type="Layer" />
           </Folder>
           <Folder Name="csb_home">
             <Project Name="Home.csd" Type="Scene" />
           </Folder>
           <Folder Name="csb_hero">
             <Project Name="CallHero.csd" Type="Layer" />
+            <Project Name="CallHeroItem.csd" Type="Node" />
+            <Project Name="MyHero.csd" Type="Layer" />
+            <Project Name="HeroQiangHua.csd" Type="Layer" />
+            <Project Name="HeroJinJie.csd" Type="Layer" />
           </Folder>
         </Folder>
       </RootFolder>
