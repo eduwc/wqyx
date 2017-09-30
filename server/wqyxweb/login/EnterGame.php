@@ -27,6 +27,11 @@ class EnterGame
         $mysqlManager->update("update user_info set serverID='$serverID' where  userName='$userName'");
 
         
+        //这个发送没有实际意义，只是防止客户端报错
+        $jsonArr["head"] = "SC_OTHER_NULL";
+        echo json_encode($jsonArr, JSON_UNESCAPED_SLASHES);
+        
+        
     }
     
 }

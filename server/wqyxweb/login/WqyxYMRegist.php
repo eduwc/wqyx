@@ -28,22 +28,22 @@ class WqyxYMRegist
         if(strlen($userName)<6 || strlen($passWord )<6)
         {
             echo "长度".strlen($userName);
-            $jsonArr["head"] = "SC_ERROR_TIP";
-            $jsonArr["error"] = "账号或密码要大于等于6位";
+            $jsonArr["head"] = "SC_TIP_FLOAT";
+            $jsonArr["tipInfo"] = "账号或密码要大于等于6位";
             echo json_encode($jsonArr);
             return;
         }
         elseif(strlen($userName)>10 || strlen($passWord )>10)
         {
-            $jsonArr["head"] = "SC_ERROR_TIP";
-            $jsonArr["error"] = "账号或密码要小于或等于10位";
+            $jsonArr["head"] = "SC_TIP_FLOAT";
+            $jsonArr["tipInfo"] = "账号或密码要小于或等于10位";
             echo json_encode($jsonArr);
             return;
         }
         else if(!ctype_alnum($userName)||!ctype_alnum($passWord))
         {
-            $jsonArr["head"] = "SC_ERROR_TIP";
-            $jsonArr["error"] = "账号或密码只能是数字或字母";
+            $jsonArr["head"] = "SC_TIP_FLOAT";
+            $jsonArr["tipInfo"] = "账号或密码只能是数字或字母";
             echo json_encode($jsonArr);
             return;
         }
@@ -54,17 +54,28 @@ class WqyxYMRegist
         if(!$res)
         {
              $mysqlManager->insert("INSERT INTO user_info(id,userName,passWord) VALUES(NULL,'$userName','$passWord')");
+             
+             
+
+             
               //注册成功  发送服务器列表
              $json_string = file_get_contents('../json/serverList.json');
+             
+             //获取第一个服务器数据
+             $jsonServer =  json_decode($json_string,true);
+             $firstServerID = $jsonServer["serversList"][0]["id"];
+             
+             
              $jsonArr["head"] = "SC_OTHER_SERVERLIST";    
-             $jsonArr["list"] = $json_string;
+             $jsonArr["list"] =  json_decode($json_string);
+             $jsonArr["lastServerID"] = (int) $firstServerID;
         }
         else
         {                   
-            $jsonArr["head"] = "SC_ERROR_TIP";
-            $jsonArr["error"] = "账号已经存在";                                  
+            $jsonArr["head"] = "SC_TIP_FLOAT";
+            $jsonArr["tipInfo"] = "账号已经存在";                                  
         }
-        echo json_encode($jsonArr);
+        echo json_encode($jsonArr,JSON_UNESCAPED_SLASHES);
  
     }
 
