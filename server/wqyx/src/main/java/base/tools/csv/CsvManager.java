@@ -5,6 +5,7 @@ import com.csvreader.CsvReader;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -31,7 +32,7 @@ public class CsvManager {
         String relativelyPath=System.getProperty("user.dir");
         ArrayList headArr = new ArrayList();
         try {
-            CsvReader csvReader = new CsvReader(relativelyPath+"\\"+path);
+            CsvReader csvReader = new CsvReader(relativelyPath+"\\"+path,',',Charset.forName("UTF-8"));
             try {
                 csvReader.readHeaders();
                 String headValues = csvReader.getRawRecord();

@@ -2,20 +2,13 @@ package game.example;
 
 import base.file.configuration.ConfigurationManager;
 import base.mysql.connectionpool.C3p0PoolManager;
-import base.tools.csv.CsvManager;
-import com.csvreader.CsvReader;
-import game.mysql.entity.hero.ETHeroView;
 
 
-import java.beans.PropertyVetoException;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Properties;
+import java.util.*;
 
 /**
  * Created by Administrator on 2017/8/29 0029.
@@ -27,8 +20,59 @@ public class GameExample {
     {
 
 
+      /*  ETPublic etPublic = new ETPublic();
+        etPublic.reduceGold("playerinfo1","888888-1",100);*/
+
+
+  /*      String tableName = "hero1";
+        String field = "recruited";
+        String value = "37475";
+        String condition = "playerTag";
+        String conditionValue = "888888-1";
+        Connection cc =  C3p0PoolManager.getInstance().getConnection();
+        try {
+            Statement stmt =  cc.createStatement();
+       *//*     String sql = "UPDATE "+tableName+" SET "+field+"="+
+                    "'"+value+"'"+" WHERE "+condition+"="+"'"+conditionValue+"'";*//*
+            String pp = "gold"+"+"+50;
+            String sql = "UPDATE  playerinfo1 SET gold ="+pp+" where playerTag='888888-1'";
+            stmt.executeUpdate(sql);
+
+            stmt.close();
+            cc.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+*/
+
+ /*       String sql = "SELECT *FROM "+"hero1"+" WHERE playerTag="+"'"+"888888-1"+"'";
+        Connection cc =  C3p0PoolManager.getInstance().getConnection();
+        try {
+            Statement stmt =  cc.createStatement();
+            ResultSet resultSet = stmt.executeQuery(sql);
+            java.sql.ResultSetMetaData rsmd = resultSet.getMetaData();
+            int numberOfColumns = rsmd.getColumnCount();
+            List list = new ArrayList();
+            while(resultSet.next()){
+
+                Map rsTree = new HashMap(numberOfColumns);
+                for(int r=1;r<numberOfColumns+1;r++)
+                {
+                    rsTree.put(rsmd.getColumnName(r),resultSet.getObject(r));
+                }
+                list.add(rsTree);
+            }
+            resultSet.close();
+            stmt.close();
+            cc.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
         ETHeroView etHeroView = new ETHeroView();
-        etHeroView.searchUncalled("888888-1","1");
+        etHeroView.searchUncalled("888888-1","1");*/
 
 
       /*  //初始化 csv表

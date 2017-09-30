@@ -127,4 +127,66 @@ public class BaseEntity {
 
     }
 
+    //只搜索一行的数据
+    public Map searchLine(String sql)
+    {
+        Connection cc =  C3p0PoolManager.getInstance().getConnection();
+        try {
+            Statement stmt =  cc.createStatement();
+            ResultSet resultSet = stmt.executeQuery(sql);
+            java.sql.ResultSetMetaData rsmd = resultSet.getMetaData();
+            int numberOfColumns = rsmd.getColumnCount();
+            Map rsTree = new HashMap(numberOfColumns);
+            while(resultSet.next()){
+                for(int r=1;r<numberOfColumns+1;r++)
+                {
+                    rsTree.put(rsmd.getColumnName(r),resultSet.getObject(r));
+                }
+            }
+            resultSet.close();
+            stmt.close();
+            cc.close();
+            return  rsTree;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+
+    public boolean update(String tableName ,String field ,String value,String valueType,String condition,String conditionValue)
+    {
+        boolean isExecuteSucceed = false;
+        Connection cc =  C3p0PoolManager.getInstance().getConnection();
+        try {
+            Statement stmt =  cc.createStatement();
+            String sql = "";
+            if(valueType.equals("1"))
+            {
+                   sql = "UPDATE "+tableName+" SET "+field+"="+"'"+value+"'"+
+                    " WHERE "+condition+"="+"'"+conditionValue+"'";
+            }
+            else
+            {
+                    sql = "UPDATE "+tableName+" SET "+field+"="+value+
+                        " WHERE "+condition+"="+"'"+conditionValue+"'";
+            }
+
+
+            int lineNumber = stmt.executeUpdate(sql);
+            if (lineNumber>0)
+            {
+                isExecuteSucceed = true;
+            }
+            stmt.close();
+            cc.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return  isExecuteSucceed;
+    }
+
 }

@@ -20,12 +20,12 @@ public class DPHeroView implements DataPackage {
 
 
         ETHeroView etHeroView = new ETHeroView();
-        String uncalled = etHeroView.searchUncalled(playerTag,serverID);
+        String called = etHeroView.searchUncalled(playerTag,serverID);
 
         JSONObject jb = new JSONObject();
         //发送角色信息
         jb.put("head", GHeadVar.SC_OPEN_HERO);
-        jb.put("uncalledInfo",uncalled);
+        jb.put("calledInfo",called);
 
         _chc.writeAndFlush(new TextWebSocketFrame(jb.toString()));
     }

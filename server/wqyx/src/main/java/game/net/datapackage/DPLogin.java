@@ -21,8 +21,8 @@ public class DPLogin implements DataPackage{
         if(et_Register.queryUserinfo(userName))
         {
             //发送登录 成功数据
-            jb.put("head", GHeadVar.GH_SC_LOGIN);
-            jb.put("loginState", 1);
+          /*  jb.put("head", GHeadVar.GH_SC_LOGIN);
+            jb.put("loginState", 1);*/
         }
         else {
           //  jb.put("head", GHeadVar.GH_SC_ERROR);

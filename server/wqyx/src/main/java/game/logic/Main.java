@@ -2,8 +2,10 @@ package game.logic;
 
 
 
+import base.mysql.connectionpool.C3p0PoolManager;
 import base.net.websocket.WebSocketManager;
 import base.tools.csv.CsvManager;
+import game.data.DataManager;
 import game.example.GameExample;
 
 import java.io.IOException;
@@ -19,13 +21,25 @@ public class Main {
     public static void main(String[] args) {
 
         //示例
-      //  GameExample ge = new GameExample();
+    //    GameExample ge = new GameExample();
 
         //  ge.how_to_configFile();
 
 
         try{
+            C3p0PoolManager.getInstance().getConnection();
+
+
+            //初始化数据
+            DataManager dataManager = new DataManager();
+            dataManager.initCsvData();
+
+
+
             new WebSocketManager(9635).run();
+
+
+
         }catch (Exception ex)
         {
 
