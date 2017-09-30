@@ -2,6 +2,8 @@ local SceneHome = class("SceneHome",require "base.view.BSScene")
 SceneHome.nodeName				= "SceneHome"
 SceneHome.mHome					= nil
 SceneHome.sceneHome 			= nil
+SceneHome.tip 					= nil
+SceneHome.pl_waitNet  			= nil
 
 -- --必须要实现
 function SceneHome:init(node,nodeName)
@@ -31,6 +33,47 @@ function SceneHome:ctor()
              	G_WebSocketManager:sendMessage(jsMsg)
 	        end
 	end)	
+
+
+	--*****************初始化场景必须资源**************************
+	self.tip = cc.CSLoader:createNode(CSB_ADDRESS.."csb_public/Tip.csb")
+	self.tip:setVisible(false)
+	self:addToTipLayer(self.tip)
+
+
+	local waitNet = cc.CSLoader:createNode(CSB_ADDRESS.."csb_public/WaitNet.csb")
+	self.pl_waitNet   =  G_ToolsManager:seekChildByName(waitNet,"pl_waitNet")	
+	self.pl_waitNet:setVisible(false)
+	self:addToLoadingLayer(waitNet)	
+
+
 end
+
+
+function SceneHome:showTip(str)
+	local tt_tip   =  G_ToolsManager:seekChildByName(self.tip,"tt_tip")
+	tt_tip:setString(str)
+	self.tip:setPosition(0,300)
+	self.tip:setVisible(true)
+
+	local  callbackEntry = nil
+	local function callback(dt)
+		cc.Director:getInstance():getScheduler():unscheduleScriptEntry(callbackEntry)
+		self.tip:setVisible(false)
+	end
+
+	callbackEntry = cc.Director:getInstance():getScheduler():scheduleScriptFunc(callback, 1, false)
+end
+
+
+function SceneHome:showWaitNet()
+	self.pl_waitNet:setVisible(true)	
+end
+
+function SceneHome:hideWaitNet()
+	self.pl_waitNet:setVisible(false)
+end
+
+
 
 return SceneHome

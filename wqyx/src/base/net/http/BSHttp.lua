@@ -13,6 +13,7 @@ function BSHttp:ctor()
 end
 
 function BSHttp:sendMessage(message)
+    G_SceneManager:showWaitNet()
 	  print("send http message is"..message)
 	  self.xhr:open("GET", message) 
 	 -- 状态改变时调用  
@@ -24,6 +25,7 @@ function BSHttp:sendMessage(message)
         print("http get statusString is"..statusString)  
         print("http get message is"..utf8Str) 
         self.bsModuleAnaly:receiveData(utf8Str) 
+        G_SceneManager:hideWaitNet()
       end  
   
       -- 注册脚本回调方法  

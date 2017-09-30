@@ -1,9 +1,10 @@
 local BSModuleAnaly = class("BSModuleAnaly")
-local switchModule = require("module.SwitchModule"):create()
-BSModuleAnaly.otherModule = require("module.OtherModule"):create()
-BSModuleAnaly.errorModule = require("module.ErrorModule"):create()   --弹出提示框，并禁止用户一切操作
-BSModuleAnaly.tipModule = require("module.TipModule"):create()	 --弹出提示框	
-BSModuleAnaly.openModule = require("module.OpenModule"):create()	 --窗口界面
+BSModuleAnaly.switchModule 	= require("module.SwitchModule"):create()
+BSModuleAnaly.otherModule 	= require("module.OtherModule"):create()
+BSModuleAnaly.errorModule 	= require("module.ErrorModule"):create()   	--弹出提示框，并禁止用户一切操作
+BSModuleAnaly.tipModule 	= require("module.TipModule"):create()	 	--弹出提示框	
+BSModuleAnaly.openModule 	= require("module.OpenModule"):create()	 	--窗口界面
+BSModuleAnaly.updateModule 	= require("module.UpdateModule"):create()	 	--更新数据
 
 --目前只支持json格式
 function BSModuleAnaly:receiveData(jsondata)
@@ -19,10 +20,11 @@ function BSModuleAnaly:receiveData(jsondata)
 	if headRule == "OPEN" then
 		self.openModule:receiveData(headInfo,js)
 	elseif headRule == "TIP" then
-		self.errorModule:receiveData(headInfo,js)
+		self.tipModule:receiveData(headInfo,js)
 	elseif headRule == "UPDATE" then
+		self.updateModule:receiveData(headInfo,js)
 	elseif headRule == "SWITCH" then	
-		switchModule:receiveData(headInfo,js)
+		self.switchModule:receiveData(headInfo,js)
 	elseif headRule == "ERROR" then
 	    self.errorModule:receiveData(headInfo,js)
 	elseif headRule == "OTHER" then

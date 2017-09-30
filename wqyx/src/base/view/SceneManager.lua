@@ -37,4 +37,13 @@ function SceneManager:showTip(str)
 	self.runGameScene:showTip(str)
 end
 
+--ÍøÂç·¢ËÍµÈ´ı ×ªÈ¦È¦
+function SceneManager:showWaitNet()
+	self.runGameScene:showWaitNet()
+end
+
+function SceneManager:hideWaitNet()
+	self.runGameScene:hideWaitNet()
+end
+
 return SceneManager

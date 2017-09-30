@@ -2,6 +2,7 @@ local BSWebsocket = class("BSWebsocket")
 local wsSendText = nil
 local bsModuleAnaly = require("base.module.BSModuleAnaly"):create()
 local isConnect = false
+local isSendMessage     =   false  --根据这个判断是否是服务端主动推送
 
 local function wsSendTextOpen(strData) 
     print("get wsSendTextOpen %s")
@@ -9,12 +10,14 @@ local function wsSendTextOpen(strData)
 end 
   
 local function wsSendTextMessage(strData) 
-   print("get messagessssss %s"..strData)  
-    -- local strInfo= "response text msg: "
-    -- local str = json.decode(strData) 
-    -- print("jieguy"..str["name"]) 
-    -- print("get message %s"..strData)   
-    bsModuleAnaly:receiveData(strData) 
+   print("BSWebsocket--wsSendTextMessage get ->"..strData)    
+   bsModuleAnaly:receiveData(strData) 
+
+   --服务端主动推送不用 设置隐藏。
+   if isSendMessage then
+     G_SceneManager:hideWaitNet()
+   end
+   isSendMessage = false   
 end 
   
 local function wsSendTextClose(strData) 
@@ -45,6 +48,8 @@ end
 
 
 function BSWebsocket:sendMessage(message)
+   
+    G_SceneManager:showWaitNet()
 
      --base64加密 需要时候开启
      if BASE64_USE == true then
@@ -69,6 +74,7 @@ function BSWebsocket:sendMessage(message)
         wsSendText:sendString(json.encode(message))
         print("sendMessage-----"..json.encode(message))
     end
+    isSendMessage = true
 
      
 end

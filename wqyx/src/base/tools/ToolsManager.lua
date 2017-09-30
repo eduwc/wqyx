@@ -75,4 +75,75 @@ end
 
 
 
+--按照顺序加载 取值的时候是csv["1001"].title
+--1001是表格中第一行id的名字
+function ToolsManager:loadCsvByID(filePath)   
+    -- 读取文件  
+    local data = cc.FileUtils:getInstance():getStringFromFile(filePath);  
+  
+    -- 按行划分  
+    local lineStr = string.split(data, '\n');  
+    local titles = string.split(lineStr[1], ","); 
+
+    local arrs = {};  
+    for i = 2, #lineStr, 1 do  
+        local content = string.split(lineStr[i], ",");  
+ 
+ 		lineArrs = {}
+        for j = 1, #titles, 1 do  
+            lineArrs[titles[j]] = content[j];  
+        end  
+        arrs[content[1]] = lineArrs
+    end  
+  
+    return arrs;  
+end  
+
+--按照顺序加载 取值的时候是csv[1].title
+function ToolsManager:loadCsvByOrder(filePath)   
+    -- 读取文件  
+    local data = cc.FileUtils:getInstance():getStringFromFile(filePath);  
+  
+    -- 按行划分  
+    local lineStr = string.split(data, '\n');  
+    local titles = string.split(lineStr[1], ","); 
+    local ID = 1;  
+    local arrs = {};  
+    for i = 2, #lineStr, 1 do  
+
+        local content = string.split(lineStr[i], ",");  
+        arrs[ID] = {};  
+        for j = 1, #titles, 1 do  
+            arrs[ID][titles[j]] = content[j];  
+        end  
+  
+        ID = ID + 1;  
+    end  
+  
+    return arrs;  
+end  
+
+
+
+
+function ToolsManager:bubbleSort(arr)  
+    local tmp = 0  
+    for i=1,#arr-1 do  
+        for j=1,#arr-i do  
+            if arr[j] > arr[j+1] then  
+                tmp = arr[j]  
+                arr[j] = arr[j+1]  
+                arr[j+1] = tmp  
+            elseif arr[j] == arr[j+1] then
+            	tmp = arr[j]  
+                arr[j] = arr[j+1]  
+                arr[j+1] = tmp 
+            end  
+        end  
+    end 
+    return arr 
+end 
+
+
+
 return ToolsManager

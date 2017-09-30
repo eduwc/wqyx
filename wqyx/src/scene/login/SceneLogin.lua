@@ -14,6 +14,7 @@ SceneLogin.bt_enterGame			= nil
 SceneLogin.lastCheckBox			= nil   --上一个选中的checkBox
 SceneLogin.lyNotice				= nil   --notic公告
 SceneLogin.tip 					= nil	--tip
+SceneLogin.pl_waitNet 			= nil	--waitNet
 
 
 
@@ -36,6 +37,13 @@ function SceneLogin:ctor()
 	self.tip = cc.CSLoader:createNode(CSB_ADDRESS.."csb_public/Tip.csb")
 	self.tip:setVisible(false)
 	self:addToTipLayer(self.tip)
+
+
+
+	local waitNet = cc.CSLoader:createNode(CSB_ADDRESS.."csb_public/WaitNet.csb")
+	self.pl_waitNet   =  G_ToolsManager:seekChildByName(waitNet,"pl_waitNet")	
+	self.pl_waitNet:setVisible(false)
+	self:addToLoadingLayer(waitNet)	
 
 
 	self.loginScene = cc.CSLoader:createNode(CSB_ADDRESS.."csb_login/Login.csb")
@@ -111,6 +119,11 @@ function SceneLogin:loadFrame()
     tf_account = G_ToolsManager:seekChildByName(self.frame,"tf_account")
 
     tf_password = G_ToolsManager:seekChildByName(self.frame,"tf_password")
+
+
+    --TODO 测试用
+    tf_account:setString("888888")
+    tf_password:setString("888888")
   
 end
 
@@ -268,7 +281,7 @@ end
 function SceneLogin:showTip(str)
 	local tt_tip   =  G_ToolsManager:seekChildByName(self.tip,"tt_tip")
 	tt_tip:setString(str)
-	self.tip:setPosition(50,400)
+	self.tip:setPosition(0,400)
 	self.tip:setVisible(true)
 
 	local  callbackEntry = nil
@@ -278,6 +291,14 @@ function SceneLogin:showTip(str)
 	end
 
 	callbackEntry = cc.Director:getInstance():getScheduler():scheduleScriptFunc(callback, 1, false)
+end
+
+function SceneLogin:showWaitNet()
+	self.pl_waitNet:setVisible(true)
+end
+
+function SceneLogin:hideWaitNet()
+	self.pl_waitNet:setVisible(false)
 end
 
 

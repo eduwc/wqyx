@@ -2,8 +2,7 @@ local ErrorModule = class("ErrorModule")
 
 
 function ErrorModule:receiveData(head,jsondata)	
-	if head == "TIP" then
-		print("error message"..jsondata["error"])
+	if head == "ERROR" then
 		G_SceneManager:showTip(jsondata["error"])
 	end
 end

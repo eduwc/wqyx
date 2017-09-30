@@ -6,6 +6,7 @@ BSScene.windowLayer 	= nil	 --窗口层
 BSScene.guideLayer 		= nil    --引导层
 BSScene.effectLayer 	= nil    --特效层
 BSScene.tipLayer 		= nil    --消息提示层
+BSScene.loadingLayer 	= nil    --loading层
 
 function BSScene:init(node,nodeName)
 	BSScene:init(node,nodeName)
@@ -45,6 +46,9 @@ function BSScene:ctor()
 
 	self.tipLayer = cc.Layer:create()
 	self.gameScene:addChild(self.tipLayer,30)
+
+	self.loadingLayer = cc.Layer:create()
+	self.gameScene:addChild(self.loadingLayer,35)	
 end
 
 
@@ -72,12 +76,24 @@ function BSScene:addToTipLayer(node)
 	self.tipLayer:addChild(node)
 end
 
+function BSScene:addToLoadingLayer(node)
+	self.loadingLayer:addChild(node)
+end
+
 
 function BSScene:receive(json)
 end
 
 function BSScene:showTip(str)
 end
+
+function BSScene:showWaitNet()
+end
+
+function BSScene:hideWaitNet()
+
+end
+
 
 
 return BSScene

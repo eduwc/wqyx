@@ -1,8 +1,8 @@
 local TipModule = class("TipModule")
 
 function TipModule:receiveData(head,jsondata)	
-	if head == "TIP" then
-		print("error message"..jsondata["error"])
+	if head == "FLOAT" then
+		G_SceneManager:showTip(jsondata["tipInfo"])
 	end
 end
 
