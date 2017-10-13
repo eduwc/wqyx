@@ -145,5 +145,12 @@ function ToolsManager:bubbleSort(arr)
 end 
 
 
+function ToolsManager:setBtnState(btn,state)
+    btn:setBright(state)
+    btn:setTouchEnabled(state)
+    btn:setEnabled(state)
+end
+
+
 
 return ToolsManager

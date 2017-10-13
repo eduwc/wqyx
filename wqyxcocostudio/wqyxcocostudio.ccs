@@ -222,6 +222,8 @@
             <Project Name="MyHero.csd" Type="Layer" />
             <Project Name="HeroQiangHua.csd" Type="Layer" />
             <Project Name="HeroJinJie.csd" Type="Layer" />
+            <Project Name="AoDingDao.csd" Type="Layer" />
+            <Project Name="JieJiaoTuJian.csd" Type="Layer" />
           </Folder>
         </Folder>
       </RootFolder>

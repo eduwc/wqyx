@@ -24,7 +24,7 @@
               <AbstractNodeData Name="Image_2" ActionTag="-733565292" Tag="244" IconVisible="False" LeftMargin="122.5115" RightMargin="397.4885" TopMargin="32.5891" BottomMargin="462.4109" Scale9Width="120" Scale9Height="145" ctype="ImageViewObjectData">
                 <Size X="120.0000" Y="145.0000" />
                 <Children>
-                  <AbstractNodeData Name="ig_beforQiangHua" ActionTag="741688755" Tag="245" IconVisible="False" LeftMargin="18.5411" RightMargin="15.4589" TopMargin="9.8764" BottomMargin="49.1236" Scale9Width="86" Scale9Height="86" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="ig_beforJinJie" ActionTag="741688755" Tag="245" IconVisible="False" LeftMargin="18.5411" RightMargin="15.4589" TopMargin="9.8764" BottomMargin="49.1236" Scale9Width="86" Scale9Height="86" ctype="ImageViewObjectData">
                     <Size X="86.0000" Y="86.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="61.5411" Y="92.1236" />
@@ -34,14 +34,14 @@
                     <PreSize X="0.7167" Y="0.5931" />
                     <FileData Type="Normal" Path="ui/home/zhuangbeidi1.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="tt_bfHeroName" ActionTag="341985964" Tag="246" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="35.5520" RightMargin="40.4480" TopMargin="107.7125" BottomMargin="11.2875" FontSize="20" LabelText="梦娜" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="44.0000" Y="26.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="57.5520" Y="24.2875" />
+                  <AbstractNodeData Name="tt_bfHeroName" ActionTag="341985964" Tag="246" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="7.8831" RightMargin="12.1169" TopMargin="110.9679" BottomMargin="8.0321" IsCustomSize="True" FontSize="20" LabelText="梦娜" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="100.0000" Y="26.0000" />
+                    <AnchorPoint ScaleY="0.5000" />
+                    <Position X="7.8831" Y="21.0321" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4796" Y="0.1675" />
-                    <PreSize X="0.3667" Y="0.1793" />
+                    <PrePosition X="0.0657" Y="0.1450" />
+                    <PreSize X="0.8333" Y="0.1793" />
                     <FontResource Type="Normal" Path="ui/FZY4JW.TTF" Plist="" />
                     <OutlineColor A="255" R="0" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -58,7 +58,7 @@
               <AbstractNodeData Name="Image_2_0" ActionTag="1992127959" Tag="247" IconVisible="False" LeftMargin="397.3736" RightMargin="122.6264" TopMargin="34.8486" BottomMargin="460.1514" Scale9Width="120" Scale9Height="145" ctype="ImageViewObjectData">
                 <Size X="120.0000" Y="145.0000" />
                 <Children>
-                  <AbstractNodeData Name="ig_afterQiangHua" ActionTag="438346851" Tag="248" IconVisible="False" LeftMargin="18.5411" RightMargin="15.4589" TopMargin="9.8764" BottomMargin="49.1236" Scale9Width="86" Scale9Height="86" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="ig_afterJinJie" ActionTag="438346851" Tag="248" IconVisible="False" LeftMargin="18.5411" RightMargin="15.4589" TopMargin="9.8764" BottomMargin="49.1236" Scale9Width="86" Scale9Height="86" ctype="ImageViewObjectData">
                     <Size X="86.0000" Y="86.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="61.5411" Y="92.1236" />
@@ -68,14 +68,14 @@
                     <PreSize X="0.7167" Y="0.5931" />
                     <FileData Type="Normal" Path="ui/home/zhuangbeidi1.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="tt_afHeroName" ActionTag="-593071928" Tag="249" IconVisible="False" LeftMargin="35.8025" RightMargin="40.1975" TopMargin="106.7462" BottomMargin="12.2538" FontSize="20" LabelText="梦娜" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="44.0000" Y="26.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="57.8025" Y="25.2538" />
+                  <AbstractNodeData Name="tt_afHeroName" ActionTag="-593071928" Tag="249" IconVisible="False" LeftMargin="9.7611" RightMargin="10.2389" TopMargin="111.6290" BottomMargin="7.3710" IsCustomSize="True" FontSize="20" LabelText="梦娜" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="100.0000" Y="26.0000" />
+                    <AnchorPoint ScaleY="0.5000" />
+                    <Position X="9.7611" Y="20.3710" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4817" Y="0.1742" />
-                    <PreSize X="0.3667" Y="0.1793" />
+                    <PrePosition X="0.0813" Y="0.1405" />
+                    <PreSize X="0.8333" Y="0.1793" />
                     <FontResource Type="Normal" Path="ui/FZY4JW.TTF" Plist="" />
                     <OutlineColor A="255" R="26" G="26" B="26" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -127,7 +127,7 @@
                   <AbstractNodeData Name="Image_2_1" ActionTag="-1807670944" Tag="254" IconVisible="False" LeftMargin="44.1262" RightMargin="35.8738" TopMargin="-4.8407" BottomMargin="59.8407" Scale9Width="120" Scale9Height="145" ctype="ImageViewObjectData">
                     <Size X="120.0000" Y="145.0000" />
                     <Children>
-                      <AbstractNodeData Name="ig_needQiangHua" ActionTag="1222437585" Tag="255" IconVisible="False" LeftMargin="18.5411" RightMargin="15.4589" TopMargin="9.8764" BottomMargin="49.1236" Scale9Width="86" Scale9Height="86" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="ig_needJinJie" ActionTag="1222437585" Tag="255" IconVisible="False" LeftMargin="18.5411" RightMargin="15.4589" TopMargin="9.8764" BottomMargin="49.1236" Scale9Width="86" Scale9Height="86" ctype="ImageViewObjectData">
                         <Size X="86.0000" Y="86.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="61.5411" Y="92.1236" />
@@ -137,26 +137,26 @@
                         <PreSize X="0.7167" Y="0.5931" />
                         <FileData Type="Normal" Path="ui/home/zhuangbeidi1.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="tt_needItemName" ActionTag="955313218" Tag="256" IconVisible="False" LeftMargin="26.3977" RightMargin="29.6023" TopMargin="101.0083" BottomMargin="17.9917" FontSize="20" LabelText="缘分结" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="64.0000" Y="26.0000" />
-                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="58.3977" Y="30.9917" />
+                      <AbstractNodeData Name="tt_needItemName" ActionTag="955313218" Tag="256" IconVisible="False" LeftMargin="8.4954" RightMargin="11.5046" TopMargin="97.7532" BottomMargin="21.2468" IsCustomSize="True" FontSize="20" LabelText="缘分结" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="100.0000" Y="26.0000" />
+                        <AnchorPoint ScaleY="0.5000" />
+                        <Position X="8.4954" Y="34.2468" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.4866" Y="0.2137" />
-                        <PreSize X="0.5333" Y="0.1793" />
+                        <PrePosition X="0.0708" Y="0.2362" />
+                        <PreSize X="0.8333" Y="0.1793" />
                         <FontResource Type="Normal" Path="ui/FZY4JW.TTF" Plist="" />
                         <OutlineColor A="255" R="0" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="tt_needItemNumber" ActionTag="-1209904640" Tag="257" IconVisible="False" LeftMargin="38.5997" RightMargin="48.4003" TopMargin="118.2265" BottomMargin="0.7735" FontSize="20" LabelText="x10" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="33.0000" Y="26.0000" />
-                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="55.0997" Y="13.7735" />
+                      <AbstractNodeData Name="tt_needItemNumber" ActionTag="-1209904640" Tag="257" IconVisible="False" LeftMargin="6.0482" RightMargin="13.9518" TopMargin="119.8544" BottomMargin="-0.8544" IsCustomSize="True" FontSize="20" LabelText="x10" HorizontalAlignmentType="HT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="100.0000" Y="26.0000" />
+                        <AnchorPoint ScaleY="0.5000" />
+                        <Position X="6.0482" Y="12.1456" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.4592" Y="0.0950" />
-                        <PreSize X="0.2750" Y="0.1793" />
+                        <PrePosition X="0.0504" Y="0.0838" />
+                        <PreSize X="0.8333" Y="0.1793" />
                         <FontResource Type="Normal" Path="ui/FZY4JW.TTF" Plist="" />
                         <OutlineColor A="255" R="0" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
@@ -170,7 +170,7 @@
                     <PreSize X="0.6000" Y="0.7250" />
                     <FileData Type="Normal" Path="ui/hero/qianghuakuang.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="bt_qiangHua" ActionTag="-465816660" Tag="258" IconVisible="False" LeftMargin="19.7532" RightMargin="15.2468" TopMargin="185.1898" BottomMargin="-45.1898" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="135" Scale9Height="38" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                  <AbstractNodeData Name="bt_jinJie" ActionTag="-465816660" Tag="258" IconVisible="False" LeftMargin="19.7532" RightMargin="15.2468" TopMargin="185.1898" BottomMargin="-45.1898" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="135" Scale9Height="38" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="165.0000" Y="60.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="102.2532" Y="-15.1898" />
@@ -185,14 +185,14 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Text_11" ActionTag="-105828823" Tag="260" IconVisible="False" LeftMargin="59.3037" RightMargin="92.6963" TopMargin="153.2005" BottomMargin="22.7995" FontSize="20" LabelText="5000" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="48.0000" Y="24.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="83.3037" Y="34.7995" />
+                  <AbstractNodeData Name="tt_jinJieGold" ActionTag="-105828823" Tag="260" IconVisible="False" LeftMargin="23.3037" RightMargin="56.6963" TopMargin="153.2005" BottomMargin="22.7995" IsCustomSize="True" FontSize="20" LabelText="5000" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="120.0000" Y="24.0000" />
+                    <AnchorPoint ScaleY="0.5000" />
+                    <Position X="23.3037" Y="34.7995" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="0" G="0" B="0" />
-                    <PrePosition X="0.4165" Y="0.1740" />
-                    <PreSize X="0.2400" Y="0.1200" />
+                    <PrePosition X="0.1165" Y="0.1740" />
+                    <PreSize X="0.6000" Y="0.1200" />
                     <FontResource Type="Normal" Path="ui/FZY4JW.TTF" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />

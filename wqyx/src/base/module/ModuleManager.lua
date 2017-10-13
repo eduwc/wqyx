@@ -15,7 +15,6 @@ function ModuleManager:addModule(module,moduleName)
 		error("your moduleName is nil")
 		return
 	else
-		--TODO 这边要是不释放 会出现内存泄漏
 		self.moduleTable[moduleName] = module
 		G_GameLog("ModuleManager-addModule moduleName is->"..moduleName)
 	end

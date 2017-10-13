@@ -33,6 +33,11 @@ G_ZHUANJING["16"] = "书"
 G_ZHUANJING["17"] = "时装"
 
 
+--****************内部通信消息*******************----
+REQUESTHERO = "in_requestHero"
+RESPONDHERO = "in_respondHero"
+
+
 
 
 

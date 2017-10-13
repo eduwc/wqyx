@@ -5,7 +5,6 @@ WHero.sv_callHero			= nil
 WHero.pl_heroInfo			= nil
 WHero.nowCallHeroID			= nil
 WHero.unCallHeroItem		= {}
-
 WHero.wMyHero 				= nil
 WHero.wAodingDao 			= nil
 WHero.bt_aodingdao			= nil
@@ -26,10 +25,6 @@ function WHero:ctor()
 	self.mhero  = require ("module.hero.MHero"):create()
 	self.mhero:connectView(self)
 
-
-	--初始化我的英雄界面
-	self.wMyHero = require("scene.window.hero.WMyHero"):create()
-	self.wMyHero:setVisible(false)
 	
 	--初始化奥丁岛界面	
 	self.wAodingDao = require("scene.window.hero.WAoDingDao"):create()
@@ -39,8 +34,7 @@ function WHero:ctor()
 	self:addChild(self.callHeroWindow)	
 
 
-	self.pl_heroInfo = G_ToolsManager:seekChildByName(self.callHeroWindow,"pl_heroInfo")
-	self.pl_heroInfo:addChild(self.wMyHero)
+	self.pl_heroInfo = G_ToolsManager:seekChildByName(self.callHeroWindow,"pl_heroInfo")	
 	self.pl_heroInfo:addChild(self.wAodingDao)
 
 	self.sv_callHero = G_ToolsManager:seekChildByName(self.callHeroWindow,"sv_callHero")
@@ -48,13 +42,19 @@ function WHero:ctor()
 	self.bt_callHero = G_ToolsManager:seekChildByName(self.callHeroWindow,"bt_callHero")
 	self.bt_callHero:addTouchEventListener(function(sender, state)
 	        if state == 2 then
-		      self:changePage(1)
+		        self:changePage(1)
 	        end
 	    end)		
 
 	self.bt_myHero = G_ToolsManager:seekChildByName(self.callHeroWindow,"bt_myHero")
 	self.bt_myHero:addTouchEventListener(function(sender, state)
 	        if state == 2 then
+	             --初始化我的英雄界面
+	            if self.wMyHero == nil then
+	            	print("self.wMyHero ")
+	            	self.wMyHero = require("scene.window.hero.WMyHero"):create()
+					self.pl_heroInfo:addChild(self.wMyHero)
+	            end	        	
 		      self:changePage(2)
 	        end
 	    end)	
@@ -231,7 +231,9 @@ function WHero:changePage(pageID)
 
 
 		self.sv_callHero:setVisible(true)
-	    self.wMyHero:setVisible(false)
+		if self.wMyHero ~= nil then
+			self.wMyHero:setVisible(false)
+		end	 
 	    self.wAodingDao:setVisible(false)
 
 
@@ -248,7 +250,9 @@ function WHero:changePage(pageID)
 
 
 		self.sv_callHero:setVisible(false)
-	    self.wMyHero:setVisible(true)
+		if self.wMyHero ~= nil then
+			self.wMyHero:setVisible(true)
+		end	    
 	    self.wAodingDao:setVisible(false)
 
 	elseif pageID == 3 then
@@ -263,7 +267,9 @@ function WHero:changePage(pageID)
 
 
 		self.sv_callHero:setVisible(false)
-	    self.wMyHero:setVisible(false)
+		if self.wMyHero ~= nil then
+			self.wMyHero:setVisible(false)
+		end	 
 	    self.wAodingDao:setVisible(true)		
 
 	end

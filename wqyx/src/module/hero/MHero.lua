@@ -52,6 +52,10 @@ function MHero:receive(msg,head)
 		self.vHero:showItem(self.uncalledHeroInfo,self.calledHeroInfo)
 	elseif head == "CALLHERO" then		
 		self.vHero:updateCallState(msg["callState"])
+	elseif head == REQUESTHERO then
+		local jsMsg = {}
+		jsMsg["calledHero"] = self.calledHeroInfo
+		G_ModuleManager:notify(jsMsg,"MMyHero",RESPONDHERO)
 	end
 
 end
