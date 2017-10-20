@@ -34,6 +34,19 @@ function SceneHome:ctor()
 	        end
 	end)	
 
+	--道具
+	local bt_item = G_ToolsManager:seekChildByName(self.sceneHome,"bt_item")
+	bt_item:addTouchEventListener(function(sender, state)
+	        if state == 2 then
+	        	--请求打开道具窗口
+	        	local jsMsg = {}
+	            jsMsg["head"] = CS_DPItem
+             	G_WebSocketManager:sendMessage(jsMsg)
+	        end
+	end)
+
+	
+
 
 	--*****************初始化场景必须资源**************************
 	self.tip = cc.CSLoader:createNode(CSB_ADDRESS.."csb_public/Tip.csb")

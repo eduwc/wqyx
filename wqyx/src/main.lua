@@ -30,8 +30,8 @@ local function main()
 	require "base.InitBase"
 	InitBase:init()
 	require "global.GlobalVar"
-    
-    
+
+
 
  -- 	local arr = {1,20,-1,30,23,21,-108,55,26,55,-2}  
  -- local arr = {"1","20","-1"}  
@@ -39,6 +39,7 @@ local function main()
  --      for i,v in ipairs(arr2) do  
  --        print(i,v)  
  --    end  
+
 
 
     require("app.MyApp"):create():run()

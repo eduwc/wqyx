@@ -187,13 +187,13 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="pl_heroInfo" ActionTag="713194326" Tag="17" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="194.7200" BottomMargin="5.2800" TouchEnable="True" BackColorAlpha="102" ColorAngle="90.0000" ctype="PanelObjectData">
+          <AbstractNodeData Name="pl_heroInfo" ActionTag="713194326" Tag="17" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="194.7200" BottomMargin="5.2800" TouchEnable="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="640.0000" Y="760.0000" />
             <Children>
-              <AbstractNodeData Name="sv_callHero" ActionTag="-1633747085" Tag="54" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="3.9588" BottomMargin="-3.9588" TouchEnable="True" ClipAble="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ScrollDirectionType="Vertical" ctype="ScrollViewObjectData">
+              <AbstractNodeData Name="sv_callHero" ActionTag="-1633747085" Tag="54" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="3.9520" BottomMargin="-3.9520" TouchEnable="True" ClipAble="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ScrollDirectionType="Vertical" ctype="ScrollViewObjectData">
                 <Size X="640.0000" Y="760.0000" />
                 <AnchorPoint />
-                <Position Y="-3.9588" />
+                <Position Y="-3.9520" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition Y="-0.0052" />

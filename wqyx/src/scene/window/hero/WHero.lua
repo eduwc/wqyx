@@ -25,7 +25,7 @@ function WHero:ctor()
 	self.mhero  = require ("module.hero.MHero"):create()
 	self.mhero:connectView(self)
 
-	
+
 	--初始化奥丁岛界面	
 	self.wAodingDao = require("scene.window.hero.WAoDingDao"):create()
 	self.wAodingDao:setVisible(false)	

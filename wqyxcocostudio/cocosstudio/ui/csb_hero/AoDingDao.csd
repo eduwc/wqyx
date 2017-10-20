@@ -28,7 +28,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="bt_jiejiao" ActionTag="525323188" Tag="93" IconVisible="False" LeftMargin="291.0392" RightMargin="183.9608" TopMargin="62.3423" BottomMargin="622.6577" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="135" Scale9Height="38" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="bt_jiejiaoTuJian" ActionTag="525323188" Tag="93" IconVisible="False" LeftMargin="291.0392" RightMargin="183.9608" TopMargin="62.3423" BottomMargin="622.6577" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="135" Scale9Height="38" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="165.0000" Y="60.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="373.5392" Y="652.6577" />
@@ -142,7 +142,7 @@
             <PreSize X="0.9063" Y="0.0872" />
             <FileData Type="Normal" Path="ui/public/zhuyi6.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="tt_chongZhiJieJiaoGold" ActionTag="-1438514291" Tag="102" IconVisible="False" LeftMargin="469.1406" RightMargin="70.8594" TopMargin="534.8502" BottomMargin="186.1499" IsCustomSize="True" FontSize="20" LabelText="10" HorizontalAlignmentType="HT_Right" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="tt_chongZhiJieJiaoGold" ActionTag="-1438514291" Tag="102" IconVisible="False" LeftMargin="469.1406" RightMargin="70.8594" TopMargin="534.8501" BottomMargin="186.1499" IsCustomSize="True" FontSize="20" LabelText="10" HorizontalAlignmentType="HT_Right" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="100.0000" Y="24.0000" />
             <AnchorPoint ScaleY="0.5000" />
             <Position X="469.1406" Y="198.1499" />
@@ -154,7 +154,7 @@
             <OutlineColor A="255" R="255" G="255" B="255" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="tt_zouFangGold" ActionTag="1906943443" Tag="103" IconVisible="False" LeftMargin="22.6250" RightMargin="517.3750" TopMargin="635.3671" BottomMargin="85.6330" IsCustomSize="True" FontSize="20" LabelText="100" HorizontalAlignmentType="HT_Right" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="tt_zouFangGold" ActionTag="1906943443" Tag="103" IconVisible="False" LeftMargin="22.6250" RightMargin="517.3750" TopMargin="635.3670" BottomMargin="85.6330" IsCustomSize="True" FontSize="20" LabelText="100" HorizontalAlignmentType="HT_Right" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="100.0000" Y="24.0000" />
             <AnchorPoint ScaleY="0.5000" />
             <Position X="22.6250" Y="97.6330" />
@@ -210,7 +210,7 @@
             <PreSize X="0.0625" Y="0.0537" />
             <FileData Type="Normal" Path="ui/home/baoshi1.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Image_3_0_0" ActionTag="-1059125398" Tag="109" IconVisible="False" LeftMargin="546.2046" RightMargin="53.7954" TopMargin="629.2480" BottomMargin="75.7519" Scale9Width="40" Scale9Height="40" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="Image_3_0_0" ActionTag="-1059125398" Tag="109" IconVisible="False" LeftMargin="546.2046" RightMargin="53.7954" TopMargin="629.2481" BottomMargin="75.7519" Scale9Width="40" Scale9Height="40" ctype="ImageViewObjectData">
             <Size X="40.0000" Y="40.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="566.2046" Y="95.7519" />
@@ -230,7 +230,7 @@
             <PreSize X="0.0625" Y="0.0537" />
             <FileData Type="Normal" Path="ui/home/jinbi1.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="pl_jieJiaoShow" ActionTag="-1163555552" Tag="111" IconVisible="False" LeftMargin="9.1086" RightMargin="10.8914" TopMargin="130.7318" BottomMargin="294.2682" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+          <AbstractNodeData Name="pl_jieJiaoShow" ActionTag="-1163555552" Tag="111" IconVisible="False" LeftMargin="9.1086" RightMargin="10.8914" TopMargin="130.7318" BottomMargin="294.2682" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="620.0000" Y="320.0000" />
             <AnchorPoint />
             <Position X="9.1086" Y="294.2682" />

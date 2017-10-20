@@ -6,6 +6,9 @@ function OpenModule:receiveData(head,jsondata)
 	if head == "HERO" then
 		runGameScene:addToWindow(require("scene.window.hero.WHero"):create())		
 		G_ModuleManager:notify(jsondata,"MHero",head)
+	elseif head == "ITEM" then
+		runGameScene:addToWindow(require("scene.window.item.WItem"):create())		
+		G_ModuleManager:notify(jsondata,"MItem",head)
 	end
 end
 

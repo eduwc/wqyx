@@ -1,4 +1,4 @@
-local ToolsManager = class("ToolsManager")
+ï»¿local ToolsManager = class("ToolsManager")
 ToolsManager.instance = nil
 
 function ToolsManager:getInstance()
@@ -75,20 +75,24 @@ end
 
 
 
---°´ÕÕË³Ğò¼ÓÔØ È¡ÖµµÄÊ±ºòÊÇcsv["1001"].title
---1001ÊÇ±í¸ñÖĞµÚÒ»ĞĞidµÄÃû×Ö
+--æŒ‰ç…§é¡ºåºåŠ è½½ å–å€¼çš„æ—¶å€™æ˜¯csv["1001"].title
+--1001æ˜¯è¡¨æ ¼ä¸­ç¬¬ä¸€è¡Œidçš„åå­—
 function ToolsManager:loadCsvByID(filePath)   
-    -- ¶ÁÈ¡ÎÄ¼ş  
+    -- è¯»å–æ–‡ä»¶  
     local data = cc.FileUtils:getInstance():getStringFromFile(filePath);  
   
-    -- °´ĞĞ»®·Ö  
+    -- æŒ‰è¡Œåˆ’åˆ†  
     local lineStr = string.split(data, '\n');  
     local titles = string.split(lineStr[1], ","); 
 
     local arrs = {};  
-    for i = 2, #lineStr, 1 do  
+    for i = 2, #lineStr-1, 1 do    --ä»excelå¯¼å‡º æœ€åä¸€è¡Œä¼šä¸ºç©º
         local content = string.split(lineStr[i], ",");  
  
+        if #content<2 then
+            G_GameLog("xiaoyu2"..i)
+        end
+
  		lineArrs = {}
         for j = 1, #titles, 1 do  
             lineArrs[titles[j]] = content[j];  
@@ -99,17 +103,17 @@ function ToolsManager:loadCsvByID(filePath)
     return arrs;  
 end  
 
---°´ÕÕË³Ğò¼ÓÔØ È¡ÖµµÄÊ±ºòÊÇcsv[1].title
+--æŒ‰ç…§é¡ºåºåŠ è½½ å–å€¼çš„æ—¶å€™æ˜¯csv[1].title
 function ToolsManager:loadCsvByOrder(filePath)   
-    -- ¶ÁÈ¡ÎÄ¼ş  
+    -- è¯»å–æ–‡ä»¶  
     local data = cc.FileUtils:getInstance():getStringFromFile(filePath);  
   
-    -- °´ĞĞ»®·Ö  
+    -- æŒ‰è¡Œåˆ’åˆ†  
     local lineStr = string.split(data, '\n');  
     local titles = string.split(lineStr[1], ","); 
     local ID = 1;  
     local arrs = {};  
-    for i = 2, #lineStr, 1 do  
+    for i = 2, #lineStr-1, 1 do   --ä»excelå¯¼å‡º æœ€åä¸€è¡Œä¼šä¸ºç©º
 
         local content = string.split(lineStr[i], ",");  
         arrs[ID] = {};  
@@ -151,6 +155,14 @@ function ToolsManager:setBtnState(btn,state)
     btn:setEnabled(state)
 end
 
+
+function ToolsManager:getTableLen(table)
+    local index = 0
+    for k,v in pairs(table) do
+        index = index+1
+    end
+    return index
+end
 
 
 return ToolsManager

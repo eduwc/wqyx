@@ -212,6 +212,7 @@
           <Folder Name="csb_public">
             <Project Name="Tip.csd" Type="Layer" />
             <Project Name="WaitNet.csd" Type="Layer" />
+            <Project Name="smallBgItem.csd" Type="Layer" />
           </Folder>
           <Folder Name="csb_home">
             <Project Name="Home.csd" Type="Scene" />
@@ -224,6 +225,67 @@
             <Project Name="HeroJinJie.csd" Type="Layer" />
             <Project Name="AoDingDao.csd" Type="Layer" />
             <Project Name="JieJiaoTuJian.csd" Type="Layer" />
+          </Folder>
+          <Folder Name="csb_equip">
+            <Project Name="Equip.csd" Type="Layer" />
+            <Project Name="ShuLianDuItem.csd" Type="Layer" />
+            <Project Name="EquipKuoRong.csd" Type="Layer" />
+            <Project Name="KuoRongItem.csd" Type="Layer" />
+            <Project Name="EquipItemInfo.csd" Type="Node" />
+          </Folder>
+          <Folder Name="equip">
+            <Image Name="changxue4.png" />
+            <Image Name="changxue5.png" />
+            <Image Name="changyi4.png" />
+            <Image Name="changyi5.png" />
+            <Image Name="dao4.png" />
+            <Image Name="dao5.png" />
+            <Image Name="daojubeijing.png" />
+            <Image Name="daojukuorong.png" />
+            <Image Name="di2.png" />
+            <Image Name="duanxue4.png" />
+            <Image Name="duanxue5.png" />
+            <Image Name="duanyi4.png" />
+            <Image Name="duanyi5.png" />
+            <Image Name="fazhang4.png" />
+            <Image Name="fazhang5.png" />
+            <Image Name="futou4.png" />
+            <Image Name="futou5.png" />
+            <Image Name="gong4.png" />
+            <Image Name="gong5.png" />
+            <Image Name="huoqiang4.png" />
+            <Image Name="huoqiang5.png" />
+            <Image Name="jian4.png" />
+            <Image Name="jian5.png" />
+            <Image Name="jiantou5.png" />
+            <Image Name="jiezhi4.png" />
+            <Image Name="jiezhi5.png" />
+            <Image Name="maozi4.png" />
+            <Image Name="maozi5.png" />
+            <Image Name="mofashu4.png" />
+            <Image Name="mofashu5.png" />
+            <Image Name="qiang4.png" />
+            <Image Name="qiang5.png" />
+            <Image Name="qita1.png" />
+            <Image Name="qita2.png" />
+            <Image Name="quanbu4.png" />
+            <Image Name="quanbu5.png" />
+            <Image Name="shizhuang4.png" />
+            <Image Name="shizhuang5.png" />
+            <Image Name="shoujiatisheng.png" />
+            <Image Name="shuliandu1.png" />
+            <Image Name="shuliandu2.png" />
+            <Image Name="shuliang.png" />
+            <Image Name="toukui4.png" />
+            <Image Name="toukui5.png" />
+            <Image Name="xianglian4.png" />
+            <Image Name="xianglian5.png" />
+            <Image Name="zhanlitisheng.png" />
+            <Image Name="zhuangbei1.png" />
+            <Image Name="zhuangbei2.png" />
+            <Image Name="zhuangbei7.png" />
+            <Image Name="zhuangbeifenleidi.png" />
+            <Image Name="zhuyi5.png" />
           </Folder>
         </Folder>
       </RootFolder>

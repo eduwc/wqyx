@@ -61,6 +61,8 @@ function BSScene:addToUiLayer(node)
 end
 
 function BSScene:addToWindow(node)
+	--同时只能开一个窗口
+	self.windowLayer:removeAllChildren()
 	self.windowLayer:addChild(node)
 end
 
