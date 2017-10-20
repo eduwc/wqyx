@@ -34,9 +34,16 @@ public class ETCallHero extends BaseEntity {
         String sql = "SELECT *FROM "+tbHeroInfo+" WHERE playerTag="+"'"+playerTag+"'";
         List ls = search(sql);
         String recruited = "";
+        String heroLv = "";
+        String qiangHuaLv = "";
+        String jinjieLv = "";
         if(!ls.isEmpty())
         {
             recruited = (String) ((HashMap)ls.get(0)).get("recruited");
+            heroLv = (String) ((HashMap)ls.get(0)).get("lv");
+            qiangHuaLv = (String) ((HashMap)ls.get(0)).get("qiangHuaLv");
+            jinjieLv = (String) ((HashMap)ls.get(0)).get("jinjieLv");
+
             String[] recruitedArr = recruited.split(";");
             //判断这个英雄有没被插入过
             boolean isExistHero = false;
@@ -56,9 +63,17 @@ public class ETCallHero extends BaseEntity {
                     if(gold>=callNeedGold)
                     {
                         recruited = recruited+";"+heroID;
-                        if(update(tbHeroInfo,"recruited",recruited,"1","playerTag",playerTag))
+                        heroLv = heroLv+";"+1;
+                        qiangHuaLv = qiangHuaLv+";"+0;
+                        jinjieLv = jinjieLv+";"+0;
+
+                        String updateSql = "UPDATE "+tbHeroInfo+" SET "+"recruited="+
+                                "'"+recruited+"'"+","+"lv="+"'"+heroLv+"'"+","+
+                                "qiangHuaLv="+"'"+qiangHuaLv+"'"+","+"jinjieLv="+
+                                "'"+jinjieLv+"'"+" WHERE playerTag="+"'"+playerTag+"'";
+                        if(update(updateSql))
                         {
-                            etPublic.reduceGold(tbPlayerInfo,playerTag,callNeedGold);
+                            etPublic.reduceGold(serverID,playerTag,callNeedGold);
                             isExecuteState = 1;
                         }
                     }
@@ -71,9 +86,16 @@ public class ETCallHero extends BaseEntity {
                     if(diamond>=callNeedDiamond)
                     {
                         recruited = recruited+";"+heroID;
-                        if(update(tbHeroInfo,"recruited",recruited,"1","playerTag",playerTag))
+                        heroLv = heroLv+";"+1;
+                        qiangHuaLv = qiangHuaLv+";"+0;
+                        jinjieLv = jinjieLv+";"+0;
+                        String updateSql = "UPDATE "+tbHeroInfo+" SET "+"recruited="+
+                                "'"+recruited+"'"+","+"lv="+"'"+heroLv+"'"+","+
+                                "qiangHuaLv="+"'"+qiangHuaLv+"'"+","+"jinjieLv="+
+                                "'"+jinjieLv+"'"+" WHERE playerTag="+"'"+playerTag+"'";
+                        if(update(updateSql))
                         {
-                            etPublic.reduceDiamond(tbPlayerInfo,playerTag,callNeedDiamond);
+                            etPublic.reduceDiamond(serverID,playerTag,callNeedDiamond);
                             isExecuteState = 1;
                         }
                     }
@@ -95,9 +117,9 @@ public class ETCallHero extends BaseEntity {
             {
                 if(gold>=callNeedGold)
                 {
-                    if(insert(tbHeroInfo,"null",playerTag,heroID))
+                    if(insert(tbHeroInfo,"null",playerTag,heroID,"1","0","0"))
                     {
-                        etPublic.reduceGold(tbPlayerInfo,playerTag,callNeedGold);
+                        etPublic.reduceGold(serverID,playerTag,callNeedGold);
                         isExecuteState = 1;
                     }
                 }
@@ -110,9 +132,9 @@ public class ETCallHero extends BaseEntity {
             {
                 if(diamond>=callNeedDiamond)
                 {
-                    if(insert(tbHeroInfo,"null",playerTag,heroID))
+                    if(insert(tbHeroInfo,"null",playerTag,heroID,"1","0","0"))
                     {
-                        etPublic.reduceDiamond(tbPlayerInfo,playerTag,callNeedDiamond);
+                        etPublic.reduceDiamond(serverID,playerTag,callNeedDiamond);
                         isExecuteState = 1;
                     }
                 }

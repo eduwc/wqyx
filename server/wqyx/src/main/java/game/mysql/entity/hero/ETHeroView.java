@@ -9,7 +9,7 @@ import java.util.List;
  * Created by Administrator on 2017/9/22 0022.
  */
 public class ETHeroView extends BaseEntity {
-    public String searchUncalled(String playerTag,String serverID)
+    public String searchcalled(String playerTag,String serverID)
     {
         String tbPlayerInfo = "hero"+serverID;
         String sql = "SELECT *FROM "+tbPlayerInfo+" WHERE playerTag="+"'"+playerTag+"'";

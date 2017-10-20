@@ -20,8 +20,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+
         //示例
-    //    GameExample ge = new GameExample();
+       // GameExample ge = new GameExample();
 
         //  ge.how_to_configFile();
 

@@ -154,7 +154,7 @@ public class BaseEntity {
     }
 
 
-
+    //只适用于更新一个字段的时候
     public boolean update(String tableName ,String field ,String value,String valueType,String condition,String conditionValue)
     {
         boolean isExecuteSucceed = false;
@@ -187,6 +187,22 @@ public class BaseEntity {
         }
 
         return  isExecuteSucceed;
+    }
+
+    public boolean update(String sql)
+    {
+        Connection cc =  C3p0PoolManager.getInstance().getConnection();
+        try {
+            Statement stmt =  cc.createStatement();
+            stmt.executeUpdate(sql);
+            stmt.close();
+            cc.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return  true;
     }
 
 }

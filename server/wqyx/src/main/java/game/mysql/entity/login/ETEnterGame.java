@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 import static java.awt.SystemColor.info;
 
@@ -24,12 +25,21 @@ public class ETEnterGame extends BaseEntity {
 
     public String[] inserPlayerInfo()
     {
+        //查看是否存在玩家数据
+
+
+
+        Random random = new Random();
+        int randomNumber = random.nextInt(999999);
+
+
+        //TODO CW 自动生成需要完善
         String tbPlayerInfo = "playerInfo"+serverID;
         //生成玩家名字昵称格式为DG111111，其中DG为随机2个大写英文字母，111111为6位不重复的数字
-        String playerName = "DG"+123456;
+        String playerName = "DG"+randomNumber;
         String headTag = "1";
 
-        insert(tbPlayerInfo,"null",tag,"1","2",playerName,headTag);
+        insert(tbPlayerInfo,"null",tag,"1","2",playerName,headTag,"0","0");
 
         String[] info = {playerName,headTag};
         return info;

@@ -20,6 +20,20 @@ public class DPPublic implements DataPackage {
         chc.writeAndFlush(new TextWebSocketFrame(jb.toString()));
     }
 
+
+    public void sendUnsatisfyTip(ChannelHandlerContext chc,int executeState)
+    {
+        if(executeState==2)
+        {
+            sendTip(chc,"金币数量不足");
+        }
+        else if(executeState==3)
+        {
+            sendTip(chc,"钻石数量不足");
+        }
+    }
+
+
     public void analyData(JSONObject dataJson) {
 
     }

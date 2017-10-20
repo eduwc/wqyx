@@ -2,6 +2,7 @@ package game.example;
 
 import base.file.configuration.ConfigurationManager;
 import base.mysql.connectionpool.C3p0PoolManager;
+import game.mysql.entity.ETPublic;
 
 
 import java.io.IOException;
@@ -20,11 +21,18 @@ public class GameExample {
     {
 
 
+
+        ETPublic etPublic = new ETPublic();
+     //   etPublic.getItemUntimeNumber("1","888888-1","102");
+        etPublic.reduceItemUntime("1","888888-1","102",2);
+
+
+
       /*  ETPublic etPublic = new ETPublic();
         etPublic.reduceGold("playerinfo1","888888-1",100);*/
 
 
-  /*      String tableName = "hero1";
+ /*       String tableName = "hero1";
         String field = "recruited";
         String value = "37475";
         String condition = "playerTag";
@@ -32,10 +40,12 @@ public class GameExample {
         Connection cc =  C3p0PoolManager.getInstance().getConnection();
         try {
             Statement stmt =  cc.createStatement();
-       *//*     String sql = "UPDATE "+tableName+" SET "+field+"="+
+     *//*       String sql = "UPDATE "+tableName+" SET "+field+"="+
                     "'"+value+"'"+" WHERE "+condition+"="+"'"+conditionValue+"'";*//*
             String pp = "gold"+"+"+50;
-            String sql = "UPDATE  playerinfo1 SET gold ="+pp+" where playerTag='888888-1'";
+           // String sql = "UPDATE  playerinfo1 SET gold ="+pp+" where playerTag='888888-1'";
+            String sql = "UPDATE "+"hero1"+" SET "+"recruited="+
+                    "'4003;4004'"+" WHERE playerTag='888888-1'";
             stmt.executeUpdate(sql);
 
             stmt.close();
@@ -43,10 +53,9 @@ public class GameExample {
 
         } catch (SQLException e) {
             e.printStackTrace();
-        }
-*/
+        }*/
 
- /*       String sql = "SELECT *FROM "+"hero1"+" WHERE playerTag="+"'"+"888888-1"+"'";
+/* *//*       String sql = "SELECT *FROM "+"hero1"+" WHERE playerTag="+"'"+"888888-1"+"'";
         Connection cc =  C3p0PoolManager.getInstance().getConnection();
         try {
             Statement stmt =  cc.createStatement();
@@ -68,10 +77,10 @@ public class GameExample {
             cc.close();
         } catch (SQLException e) {
             e.printStackTrace();
-        }
+        }*/
 
 
-        ETHeroView etHeroView = new ETHeroView();
+  /*      ETHeroView etHeroView = new ETHeroView();
         etHeroView.searchUncalled("888888-1","1");*/
 
 
