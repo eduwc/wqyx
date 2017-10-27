@@ -31,7 +31,7 @@
                 <PreSize X="1.0000" Y="0.5250" />
                 <FileData Type="Normal" Path="ui/equip/daojukuorong.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="bt_kuoRongOpen" ActionTag="-53191839" Tag="233" IconVisible="False" LeftMargin="0.9328" RightMargin="4.0672" TopMargin="311.0811" BottomMargin="28.9190" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="135" Scale9Height="38" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="bt_kuoRongOpen" ActionTag="-53191839" Tag="233" IconVisible="False" LeftMargin="0.9328" RightMargin="4.0672" TopMargin="311.0810" BottomMargin="28.9190" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="135" Scale9Height="38" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="165.0000" Y="60.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="83.4328" Y="58.9190" />

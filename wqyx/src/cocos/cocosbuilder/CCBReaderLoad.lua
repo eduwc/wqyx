@@ -1,4 +1,4 @@
-if nil == cc.CCBReader then
+﻿if nil == cc.CCBReader then
     return
 end
 

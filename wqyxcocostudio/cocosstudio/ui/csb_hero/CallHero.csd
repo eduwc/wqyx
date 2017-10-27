@@ -133,7 +133,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Button_1" ActionTag="641438655" Tag="75" IconVisible="False" LeftMargin="192.0000" RightMargin="406.0000" TopMargin="6.0000" BottomMargin="6.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="13" RightEage="13" TopEage="11" BottomEage="11" Scale9OriginX="13" Scale9OriginY="11" Scale9Width="16" Scale9Height="20" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="bt_heroKuoRong" ActionTag="641438655" Tag="75" IconVisible="False" LeftMargin="192.0000" RightMargin="406.0000" TopMargin="6.0000" BottomMargin="6.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="13" RightEage="13" TopEage="11" BottomEage="11" Scale9OriginX="13" Scale9OriginY="11" Scale9Width="16" Scale9Height="20" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="42.0000" Y="42.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="213.0000" Y="27.0000" />

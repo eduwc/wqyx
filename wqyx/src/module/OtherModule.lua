@@ -1,4 +1,4 @@
-local OtherModule = class("OtherModule")
+﻿local OtherModule = class("OtherModule")
 
 
 function OtherModule:receiveData(head,jsondata)	

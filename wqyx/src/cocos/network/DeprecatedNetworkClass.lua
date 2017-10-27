@@ -1,4 +1,4 @@
-if nil == cc.XMLHttpRequest then
+﻿if nil == cc.XMLHttpRequest then
     return
 end
 -- This is the DeprecatedNetworkClass

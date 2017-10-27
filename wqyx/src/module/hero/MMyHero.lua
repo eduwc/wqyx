@@ -1,4 +1,4 @@
-local MMyHero = class("MMyHero",require "base.module.BaseModule")
+﻿local MMyHero = class("MMyHero",require "base.module.BaseModule")
 MMyHero.moduleName			= "MMyHero"
 MMyHero.propCsv 			= nil
 MMyHero.vMyHero 			= nil

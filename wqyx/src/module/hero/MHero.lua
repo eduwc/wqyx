@@ -1,10 +1,12 @@
-local MHero = class("MHero",require "base.module.BaseModule")
+﻿local MHero = class("MHero",require "base.module.BaseModule")
 MHero.moduleName			= "MHero"
 MHero.vHero 				= nil
 MHero.uncalledHeroInfo		= {}
 MHero.uncalledHeroID		= {}
 MHero.calledHeroInfo		= {}
 MHero.calledHeroID			= {}
+MHero.maxKuoRong 			= nil  --目前最大的扩容数量
+MHero.nowHeroNumber   		= 0    --当前所拥有的英雄数目
 
 function MHero:connectView(node)
 	self.vHero = node
@@ -23,7 +25,10 @@ end
 function MHero:receive(msg,head)
 	if head == "HERO" then
 	   local calledHeroIDArr = string.split(msg["calledInfo"],";")
-	   --�޳����ٻ���
+	   self:setMaxHeroNumber(msg["heroMaxKuoRong"])
+	   self:setNowHeroNumber(msg["nowHeroNumber"])
+
+
 	   local heroCsv =  G_CsvManager:getInstance():getHeroCsv()
 	    for k,csvInfo in pairs(heroCsv) do
 	   		if csvInfo["if_recruit"] == "1" then
@@ -44,18 +49,22 @@ function MHero:receive(msg,head)
 			   		end
 			end		 
 	    end
-	    --TOOD �����ȷ���
+	    --TOOD CW
  		-- self.uncalledHeroID = G_ToolsManager:bubbleSort(self.uncalledHeroID)
 			--       for i,v in ipairs(self.uncalledHeroID) do  
 			--         print(i,v)  
 			--     end  	
 		self.vHero:showItem(self.uncalledHeroInfo,self.calledHeroInfo)
-	elseif head == "CALLHERO" then		
-		self.vHero:updateCallState(msg["callState"])
+	elseif head == "CALLHERO" then	
+		self:setNowHeroNumber(1)	
+		self.vHero:updateCallState(msg["callState"])		
 	elseif head == REQUESTHERO then
 		local jsMsg = {}
 		jsMsg["calledHero"] = self.calledHeroInfo
 		G_ModuleManager:notify(jsMsg,"MMyHero",RESPONDHERO)
+	elseif head == "HEROKUORONG" then
+		self:setMaxHeroNumber(msg["heroMaxKuoRong"])		
+		self.vHero:updateHeroKuoRong()
 	end
 
 end
@@ -67,6 +76,23 @@ function MHero:getTableLen(table)
 		index = index+1
 	end
 	return index
+end
+
+--获取英雄的最大数目
+function MHero:getMaxHeroNumber()
+	return self.maxKuoRong	
+end
+
+function MHero:setMaxHeroNumber(number)
+	self.maxKuoRong  = number
+end
+
+function MHero:getNowHeroNumber()
+	return self.nowHeroNumber	
+end
+
+function MHero:setNowHeroNumber(number)
+	self.nowHeroNumber = self.nowHeroNumber+number
 end
 
 return MHero

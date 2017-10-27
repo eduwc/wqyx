@@ -213,6 +213,7 @@
             <Project Name="Tip.csd" Type="Layer" />
             <Project Name="WaitNet.csd" Type="Layer" />
             <Project Name="smallBgItem.csd" Type="Layer" />
+            <Project Name="PublicKuoRongItem.csd" Type="Layer" />
           </Folder>
           <Folder Name="csb_home">
             <Project Name="Home.csd" Type="Scene" />

@@ -1,4 +1,4 @@
-
+﻿
 if not gl then return end
 
 gl.GCCSO_SHADER_BINARY_FJ   = 0x9260

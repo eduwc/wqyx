@@ -11,7 +11,7 @@ function VItemKuoRong:ctor()
 	    end
 	end)
 
-	local equipKuoRongArr = G_CsvManager:getInstance():getKuoRong("1")
+	local equipKuoRongArr = G_CsvManager:getInstance():getKuoRong("3")
 
 	local sv_kuoRongItem = G_ToolsManager:seekChildByName(self.equipKuoRongCsb,"sv_kuoRongItem")
 	local sv_kuoRongItemWidth = #equipKuoRongArr*180

@@ -1,4 +1,4 @@
-local BSScene 			= class("BSScene",cc.Scene)
+﻿local BSScene 			= class("BSScene",cc.Scene)
 BSScene.gameScene		= nil
 BSScene.bgLayer 		= nil    --背景层
 BSScene.uiLayer 		= nil	 --UI层	

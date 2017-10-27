@@ -1,4 +1,4 @@
-if nil == cc.SimpleAudioEngine then
+﻿if nil == cc.SimpleAudioEngine then
     return
 end
 --tip

@@ -1,4 +1,4 @@
-local BaseModule = class("MLogin")
+﻿local BaseModule = class("MLogin")
 BaseModule.moduleName = nil
 
 

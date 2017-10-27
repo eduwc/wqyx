@@ -1,4 +1,4 @@
-
+﻿
 --***************管理*****************--
 G_ToolsManager 		=  require ("base.tools.ToolsManager"):getInstance()
 G_NodeManager  		=  require ("base.view.NodeManager"):getInstance()

@@ -1,4 +1,4 @@
-local BSModuleAnaly = class("BSModuleAnaly")
+﻿local BSModuleAnaly = class("BSModuleAnaly")
 BSModuleAnaly.switchModule 	= require("module.SwitchModule"):create()
 BSModuleAnaly.otherModule 	= require("module.OtherModule"):create()
 BSModuleAnaly.errorModule 	= require("module.ErrorModule"):create()   	--弹出提示框，并禁止用户一切操作

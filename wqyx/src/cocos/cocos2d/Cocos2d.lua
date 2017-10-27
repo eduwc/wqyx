@@ -1,4 +1,4 @@
-
+﻿
 cc = cc or {}
 
 function cc.clampf(value, min_inclusive, max_inclusive)

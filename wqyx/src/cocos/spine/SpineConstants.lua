@@ -1,4 +1,4 @@
-if nil == sp then
+﻿if nil == sp then
     return
 end
 

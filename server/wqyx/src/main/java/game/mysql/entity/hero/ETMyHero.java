@@ -5,6 +5,7 @@ import game.mysql.entity.BaseEntity;
 import game.mysql.entity.ETPublic;
 import game.mysql.entity.common.ETCommon;
 
+import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class ETMyHero extends BaseEntity {
         boolean heroIsExist =  ETCommon.getInstance().heroIsExist(serverID,playerTag,heroID);*/
 
 
-        long gold = etPublic.getGold(serverID,playerTag);
+        BigInteger gold = etPublic.getGold(serverID,playerTag);
 
         HashMap heroMap = (HashMap)(CsvManager.getInstance().getCsvMap("hero").get(heroID));
         String propid = (String) heroMap.get("strengthen_need_propid");
@@ -42,7 +43,7 @@ public class ETMyHero extends BaseEntity {
         }
         else
         {
-            if(gold<needGold)
+            if(gold.compareTo(BigInteger.valueOf(needGold))<0)
             {
                 return 3;
             }
@@ -65,7 +66,7 @@ public class ETMyHero extends BaseEntity {
         boolean heroIsExist =  ETCommon.getInstance().heroIsExist(serverID,playerTag,heroID);*/
 
 
-        long gold = etPublic.getGold(serverID,playerTag);
+        BigInteger gold = etPublic.getGold(serverID,playerTag);
 
         HashMap heroMap = (HashMap)(CsvManager.getInstance().getCsvMap("hero").get(heroID));
         String propid = "100";
@@ -86,7 +87,7 @@ public class ETMyHero extends BaseEntity {
         }
         else
         {
-            if(gold<needGold)
+            if(gold.compareTo(BigInteger.valueOf(needGold))<0)
             {
                 return 3;
             }

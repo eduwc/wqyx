@@ -1,4 +1,4 @@
-local VJinJie = class("VJinJie",require "base.view.BaseNode")
+锘縧ocal VJinJie = class("VJinJie",require "base.view.BaseNode")
 VJinJie.jinjieBg 			= nil
 VJinJie.selectedHeroInfo  	= nil
 VJinJie.mMyHero 			= nil
@@ -24,7 +24,7 @@ function VJinJie:init(selectedHeroInfo,mMyHero,selectedHeroID)
 	self.jinjieBg	= cc.CSLoader:createNode(CSB_ADDRESS.."csb_hero/HeroJinJie.csb")
 	self:addChild(self.jinjieBg)
 
-	self.nowJinJieLv 		 		= 0   --目前进阶等级
+	self.nowJinJieLv 		 		= 0  
 	local propid 					= "100"
 	local itemPicID 				= self.mMyHero:getItemPicID(propid)
 	local itemName 				 	= self.mMyHero:getItemName(propid)
@@ -75,7 +75,7 @@ function VJinJie:init(selectedHeroInfo,mMyHero,selectedHeroID)
 end
 
 
---更新强化信息
+--鏇存柊缁撲氦
 function VJinJie:updateJinJieInfo()
 	if self.nowJinJieLv <=5 then
 		self.nowJinJieLv = self.nowJinJieLv+1

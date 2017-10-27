@@ -1,4 +1,4 @@
-local NodeManager  			= class("NodeManager")
+﻿local NodeManager  			= class("NodeManager")
 NodeManager.nodeTable 		= {}
 NodeManager.instance 		= nil
 

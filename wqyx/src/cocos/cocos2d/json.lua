@@ -1,4 +1,4 @@
------------------------------------------------------------------------------
+﻿-----------------------------------------------------------------------------
 -- JSON4Lua: JSON encoding / decoding support for the Lua language.
 -- json Module.
 -- Author: Craig Mason-Jones

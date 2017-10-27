@@ -1,4 +1,4 @@
-
+﻿
 local AppBase = class("AppBase")
 
 function AppBase:ctor(configs)

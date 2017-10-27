@@ -3,7 +3,9 @@ package game.mysql.entity.hero;
 import base.tools.csv.CsvManager;
 import game.mysql.entity.BaseEntity;
 import game.mysql.entity.ETPublic;
+import game.var.global.GPublicVar;
 
+import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,17 +14,19 @@ import java.util.Map;
  * Created by Administrator on 2017/9/28 0028.
  */
 public class ETCallHero extends BaseEntity {
-    //返回 1成功  2.金币不足 3.钻石不足
+    //返回 1成功  2.金币不足 3.钻石不足 4.英雄容量不足
     public int callHero(String callType,String heroID,String playerTag,String serverID)
     {
         int isExecuteState = 0;
         ETPublic etPublic = new ETPublic();
 
+
+
         //获取金币和钻石
         String tbPlayerInfo = "playerInfo"+serverID;
         Map playerMap = searchLine("SELECT *FROM "+tbPlayerInfo+" WHERE playerTag="+"'"+playerTag+"'");
-        Integer diamond = (Integer) playerMap.get("diamond");
-        Long gold = (Long) playerMap.get("gold");
+        Long diamond = (Long) playerMap.get("diamond");
+        BigInteger gold = (BigInteger) playerMap.get("gold");
 
         //获取召唤需要的钻石和金币数
         HashMap heroMap = (HashMap)(CsvManager.getInstance().getCsvMap("hero").get(heroID));
@@ -37,6 +41,13 @@ public class ETCallHero extends BaseEntity {
         String heroLv = "";
         String qiangHuaLv = "";
         String jinjieLv = "";
+
+        if(etPublic.getHeroNumberByList(ls)>=etPublic.getMaxKuoRongNumber(playerTag,serverID, GPublicVar.KUORONG_HERO))
+        {
+            isExecuteState = 4;
+            return isExecuteState;
+        }
+
         if(!ls.isEmpty())
         {
             recruited = (String) ((HashMap)ls.get(0)).get("recruited");
@@ -60,7 +71,8 @@ public class ETCallHero extends BaseEntity {
                 //金币购买
                 if(callType.equals("1"))
                 {
-                    if(gold>=callNeedGold)
+
+                    if(gold.compareTo(BigInteger.valueOf(callNeedGold))>=0)
                     {
                         recruited = recruited+";"+heroID;
                         heroLv = heroLv+";"+1;
@@ -115,7 +127,7 @@ public class ETCallHero extends BaseEntity {
             //金币购买
             if(callType.equals("1"))
             {
-                if(gold>=callNeedGold)
+                if(gold.compareTo(BigInteger.valueOf(callNeedGold))>=0)
                 {
                     if(insert(tbHeroInfo,"null",playerTag,heroID,"1","0","0"))
                     {

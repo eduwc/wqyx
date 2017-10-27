@@ -1,4 +1,4 @@
-local MHome = class("MHome",require "base.module.BaseModule")
+﻿local MHome = class("MHome",require "base.module.BaseModule")
 MHome.moduleName	= "MHome"
 MHome.vLogin 		= nil
 MHome.enterGameInfo	= nil
@@ -20,6 +20,9 @@ end
 function MHome:receive(msg,head)
 	if head == "ENTERGAME" then
 	   self.enterGameInfo = msg
+
+	   --存一份到 public 里面方便取用
+	   G_ModuleManager:notify(json.encode(msg),"MPublic",IN_PlAYERINFO)	   
 	end
 end
 

@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 
 /**
  * Created by Administrator on 2017/9/22 0022.
@@ -15,8 +16,9 @@ import java.util.HashMap;
 public class CsvManager {
     private static CsvManager _instance = null;
     private HashMap csvMap = new HashMap();
+    private HashMap kuoRongInfoMap = new HashMap();
 
-    public static CsvManager getInstance()
+    public static synchronized CsvManager getInstance()
     {
         if(_instance == null)
         {
@@ -70,6 +72,49 @@ public class CsvManager {
     public HashMap getCsvMap(String csvName)
     {
         return (HashMap) csvMap.get(csvName);
+    }
+
+    //*****************扩容******************
+
+    public void setKuoRongInfo()
+    {
+        HashMap kuoRongMap = getCsvMap("dilatation_up");
+
+        //扩容类型
+        // 1-资源仓库数量 // 2-资源各资源上限  // 3-道具装备数量
+        // 4-英雄数量  // 10-锻造栏 //  11-冒险队列
+
+        HashMap ziYaunCang = new HashMap();
+        HashMap ziYaun = new HashMap();
+        HashMap item = new HashMap();
+        HashMap hero = new HashMap();
+        HashMap duanZao = new HashMap();
+        HashMap maoXian = new HashMap();
+
+        kuoRongInfoMap.put("1",ziYaunCang);
+        kuoRongInfoMap.put("2",ziYaun);
+        kuoRongInfoMap.put("3",item);
+        kuoRongInfoMap.put("4",hero);
+        kuoRongInfoMap.put("10",duanZao);
+        kuoRongInfoMap.put("11",maoXian);
+
+
+        Iterator iter = kuoRongMap.entrySet().iterator();
+        while (iter.hasNext())
+        {
+            HashMap.Entry entry = (HashMap.Entry) iter.next();
+            HashMap val = (HashMap)entry.getValue();
+
+            HashMap hp = (HashMap)kuoRongInfoMap.get(val.get("dilatation_up_type"));
+            hp.put((String)val.get("dilatation_up_level"),val);
+
+        }
+    }
+
+
+    public HashMap getKuoRongInfo(String kuorongLv,String kuoRongType)
+    {
+        return  (HashMap) ((HashMap)kuoRongInfoMap.get(kuoRongType)).get(kuorongLv);
     }
 
 

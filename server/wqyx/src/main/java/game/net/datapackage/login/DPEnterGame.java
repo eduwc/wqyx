@@ -36,6 +36,10 @@ public class DPEnterGame implements DataPackage {
             jb.put("sex",info.get("sex"));
             jb.put("playerName",info.get("playerName"));
             jb.put("headTag",info.get("headTag"));
+            jb.put("diamond",info.get("diamond"));
+            jb.put("gold",info.get("gold"));
+            jb.put("heroKuoRongNumber",info.get("heroKuoRongNumber"));
+            jb.put("equipKuoRongNumber",info.get("equipKuoRongNumber"));
 
         }
         else
@@ -51,6 +55,11 @@ public class DPEnterGame implements DataPackage {
             jb.put("sex",2);
             jb.put("playerName",info[0]);
             jb.put("headTag",info[1]);
+            jb.put("diamond",0);
+            jb.put("gold",0);
+            jb.put("heroKuoRongNumber",0);
+            jb.put("equipKuoRongNumber",0);
+
 
         }
         _chc.writeAndFlush(new TextWebSocketFrame(jb.toString()));

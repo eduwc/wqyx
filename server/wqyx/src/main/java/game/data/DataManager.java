@@ -12,5 +12,7 @@ public class DataManager {
     {
         //初始化csv表
         CsvManager.getInstance().loadCsv("res\\csv\\hero.csv","hero");
+        CsvManager.getInstance().loadCsv("res\\csv\\dilatation_up.csv","dilatation_up");
+        CsvManager.getInstance().setKuoRongInfo();
     }
 }

@@ -1,4 +1,4 @@
-
+﻿
 --Enums will be deprecated,begin
 _G.kCCTextAlignmentLeft              = cc.TEXT_ALIGNMENT_LEFT
 _G.kCCTextAlignmentRight             = cc.TEXT_ALIGNMENT_RIGHT

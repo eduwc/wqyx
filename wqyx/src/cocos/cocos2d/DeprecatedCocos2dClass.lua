@@ -1,4 +1,4 @@
--- This is the DeprecatedClass
+﻿-- This is the DeprecatedClass
 
 DeprecatedClass = {} or DeprecatedClass
 

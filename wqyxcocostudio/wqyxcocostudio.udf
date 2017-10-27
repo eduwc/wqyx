@@ -28,5 +28,21 @@
         <EnableHTML5Advanced Value="False" />
       </Value>
     </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="ui/csb_equip/EquipKuoRong.csd" />
+          <FilePathData Path="ui/csb_equip/Equip.csd" />
+          <FilePathData Path="ui/csb_equip/EquipItemInfo.csd" />
+          <FilePathData Path="ui/csb_equip/ShuLianDuItem.csd" />
+          <FilePathData Path="ui/csb_equip/KuoRongItem.csd" />
+          <FilePathData Path="ui/csb_hero/CallHero.csd" />
+          <FilePathData Path="ui/csb_public/PublicKuoRongItem.csd" />
+          <FilePathData Path="ui/csb_login/Login.csd" />
+          <FilePathData Path="ui/csb_login/LoginFrame.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="ui/csb_hero/CallHero.csd" />
+      </Value>
+    </Item>
   </Properties>
 </UserData>

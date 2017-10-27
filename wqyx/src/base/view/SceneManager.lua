@@ -1,6 +1,6 @@
-local SceneManager 			= class("SceneManager")
-SceneManager.runScene 		= nil   --ÕıÔÚÔËĞĞµÄ³¡¾°(ÊÇÒ»¸öcc.Scene:create())
-SceneManager.runGameScene   = nil   --ÕıÔÚÔËĞĞµÄÓÎÏ·³¡¾°(¼Ì³ĞÓÚBSSceneµÄÀà)
+ï»¿local SceneManager 			= class("SceneManager")
+SceneManager.runScene 		= nil   --æ­£åœ¨è¿è¡Œçš„åœºæ™¯(æ˜¯ä¸€ä¸ªcc.Scene:create())
+SceneManager.runGameScene   = nil   --æ­£åœ¨è¿è¡Œçš„æ¸¸æˆåœºæ™¯(ç»§æ‰¿äºBSSceneçš„ç±»)
 SceneManager.instance 		= nil
 
 function SceneManager:getInstance()
@@ -12,11 +12,11 @@ end
 
 
 function SceneManager:changeScene(scene)
-	--ÇåÀí
+	--æ¸…ç†
 	G_NodeManager:removeAllNode()
 	G_ModuleManager:removeAllMoudle()
 
-	--ÔËĞĞĞÂ³¡¾°
+	--è¿è¡Œæ–°åœºæ™¯
 	self.runScene = cc.Scene:create()
 	cc.Director:getInstance():replaceScene(self.runScene)
 
@@ -37,7 +37,7 @@ function SceneManager:showTip(str)
 	self.runGameScene:showTip(str)
 end
 
---ÍøÂç·¢ËÍµÈ´ı ×ªÈ¦È¦
+--ç½‘ç»œå‘é€ç­‰å¾… è½¬åœˆåœˆ
 function SceneManager:showWaitNet()
 	self.runGameScene:showWaitNet()
 end

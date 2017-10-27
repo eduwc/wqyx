@@ -1,4 +1,4 @@
-local VQiangHua = class("VQiangHua",require "base.view.BaseNode")
+﻿local VQiangHua = class("VQiangHua",require "base.view.BaseNode")
 VQiangHua.qiangHuaBg 			= nil
 VQiangHua.selectedHeroInfo  	= nil
 VQiangHua.mMyHero 				= nil

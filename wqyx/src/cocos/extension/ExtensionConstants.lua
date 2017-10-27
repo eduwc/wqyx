@@ -1,4 +1,4 @@
-if nil == cc.Control then
+﻿if nil == cc.Control then
 	return
 end
 

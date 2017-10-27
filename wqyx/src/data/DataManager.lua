@@ -1,4 +1,4 @@
-local DataManager = class("DataManager")
+ï»¿local DataManager = class("DataManager")
 DataManager.instance = nil
 
 
@@ -11,8 +11,8 @@ function DataManager:getInstance()
 end
 
 
---»ñÈ¡×¨¾«ÎÄ±¾
---getType  1µÄÊ±ºò·µ»Ø ×¨¾«ÎÄ±¾µÄÊı×é  2µÄÊ±ºò·µ»ØÆ´½ÓºÃµÄ×¨¾«×Ö·û´®ÓÃ£¬´®Áª
+--è·å–ä¸“ç²¾æ–‡æœ¬
+--getType  1çš„æ—¶å€™è¿”å› ä¸“ç²¾æ–‡æœ¬çš„æ•°ç»„  2çš„æ—¶å€™è¿”å›æ‹¼æ¥å¥½çš„ä¸“ç²¾å­—ç¬¦ä¸²ç”¨ï¼Œä¸²è”
 
 function DataManager:zhuanjinText(heroZhuanJing,getType)
 	local zhuanjinArr =  string.split(heroZhuanJing,"|")

@@ -1,4 +1,4 @@
-local BSHttp = class("BSHttp")
+﻿local BSHttp = class("BSHttp")
 BSHttp.xhr = nil
 BSHttp.bsModuleAnaly = require("base.module.BSModuleAnaly"):create()
 

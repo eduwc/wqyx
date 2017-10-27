@@ -1,7 +1,7 @@
-local MLogin = class("MLogin",require "base.module.BaseModule")
+锘縧ocal MLogin = class("MLogin",require "base.module.BaseModule")
 MLogin.moduleName	= "MLogin"
 MLogin.vLogin 		= nil
-MLogin.serverList 	= nil  --服务器列表数据
+MLogin.serverList 	= nil  
 
 
 function MLogin:connectView(node)
@@ -20,7 +20,7 @@ end
 function MLogin:receive(msg,head)
 	if head == "SERVERLIST" then
 		self.serverList = msg["list"]
-		if msg["lastServerID"] >0 then   --上次选择过服务器 默认显示
+		if msg["lastServerID"] >0 then   
 			self.vLogin:showSelected(self.serverList["serversList"][msg["lastServerID"]]["name"],msg["lastServerID"])
 		else
 			self.vLogin:showSelected(self.serverList["serversList"][1]["name"],msg["lastServerID"])

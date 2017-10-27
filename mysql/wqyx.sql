@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2017-10-20 16:59:46
+Date: 2017-10-27 18:20:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,7 +27,7 @@ CREATE TABLE `equip1` (
   `equipNumber` int(6) unsigned DEFAULT NULL,
   `equipStar` smallint(5) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of equip1
@@ -54,7 +54,7 @@ CREATE TABLE `hero1` (
 -- ----------------------------
 -- Records of hero1
 -- ----------------------------
-INSERT INTO `hero1` VALUES ('10', '888888-1', '4003;4002;5003;5002;6003;5006;6003', '1;1;1;1;1;1;1', '1;4;11;0;0;0;0', '1;1;1;0;0;0;0', '2017-10-16 17:56:08');
+INSERT INTO `hero1` VALUES ('10', '888888-1', '4003;4002;5003;5002;6003;5006;6003;4001;6002;5001;6006;6001', '1;1;1;1;1;1;1;1;1;1;1;1', '1;4;11;0;0;0;0;0;0;0;0;0', '1;1;1;0;0;0;0;0;0;0;0;0', '2017-10-27 18:13:00');
 
 -- ----------------------------
 -- Table structure for `heroequip1`
@@ -114,20 +114,22 @@ DROP TABLE IF EXISTS `playerinfo1`;
 CREATE TABLE `playerinfo1` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `playerTag` varchar(255) DEFAULT NULL,
-  `lv` int(11) DEFAULT NULL,
-  `sex` tinyint(4) DEFAULT NULL,
+  `lv` int(11) unsigned DEFAULT NULL,
+  `sex` tinyint(4) unsigned DEFAULT NULL,
   `playerName` char(255) DEFAULT NULL,
   `headTag` tinyint(4) DEFAULT NULL,
-  `diamond` int(11) DEFAULT NULL,
-  `gold` bigint(20) DEFAULT NULL,
+  `diamond` int(11) unsigned DEFAULT NULL,
+  `gold` bigint(20) unsigned DEFAULT NULL,
+  `heroKuoRongNumber` tinyint(6) unsigned DEFAULT NULL,
+  `equipKuoRongNumber` tinyint(6) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of playerinfo1
 -- ----------------------------
-INSERT INTO `playerinfo1` VALUES ('6', '888888-1', '1', '2', 'DG123456', '1', '121512', '137094980');
-INSERT INTO `playerinfo1` VALUES ('7', '888888129-1', '1', '2', 'DG834656', '1', '0', '0');
+INSERT INTO `playerinfo1` VALUES ('6', '888888-1', '1', '2', 'DG123456', '1', '121082', '137094960', '5', '0');
+INSERT INTO `playerinfo1` VALUES ('7', '888888129-1', '1', '2', 'DG834656', '1', '0', '0', '0', '0');
 
 -- ----------------------------
 -- Table structure for `test`

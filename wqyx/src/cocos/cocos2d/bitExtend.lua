@@ -1,4 +1,4 @@
--- bit operation
+﻿-- bit operation
 
 bit = bit or {}
 bit.data32 = {}

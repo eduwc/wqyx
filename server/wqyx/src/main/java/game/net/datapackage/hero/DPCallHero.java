@@ -43,6 +43,10 @@ public class DPCallHero implements DataPackage {
         {
             dpPublic.sendTip(_chc,"钻石不足");
         }
+        else if(isExecuteState == 4)
+        {
+            dpPublic.sendTip(_chc,"请先扩容英雄上限");
+        }
 
 
 

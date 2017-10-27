@@ -1,4 +1,4 @@
-if nil == cc.CCBProxy then
+﻿if nil == cc.CCBProxy then
 	return
 end
 -- This is the DeprecatedCocosBuilderClass

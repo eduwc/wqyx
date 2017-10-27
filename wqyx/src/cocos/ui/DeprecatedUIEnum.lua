@@ -1,4 +1,4 @@
-if nil == ccui then
+﻿if nil == ccui then
     return
 end
 

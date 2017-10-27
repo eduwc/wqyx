@@ -9,15 +9,16 @@ import java.util.List;
  * Created by Administrator on 2017/9/22 0022.
  */
 public class ETHeroView extends BaseEntity {
+    public  List heroList = null;
     public String searchcalled(String playerTag,String serverID)
     {
         String tbPlayerInfo = "hero"+serverID;
         String sql = "SELECT *FROM "+tbPlayerInfo+" WHERE playerTag="+"'"+playerTag+"'";
-        List ls = search(sql);
+        heroList = search(sql);
         String recruited = "";
-        if(!ls.isEmpty())
+        if(!heroList.isEmpty())
         {
-            recruited = (String) ((HashMap)ls.get(0)).get("recruited");
+            recruited = (String) ((HashMap)heroList.get(0)).get("recruited");
         }
 
 

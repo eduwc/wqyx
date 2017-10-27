@@ -1,4 +1,4 @@
-
+﻿
 cc.FileUtils:getInstance():setPopupNotify(false)
 
 require "config"

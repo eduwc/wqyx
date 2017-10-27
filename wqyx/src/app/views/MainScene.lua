@@ -1,4 +1,4 @@
-local MainScene = class("MainScene", cc.load("mvc").ViewBase)
+﻿local MainScene = class("MainScene", cc.load("mvc").ViewBase)
 
 
 

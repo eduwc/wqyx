@@ -1,4 +1,4 @@
-local Testlua2  = class("Testlua2")
+﻿local Testlua2  = class("Testlua2")
 Testlua2.testlua1 = nil
 
 

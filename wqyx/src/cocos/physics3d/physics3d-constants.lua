@@ -1,4 +1,4 @@
-if nil == cc.Physics3DComponent then
+﻿if nil == cc.Physics3DComponent then
     return
 end
 

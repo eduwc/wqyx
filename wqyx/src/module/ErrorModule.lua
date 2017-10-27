@@ -1,4 +1,4 @@
-local ErrorModule = class("ErrorModule")
+﻿local ErrorModule = class("ErrorModule")
 
 
 function ErrorModule:receiveData(head,jsondata)	

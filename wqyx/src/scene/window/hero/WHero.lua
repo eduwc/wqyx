@@ -1,4 +1,4 @@
-local WHero = class("WHero",require "base.view.BaseNode")
+﻿local WHero = class("WHero",require "base.view.BaseNode")
 WHero.nodeName				= "WHero"
 WHero.mhero					= nil
 WHero.sv_callHero			= nil
@@ -10,6 +10,9 @@ WHero.wAodingDao 			= nil
 WHero.bt_aodingdao			= nil
 WHero.bt_callHero			= nil
 WHero.bt_myHero				= nil
+WHero.heroKuoRong 			= nil
+WHero.tt_totalHero 			= nil
+WHero.tt_nowHero  			= nil
 
 -- --必须要实现
 function WHero:init(node,nodeName)
@@ -24,6 +27,7 @@ function WHero:ctor()
 	--可不调用，最好调用
 	self.mhero  = require ("module.hero.MHero"):create()
 	self.mhero:connectView(self)
+
 
 
 	--初始化奥丁岛界面	
@@ -72,6 +76,18 @@ function WHero:ctor()
 		       self:removeFromParent()
 	        end
 	    end)
+
+	local bt_heroKuoRong = G_ToolsManager:seekChildByName(self.callHeroWindow,"bt_heroKuoRong")
+	bt_heroKuoRong:addTouchEventListener(function(sender, state)
+	        if state == 2 then
+		       self:showKuoRongView()
+	        end
+	end)
+
+
+	self.tt_nowHero = G_ToolsManager:seekChildByName(self.callHeroWindow,"tt_nowHero")
+	self.tt_totalHero = G_ToolsManager:seekChildByName(self.callHeroWindow,"tt_totalHero")
+
 
 end
 
@@ -200,6 +216,10 @@ function WHero:showItem(uncallList,callList)
 		index = index+1
 	end
 
+
+	self.tt_totalHero:setString(self.mhero:getMaxHeroNumber())
+	self.tt_nowHero:setString(self.mhero:getNowHeroNumber())
+
 end
 
 
@@ -213,6 +233,8 @@ function WHero:updateCallState(state)
 
 		local ig_called = G_ToolsManager:seekChildByName(uncallItem,"ig_called")
 		ig_called:setVisible(true)	
+
+		self.tt_nowHero:setString(self.mhero:getNowHeroNumber())
 	end
 end
 
@@ -273,6 +295,17 @@ function WHero:changePage(pageID)
 	    self.wAodingDao:setVisible(true)		
 
 	end
+end
+
+function WHero:showKuoRongView()
+	self.heroKuoRong = require("scene.window.hero.HeroKuoRong"):create(tonumber(G_ModulePublic:getHeroKuoRongNumber()))
+	self:addChild(self.heroKuoRong,100) 
+end
+
+function WHero:updateHeroKuoRong()
+	self.tt_totalHero:setString(self.mhero:getMaxHeroNumber())
+
+	self.heroKuoRong:updateKuoRong()
 end
 
 

@@ -19,10 +19,11 @@ public class GHeadVar {
 
     //**********************英雄**************************//
     public static String SC_OPEN_HERO = "SC_OPEN_HERO";  //打开英雄界面
-    public static String SC_UPDATE_CALLHERO     = "SC_UPDATE_CALLHERO";     //召唤英雄
-    public static String SC_UPDATE_QIANGHUA     = "SC_UPDATE_QIANGHUA";     //强化英雄
-    public static String SC_UPDATE_JINJIE       = "SC_UPDATE_JINJIE";         //进阶英雄
-    public static String SC_UPDATE_AODINGDAO    = "SC_UPDATE_AODINGDAO";   //奥丁岛
+    public static String SC_UPDATE_CALLHERO         = "SC_UPDATE_CALLHERO";     //召唤英雄
+    public static String SC_UPDATE_QIANGHUA         = "SC_UPDATE_QIANGHUA";     //强化英雄
+    public static String SC_UPDATE_JINJIE           = "SC_UPDATE_JINJIE";       //进阶英雄
+    public static String SC_UPDATE_AODINGDAO        = "SC_UPDATE_AODINGDAO";    //奥丁岛
+    public static String SC_UPDATE_HEROKUORONG      = "SC_UPDATE_HEROKUORONG";  //英雄扩容
 
     //**********************道具**************************//
     public static String SC_OPEN_ITEM = "SC_OPEN_ITEM";  //打开道具界面

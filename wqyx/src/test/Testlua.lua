@@ -1,4 +1,4 @@
-
+﻿
 local Testlua  = class("Testlua",cc.load("mvc").AppBase)
 
 

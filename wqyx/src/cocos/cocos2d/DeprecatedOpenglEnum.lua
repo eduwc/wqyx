@@ -1,4 +1,4 @@
--- This is the DeprecatedEnum
+﻿-- This is the DeprecatedEnum
 
 DeprecatedClass = {} or DeprecatedClass
 

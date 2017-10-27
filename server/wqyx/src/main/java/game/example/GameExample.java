@@ -3,6 +3,7 @@ package game.example;
 import base.file.configuration.ConfigurationManager;
 import base.mysql.connectionpool.C3p0PoolManager;
 import game.mysql.entity.ETPublic;
+import game.mysql.entity.hero.ETHeroHuoRong;
 
 
 import java.io.IOException;
@@ -19,91 +20,15 @@ public class GameExample {
 
     public GameExample()
     {
-
-
-
-        ETPublic etPublic = new ETPublic();
-     //   etPublic.getItemUntimeNumber("1","888888-1","102");
-        etPublic.reduceItemUntime("1","888888-1","102",2);
-
-
+       /* ETHeroHuoRong ETHeroHuoRong2 = new ETHeroHuoRong();
+        ETHeroHuoRong2.heroKuoRong("888888-1","1");*/
 
       /*  ETPublic etPublic = new ETPublic();
-        etPublic.reduceGold("playerinfo1","888888-1",100);*/
+        int xx = etPublic.getHeroNumber("888888-1","1");
+        int xx2 = xx;*/
 
-
- /*       String tableName = "hero1";
-        String field = "recruited";
-        String value = "37475";
-        String condition = "playerTag";
-        String conditionValue = "888888-1";
-        Connection cc =  C3p0PoolManager.getInstance().getConnection();
-        try {
-            Statement stmt =  cc.createStatement();
-     *//*       String sql = "UPDATE "+tableName+" SET "+field+"="+
-                    "'"+value+"'"+" WHERE "+condition+"="+"'"+conditionValue+"'";*//*
-            String pp = "gold"+"+"+50;
-           // String sql = "UPDATE  playerinfo1 SET gold ="+pp+" where playerTag='888888-1'";
-            String sql = "UPDATE "+"hero1"+" SET "+"recruited="+
-                    "'4003;4004'"+" WHERE playerTag='888888-1'";
-            stmt.executeUpdate(sql);
-
-            stmt.close();
-            cc.close();
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }*/
-
-/* *//*       String sql = "SELECT *FROM "+"hero1"+" WHERE playerTag="+"'"+"888888-1"+"'";
-        Connection cc =  C3p0PoolManager.getInstance().getConnection();
-        try {
-            Statement stmt =  cc.createStatement();
-            ResultSet resultSet = stmt.executeQuery(sql);
-            java.sql.ResultSetMetaData rsmd = resultSet.getMetaData();
-            int numberOfColumns = rsmd.getColumnCount();
-            List list = new ArrayList();
-            while(resultSet.next()){
-
-                Map rsTree = new HashMap(numberOfColumns);
-                for(int r=1;r<numberOfColumns+1;r++)
-                {
-                    rsTree.put(rsmd.getColumnName(r),resultSet.getObject(r));
-                }
-                list.add(rsTree);
-            }
-            resultSet.close();
-            stmt.close();
-            cc.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }*/
-
-
-  /*      ETHeroView etHeroView = new ETHeroView();
-        etHeroView.searchUncalled("888888-1","1");*/
-
-
-      /*  //初始化 csv表
-        CsvManager.getInstance().loadCsv("res\\csv\\res.csv","res");
-        HashMap sp = CsvManager.getInstance().getCsvMap("res");
-        String s = (String) ((HashMap)(CsvManager.getInstance().getCsvMap("res").get("5"))).get("img1_id");*/
-
-
-/*        Integer a = 1;
-        long start = 0;
-        long end = 0;
-        // 先垃圾回收
-        System.gc();
-        start = Runtime.getRuntime().freeMemory();
-        HashMap map = new HashMap();
-        for (int i = 0; i < 1000000; i++) {
-            map.put(i, a);
-        }
-        // 快要计算的时,再清理一次
-        System.gc();
-        end = Runtime.getRuntime().freeMemory();
-        System.out.println("一个HashMap对象占内存:" + (end - start));*/
+    /*   int xx =  etPublic.getMaxKuoRongNumber("888888-1","1","4");
+        int xx2 = xx;*/
 
     }
 

@@ -1,4 +1,4 @@
-local TipModule = class("TipModule")
+﻿local TipModule = class("TipModule")
 
 function TipModule:receiveData(head,jsondata)	
 	if head == "FLOAT" then

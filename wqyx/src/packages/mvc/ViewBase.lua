@@ -1,4 +1,4 @@
-
+﻿
 local ViewBase = class("ViewBase", cc.Node)
 
 function ViewBase:ctor(app, name)

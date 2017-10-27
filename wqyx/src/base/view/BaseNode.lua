@@ -1,4 +1,4 @@
-local BaseNode = class("BaseNode",cc.Node)
+﻿local BaseNode = class("BaseNode",cc.Node)
 BaseNode.nodeName = nil
 
 

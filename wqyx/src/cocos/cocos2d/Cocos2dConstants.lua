@@ -1,4 +1,4 @@
-
+﻿
 cc = cc or {}
 
 cc.SPRITE_INDEX_NOT_INITIALIZED = 0xffffffff

@@ -1,4 +1,4 @@
-local BSWebsocket = class("BSWebsocket")
+﻿local BSWebsocket = class("BSWebsocket")
 local wsSendText = nil
 local bsModuleAnaly = require("base.module.BSModuleAnaly"):create()
 local isConnect = false

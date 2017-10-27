@@ -1,4 +1,4 @@
-
+﻿
 function schedule(node, callback, delay)
     local delay = cc.DelayTime:create(delay)
     local sequence = cc.Sequence:create(delay, cc.CallFunc:create(callback))

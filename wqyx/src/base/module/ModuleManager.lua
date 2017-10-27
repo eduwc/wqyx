@@ -1,4 +1,4 @@
-local ModuleManager  = class("ModuleManager")
+﻿local ModuleManager  = class("ModuleManager")
 ModuleManager.moduleTable 		= {}
 ModuleManager.instance 			= nil
 

@@ -1,4 +1,4 @@
-local HttpManager = class("HttpManager",require ("base.net.http.BSHttp"))
+﻿local HttpManager = class("HttpManager",require ("base.net.http.BSHttp"))
 HttpManager.instance = nil
 
 function HttpManager:getInstance()

@@ -1,4 +1,4 @@
-
+﻿
 local luaoc = {}
 
 local callStaticMethod = LuaObjcBridge.callStaticMethod

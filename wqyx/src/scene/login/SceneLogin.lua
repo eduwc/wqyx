@@ -1,4 +1,4 @@
------------------***********登录界面********************----------------------
+﻿-----------------***********登录界面********************----------------------
 local SceneLogin 				= class("SceneLogin",require "base.view.BSScene")
 SceneLogin.nodeName				= "SceneLogin"
 SceneLogin.isRegist 			= false

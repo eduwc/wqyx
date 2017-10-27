@@ -1,4 +1,4 @@
-local OpenModule = class("OpenModule")
+﻿local OpenModule = class("OpenModule")
 
 
 function OpenModule:receiveData(head,jsondata)	

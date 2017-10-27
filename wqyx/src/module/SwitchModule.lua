@@ -1,4 +1,4 @@
-local SwitchModule = class("SwitchModule")
+﻿local SwitchModule = class("SwitchModule")
 
 
 function SwitchModule:receiveData(head,jsondata)	

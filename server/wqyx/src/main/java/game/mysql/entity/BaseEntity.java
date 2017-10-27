@@ -155,6 +155,8 @@ public class BaseEntity {
 
 
     //只适用于更新一个字段的时候
+    //valueType 1是插入 字符串类型的value 2是插入int类型的value
+
     public boolean update(String tableName ,String field ,String value,String valueType,String condition,String conditionValue)
     {
         boolean isExecuteSucceed = false;

@@ -1,4 +1,4 @@
-if nil == cc.Terrain then
+﻿if nil == cc.Terrain then
     return
 end
 

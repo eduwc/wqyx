@@ -1,4 +1,4 @@
-local CsvManager = class("CsvManager")
+﻿local CsvManager = class("CsvManager")
 CsvManager.instance 			= nil
 CsvManager.hero 				= nil
 CsvManager.prop 				= nil
@@ -84,7 +84,13 @@ end
 
 
 --*****************扩容**********************
---kuoRongType 1.装备扩容
+--kuoRongType 扩容类型
+--1-资源仓库数量
+--2-资源各资源上限
+--3-道具装备数量
+--4-英雄数量
+--10-锻造栏
+--11-冒险队列
 function CsvManager:getKuoRong(kuoRongType)
 	local kuoRongArr = {}
 	for k,v in pairs(self.dilatation_up) do
@@ -96,9 +102,7 @@ function CsvManager:getKuoRong(kuoRongType)
 	--从小到大排序
 	local function kuoRongsort(a,b)
 		local kuoRongValue = nil
-		if kuoRongType == "1" then
-			kuoRongValue = tonumber(a["dilatation_up_level"])<tonumber(b["dilatation_up_level"])
-		end		
+		kuoRongValue = tonumber(a["dilatation_up_level"])<tonumber(b["dilatation_up_level"])	
 		return kuoRongValue
 	end
 

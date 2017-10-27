@@ -1,4 +1,4 @@
-InitBase = {}
+﻿InitBase = {}
 
 
 function InitBase:init()

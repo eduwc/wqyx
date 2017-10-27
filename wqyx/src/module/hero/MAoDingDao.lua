@@ -1,4 +1,4 @@
-local MAoDingDao = class("MAoDingDao",require "base.module.BaseModule")
+﻿local MAoDingDao = class("MAoDingDao",require "base.module.BaseModule")
 MAoDingDao.moduleName			= "MAoDingDao"
 MAoDingDao.wAoDingDao 			= nil
 MAoDingDao.hero_friendshipCsv 	= nil

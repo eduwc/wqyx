@@ -1,4 +1,4 @@
-
+﻿
 local luaj = {}
 
 local callJavaStaticMethod = LuaJavaBridge.callStaticMethod

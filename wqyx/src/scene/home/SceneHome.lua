@@ -1,4 +1,4 @@
-local SceneHome = class("SceneHome",require "base.view.BSScene")
+﻿local SceneHome = class("SceneHome",require "base.view.BSScene")
 SceneHome.nodeName				= "SceneHome"
 SceneHome.mHome					= nil
 SceneHome.sceneHome 			= nil

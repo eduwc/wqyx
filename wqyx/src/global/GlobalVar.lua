@@ -1,4 +1,4 @@
-require "global.TransferVar"
+﻿require "global.TransferVar"
 --***********网络*****************--
 
 --websocket管理类
@@ -7,7 +7,7 @@ G_WebSocketManager = require ("net.websocket.WebSocketManager"):create()
 G_HttpManager	   = require ("net.http.HttpManager"):getInstance()
 G_CsvManager	   = require ("data.csv.CsvManager"):getInstance()
 G_DataManager	   = require ("data.DataManager"):getInstance()
-
+G_ModulePublic	   = require ("module.public.MPublic"):getInstance()
 
 
 
@@ -34,8 +34,9 @@ G_ZHUANJING["17"] = "时装"
 
 
 --****************内部通信消息*******************----
-REQUESTHERO = "in_requestHero"
-RESPONDHERO = "in_respondHero"
+REQUESTHERO 	= "in_requestHero"
+RESPONDHERO 	= "in_respondHero"
+IN_PlAYERINFO   = "in_playerInfo"
 
 
 

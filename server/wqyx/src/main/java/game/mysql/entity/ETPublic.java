@@ -1,7 +1,9 @@
 package game.mysql.entity;
 
+import base.tools.csv.CsvManager;
 import game.mysql.entity.BaseEntity;
 
+import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,12 +15,12 @@ public class ETPublic extends BaseEntity {
 
     //**************************金币***************************//
     //获取玩家金币数
-    public long getGold(String serverID,String playerTag)
+    public BigInteger getGold(String serverID,String playerTag)
     {
         String tbPlayerInfo = "playerInfo"+serverID;
         Map playerMap = searchLine("SELECT *FROM "+tbPlayerInfo+" WHERE playerTag="+"'"+playerTag+"'");
-        Integer diamond = (Integer) playerMap.get("diamond");
-        Long gold = (Long) playerMap.get("gold");
+        Long diamond = (Long) playerMap.get("diamond");
+        BigInteger gold = (BigInteger) playerMap.get("gold");
         return  gold;
     }
 
@@ -41,8 +43,8 @@ public class ETPublic extends BaseEntity {
     //查询金币是否足够
     public boolean goldIsSatisfy(String serverID,String playerTag,int needGold)
     {
-        long gold = getGold(serverID,playerTag);
-        if(gold>=needGold)
+        BigInteger gold = getGold(serverID,playerTag);
+        if(gold.compareTo(BigInteger.valueOf(needGold))>=0)
         {
             return true;
         }
@@ -55,11 +57,11 @@ public class ETPublic extends BaseEntity {
     //**************************钻石***************************//
 
     //获取玩家钻石数目
-    public int getDiamond(String serverID,String playerTag)
+    public Long getDiamond(String serverID,String playerTag)
     {
         String tbPlayerInfo = "playerInfo"+serverID;
         Map playerMap = searchLine("SELECT *FROM "+tbPlayerInfo+" WHERE playerTag="+"'"+playerTag+"'");
-        Integer diamond = (Integer) playerMap.get("diamond");
+        Long diamond = (Long) playerMap.get("diamond");
         return  diamond;
     }
 
@@ -137,6 +139,24 @@ public class ETPublic extends BaseEntity {
         return index;
     }
 
+    //获取玩家的英雄数目
+    public int getHeroNumber(String playerTag,String serverID)
+    {
+        List heroInfoList =  getHeroInfo(serverID,playerTag);
+        String recruitedStr = (String) ((HashMap)heroInfoList.get(0)).get("recruited");
+        String[] recruitedArr = recruitedStr.split(";");
+        return  recruitedArr.length;
+    }
+
+   // 获取玩家的英雄数目(用于已经查询到list的时候，防止多次查询数据库)
+    public int getHeroNumberByList(List heroInfoList)
+    {
+        String recruitedStr = (String) ((HashMap)heroInfoList.get(0)).get("recruited");
+        String[] recruitedArr = recruitedStr.split(";");
+        return  recruitedArr.length;
+    }
+
+
 
     public int getQiangHuaLv(List heroList,String heroID)
     {
@@ -181,5 +201,108 @@ public class ETPublic extends BaseEntity {
         String updataSql = "UPDATE "+tableName+" SET itemNumber=itemNumber-"+reduceNumber+" WHERE playerTag="+"'"+playerTag+"'"+" AND "
                 +"itemID="+"'"+itemID+"'";
         update(updataSql);
+    }
+
+    //***********************扩容***************************//
+    //扩容类型
+    // 1-资源仓库数量 // 2-资源各资源上限  // 3-道具装备数量
+    // 4-英雄数量  // 10-锻造栏 //  11-冒险队列
+    public int getKuoRongLv(String playerTag,String serverID,String kuoRongType)
+    {
+        String tbPlayerInfo = "playerInfo"+serverID;
+        Map playerMap = searchLine("SELECT *FROM "+tbPlayerInfo+" WHERE playerTag="+"'"+playerTag+"'");
+
+        Integer kuoRongLv = 0;
+        if(kuoRongType.equals("1"))
+        {
+
+        }
+        else if(kuoRongType.equals("2"))
+        {
+
+        }
+        else if(kuoRongType.equals("3"))
+        {
+
+        }
+        else if(kuoRongType.equals("4"))
+        {
+            kuoRongLv = (Integer) playerMap.get("heroKuoRongNumber");
+        }
+        else if(kuoRongType.equals("10"))
+        {
+
+        }
+        else if(kuoRongType.equals("11"))
+        {
+
+        }
+
+        return  kuoRongLv;
+    }
+
+    public void KuoRong(String playerTag,String serverID,int kuoRongAddLv,String kuoRongType)
+    {
+        String tableName = "playerInfo"+serverID;
+        String addSql = "";
+        String fieldName = "";
+        if(kuoRongType.equals("1"))
+        {
+        }
+        else if(kuoRongType.equals("2"))
+        {
+
+        }
+        else if(kuoRongType.equals("2"))
+        {
+
+        }
+        else if(kuoRongType.equals("3"))
+        {
+
+        }
+        else if(kuoRongType.equals("4"))
+        {
+            fieldName = "heroKuoRongNumber";
+        }
+        else if(kuoRongType.equals("10"))
+        {
+
+        }
+        else if(kuoRongType.equals("11"))
+        {
+
+        }
+        addSql = fieldName+"+"+kuoRongAddLv;
+        update(tableName,fieldName,addSql,"2","playerTag",playerTag);
+    }
+
+
+
+    //***********************玩家数据***************************//
+    public Map getPlayerInfo(String playerTag,String serverID)
+    {
+        String tbPlayerInfo = "playerInfo"+serverID;
+        return  searchLine("SELECT *FROM "+tbPlayerInfo+" WHERE playerTag="+"'"+playerTag+"'");
+    }
+
+
+    public Long getMaxKuoRongNumber(String playerTag,String serverID,String kuoRongType)
+    {
+        Map playerInfo = getPlayerInfo(playerTag,serverID);
+        Long playerLv = (Long)playerInfo.get("lv");
+        Integer kuoRongNumber = (Integer)playerInfo.get("heroKuoRongNumber");
+
+        Long playerLvNumber = (Long) (playerLv/3);
+
+        Integer kuoRongValue = 0;  //通过扩容获得的数量
+        //i=1 是因为扩容等级是从1开始算，0的话表里面是空的
+        for (Integer i = 1; i <= kuoRongNumber; i++) {
+            HashMap kuoRongInfo = CsvManager.getInstance().getKuoRongInfo(i.toString(),kuoRongType);
+            kuoRongValue += Integer.parseInt((String) kuoRongInfo.get("dilatation_up_num"));
+        }
+
+        //5是默认值
+        return playerLvNumber+kuoRongValue+5;
     }
 }

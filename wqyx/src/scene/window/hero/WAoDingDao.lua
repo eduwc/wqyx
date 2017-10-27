@@ -1,4 +1,4 @@
-local WAoDingDao = class("WAoDingDao",require "base.view.BaseNode")
+锘縧ocal WAoDingDao = class("WAoDingDao",require "base.view.BaseNode")
 WAoDingDao.nodeName				= "WAoDingDao"
 WAoDingDao.mAoDingDao 			= nil
 WAoDingDao.aoDingDaoWindow 		= nil
@@ -7,17 +7,16 @@ WAoDingDao.pl_jieJiaoShow		= nil
 
 
 
--- --必须要实现
 function WAoDingDao:init(node,nodeName)
 	WAoDingDao.super:init(node,nodeName)
 end
 
 function WAoDingDao:ctor()
-	--必须要调用
+
 	self:init(self,self.nodeName)
 	WAoDingDao.super:ctor()
 
-	-- --可不调用，最好调用
+
 	self.mAoDingDao  = require ("module.hero.MAoDingDao"):create()
 	self.mAoDingDao:connectView(self)
 
@@ -46,7 +45,7 @@ function WAoDingDao:ctor()
 	        if state == 2 then
 				local jsMsg = {}
 	            jsMsg["head"] = CS_DPAoDingDao
-	            jsMsg["jieJiaoType"] = "4"    --1.走访 2.钻石结交 3.十连钻石结交 4.重置
+	            jsMsg["jieJiaoType"] = "4"    --1.璧拌 2.閽荤煶缁撲氦  3.鍗佽繛閽荤煶缁撲氦 4.閲嶇疆
              	G_WebSocketManager:sendMessage(jsMsg)
 	        end
 	end)
@@ -57,7 +56,7 @@ function WAoDingDao:ctor()
 	        if state == 2 then
 				local jsMsg = {}
 	            jsMsg["head"] = CS_DPAoDingDao
-	            jsMsg["jieJiaoType"] = "1"    --1.走访 2.钻石结交 3.十连钻石结交
+	            jsMsg["jieJiaoType"] = "1"   --1.璧拌 2.閽荤煶缁撲氦  3.鍗佽繛閽荤煶缁撲氦 4.閲嶇疆
              	G_WebSocketManager:sendMessage(jsMsg)
 	        end
 	end)
@@ -68,7 +67,7 @@ function WAoDingDao:ctor()
 	        if state == 2 then
 				local jsMsg = {}
 	            jsMsg["head"] = CS_DPAoDingDao
-	            jsMsg["jieJiaoType"] = "2"    --1.走访 2.钻石结交  3.十连钻石结交
+	            jsMsg["jieJiaoType"] = "2"    --1.璧拌 2.閽荤煶缁撲氦  3.鍗佽繛閽荤煶缁撲氦 4.閲嶇疆
              	G_WebSocketManager:sendMessage(jsMsg)
 	        end
 	end)
@@ -79,7 +78,7 @@ function WAoDingDao:ctor()
 	        if state == 2 then
 				local jsMsg = {}
 	            jsMsg["head"] = CS_DPAoDingDao
-	            jsMsg["jieJiaoType"] = "3"    --1.走访 2.钻石结交 3.十连钻石结交
+	            jsMsg["jieJiaoType"] = "3"    --1.璧拌 2.閽荤煶缁撲氦  3.鍗佽繛閽荤煶缁撲氦 4.閲嶇疆
              	G_WebSocketManager:sendMessage(jsMsg)
 	        end
 	end)

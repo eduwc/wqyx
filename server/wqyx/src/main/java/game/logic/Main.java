@@ -21,8 +21,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        //示例
-       // GameExample ge = new GameExample();
+
 
         //  ge.how_to_configFile();
 
@@ -35,7 +34,8 @@ public class Main {
             DataManager dataManager = new DataManager();
             dataManager.initCsvData();
 
-
+            //示例
+            GameExample ge = new GameExample();
 
             new WebSocketManager(9635).run();
 
@@ -45,6 +45,8 @@ public class Main {
         {
 
         }
+
+
 
     }
 }
