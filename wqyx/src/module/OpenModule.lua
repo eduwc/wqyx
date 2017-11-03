@@ -9,6 +9,9 @@ function OpenModule:receiveData(head,jsondata)
 	elseif head == "ITEM" then
 		runGameScene:addToWindow(require("scene.window.item.WItem"):create())		
 		G_ModuleManager:notify(jsondata,"MItem",head)
+	elseif head == "MAOXIAN" then
+		runGameScene:addToWindow(require("scene.window.maoXian.WMaoXianDuiLie"):create())		
+		G_ModuleManager:notify(jsondata,"MMaoXian",head)
 	end
 end
 

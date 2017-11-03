@@ -288,6 +288,57 @@
             <Image Name="zhuangbeifenleidi.png" />
             <Image Name="zhuyi5.png" />
           </Folder>
+          <Folder Name="maoXian">
+            <Image Name="dengji4.png" />
+            <Image Name="duilie3.png" />
+            <Image Name="duilie4.png" />
+            <Image Name="jiandan1.png" />
+            <Image Name="kaishimaoxian.png" />
+            <Image Name="kunnan1.png" />
+            <Image Name="maoxian3.png" />
+            <Image Name="maoxian4.png" />
+            <Image Name="maoxiandengji.png" />
+            <Image Name="maoxiandi.png" />
+            <Image Name="maoxiankuang.png" />
+            <Image Name="qianghuakuang1.png" />
+            <Image Name="yiban1.png" />
+            <Image Name="zhongshang.png" />
+            <Image Name="tianjia3.png" />
+          </Folder>
+          <Folder Name="csb_maoXian">
+            <Project Name="MaoXianEmpty.csd" Type="Node" />
+            <Project Name="MaoXianItem.csd" Type="Node" />
+            <Project Name="MaoXianHeroItem.csd" Type="Node" />
+            <Project Name="MaoXianLingJiang.csd" Type="Layer" />
+            <Project Name="MaoXianDuiLie.csd" Type="Layer" />
+            <Project Name="MaoXianView.csd" Type="Layer" />
+            <Project Name="MaoXianHeroList.csd" Type="Layer" />
+            <Project Name="MaoXianHeroListItem.csd" Type="Layer" />
+          </Folder>
+          <Folder Name="duanZao">
+            <Image Name="duanzao1.png" />
+            <Image Name="duanzao2.png" />
+            <Image Name="duanzao7.png" />
+            <Image Name="duanzaotisheng.png" />
+            <Image Name="quxiao7.png" />
+            <Image Name="shiyong7.png" />
+            <Image Name="tisheng.png" />
+            <Image Name="wancheng7.png" />
+            <Image Name="yilan1.png" />
+            <Image Name="yilan2.png" />
+          </Folder>
+        </Folder>
+        <Folder Name="duanZao">
+          <Image Name="duanzao1.png" />
+          <Image Name="duanzao2.png" />
+          <Image Name="duanzao7.png" />
+          <Image Name="duanzaotisheng.png" />
+          <Image Name="quxiao7.png" />
+          <Image Name="shiyong7.png" />
+          <Image Name="tisheng.png" />
+          <Image Name="wancheng7.png" />
+          <Image Name="yilan1.png" />
+          <Image Name="yilan2.png" />
         </Folder>
       </RootFolder>
     </Group>

@@ -29,4 +29,8 @@ public class GHeadVar {
     public static String SC_OPEN_ITEM = "SC_OPEN_ITEM";  //打开道具界面
 
 
+    //*********************冒险******************************//
+    public static String SC_OPEN_MAOXIAN = "SC_OPEN_MAOXIAN";  //打开冒险界面
+
+
 }

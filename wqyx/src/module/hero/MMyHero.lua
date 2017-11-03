@@ -2,6 +2,7 @@
 MMyHero.moduleName			= "MMyHero"
 MMyHero.propCsv 			= nil
 MMyHero.vMyHero 			= nil
+MMyHero.heroServerInfo 		= nil
 
 
 function MMyHero:connectView(node)
@@ -20,6 +21,7 @@ end
 
 function MMyHero:receive(msg,head)
 	if head == RESPONDHERO then
+		self.heroServerInfo = msg["heroServerInfo"]
 		self.vMyHero:initHeroList(msg["calledHero"])
 	elseif head == "QIANGHUA" then
 		self.vMyHero.qiangHuaView:updateQiangHuaInfo()
@@ -114,6 +116,22 @@ function MMyHero:getJinJieGold(jinjieLV,callLv)
 	return 100*jinjieLV*jinjieLV*callLv*callLv
 end
 
+
+function MMyHero:getJinJieInfo(heroID)
+	return self.heroServerInfo[heroID]["jinjieLv"]
+end
+
+function MMyHero:getQiangHuaInfo(heroID)
+	return self.heroServerInfo[heroID]["qiangHuaLv"]
+end
+
+function MMyHero:getExpInfo(heroID)
+	return self.heroServerInfo[heroID]["exp"]
+end
+
+function MMyHero:getLvInfo(heroID)
+	return self.heroServerInfo[heroID]["lv"]
+end
 
 
 return MMyHero

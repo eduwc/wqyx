@@ -45,6 +45,17 @@ function SceneHome:ctor()
 	        end
 	end)
 
+	--冒险
+	local bt_adventure = G_ToolsManager:seekChildByName(self.sceneHome,"bt_adventure")
+	bt_adventure:addTouchEventListener(function(sender, state)
+	        if state == 2 then
+	        	--请求打开道具窗口
+	        	local jsMsg = {}
+	            jsMsg["head"] = CS_DPMaoXianDuiLie
+             	G_WebSocketManager:sendMessage(jsMsg)
+	        end
+	end)
+
 	
 
 

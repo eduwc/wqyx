@@ -2,8 +2,8 @@ package game.example;
 
 import base.file.configuration.ConfigurationManager;
 import base.mysql.connectionpool.C3p0PoolManager;
-import game.mysql.entity.ETPublic;
-import game.mysql.entity.hero.ETHeroHuoRong;
+import base.tools.time.TimeManager;
+import game.timer.TimingManager;
 
 
 import java.io.IOException;
@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Created by Administrator on 2017/8/29 0029.
@@ -29,6 +30,55 @@ public class GameExample {
 
     /*   int xx =  etPublic.getMaxKuoRongNumber("888888-1","1","4");
         int xx2 = xx;*/
+        final  TimingManager timeManager = new TimingManager("1");
+
+
+
+             final ConcurrentHashMap map = new ConcurrentHashMap();
+
+        map.put("1",1000);
+        map.put("2",1000);
+        map.put("3",1000);
+
+
+
+        TimerTask task = new TimerTask() {
+            Iterator iter = map.entrySet().iterator();
+            @Override
+            public void run() {
+                while (iter.hasNext()) {
+                    Map.Entry entry = (Map.Entry) iter.next();
+
+                    System.out.println("内容是"+entry.setValue((Integer)entry.getValue()-1) );
+                }
+                iter = map.entrySet().iterator();
+            }
+        };
+        Timer timer = new Timer();
+        long delay = 0;
+        long intevalPeriod = 1 * 1000;
+        // schedules the task to be run in an interval
+     //   timer.scheduleAtFixedRate(task, delay, intevalPeriod);
+
+
+        TimerTask task2 = new TimerTask() {
+            @Override
+            public void run() {
+                timeManager.deleteXiuYangItem("888888-1","1","4002");
+              /*  try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }*/
+            }
+        };
+        Timer timer2 = new Timer();
+        long delay2 = 5000;
+        long intevalPeriod2 = 5 * 1000;
+        // schedules the task to be run in an interval
+        timer2.scheduleAtFixedRate(task2, delay2, intevalPeriod2);
+
+
 
     }
 

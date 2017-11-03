@@ -8,6 +8,7 @@ G_HttpManager	   = require ("net.http.HttpManager"):getInstance()
 G_CsvManager	   = require ("data.csv.CsvManager"):getInstance()
 G_DataManager	   = require ("data.DataManager"):getInstance()
 G_ModulePublic	   = require ("module.public.MPublic"):getInstance()
+G_GameToolsManager = require ("tools.GameToolsManager"):getInstance()					
 
 
 

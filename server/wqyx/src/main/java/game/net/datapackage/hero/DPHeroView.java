@@ -31,6 +31,10 @@ public class DPHeroView implements DataPackage {
         jb.put("calledInfo",called);
         jb.put("heroMaxKuoRong",etPublic.getMaxKuoRongNumber(playerTag,serverID, GPublicVar.KUORONG_HERO));
         jb.put("nowHeroNumber",etPublic.getHeroNumberByList(etHeroView.heroList));
+        jb.put("qiangHuaLv",etHeroView.getQiangHuaLv());
+        jb.put("jinjieLv",etHeroView.getJinJieLv());
+        jb.put("exp",etHeroView.getExp());
+        jb.put("lv",etHeroView.getLv());
 
 
         _chc.writeAndFlush(new TextWebSocketFrame(jb.toString()));

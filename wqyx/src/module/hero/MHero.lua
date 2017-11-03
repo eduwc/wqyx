@@ -1,12 +1,15 @@
 ﻿local MHero = class("MHero",require "base.module.BaseModule")
 MHero.moduleName			= "MHero"
 MHero.vHero 				= nil
-MHero.uncalledHeroInfo		= {}
-MHero.uncalledHeroID		= {}
+MHero.uncalledHeroInfo		= {}   --hero csv数据
+MHero.uncalledHeroID		= {}	
 MHero.calledHeroInfo		= {}
 MHero.calledHeroID			= {}
 MHero.maxKuoRong 			= nil  --目前最大的扩容数量
 MHero.nowHeroNumber   		= 0    --当前所拥有的英雄数目
+MHero.qiangHuaInfo          = nil
+MHero.jinJieInfo            = nil
+MHero.heroServerInfo        = {}   --hero存储在服务端的数据
 
 function MHero:connectView(node)
 	self.vHero = node
@@ -27,6 +30,16 @@ function MHero:receive(msg,head)
 	   local calledHeroIDArr = string.split(msg["calledInfo"],";")
 	   self:setMaxHeroNumber(msg["heroMaxKuoRong"])
 	   self:setNowHeroNumber(msg["nowHeroNumber"])
+	   self:setQiangHuaInfo(string.split(msg["qiangHuaLv"],";"))
+	   self:setJinJieInfo(string.split(msg["jinjieLv"],";"))
+
+	   --存储hero在服务端的相关数据
+	   for i,v in ipairs(calledHeroIDArr) do
+	   		local heroInfo = {}
+	   		heroInfo["qiangHuaLv"] = self:getQiangHuaInfo(i)
+	   		heroInfo["jinjieLv"] = self:getJinJieInfo(i)
+	   		self.heroServerInfo[v] = heroInfo
+	   end
 
 
 	   local heroCsv =  G_CsvManager:getInstance():getHeroCsv()
@@ -60,6 +73,7 @@ function MHero:receive(msg,head)
 		self.vHero:updateCallState(msg["callState"])		
 	elseif head == REQUESTHERO then
 		local jsMsg = {}
+		jsMsg["heroServerInfo"] = self.heroServerInfo
 		jsMsg["calledHero"] = self.calledHeroInfo
 		G_ModuleManager:notify(jsMsg,"MMyHero",RESPONDHERO)
 	elseif head == "HEROKUORONG" then
@@ -93,6 +107,26 @@ end
 
 function MHero:setNowHeroNumber(number)
 	self.nowHeroNumber = self.nowHeroNumber+number
+end
+
+
+function MHero:setQiangHuaInfo(qiangHuaInfo)
+	self.qiangHuaInfo = qiangHuaInfo
+end
+
+--该函数未经经过排序，会与排序后的顺序不相符
+function MHero:getQiangHuaInfo(index)
+	return self.qiangHuaInfo[index]
+end
+
+
+function MHero:setJinJieInfo(jinJieInfo)
+	self.jinJieInfo = jinJieInfo
+end
+
+--该函数未经经过排序，会与排序后的顺序不相符
+function MHero:getJinJieInfo(index)
+	return self.jinJieInfo[index]
 end
 
 return MHero

@@ -118,12 +118,21 @@ public class ETPublic extends BaseEntity {
 
     public List getHeroInfo(String serverID,String playerTag)
     {
-        int index = 0;
         String tableName = "hero"+serverID;
         String sql = "SELECT *FROM "+tableName+" WHERE playerTag="+"'"+playerTag+"'";
         List ls = search(sql);
         return  ls;
     }
+
+
+    public List getAllHeroInfo(String serverID)
+    {
+        String tableName = "hero"+serverID;
+        String sql = "SELECT *FROM "+tableName;
+        List ls = search(sql);
+        return  ls;
+    }
+
 
     //获取英雄所在的索引位置
     public int getHeroIndex(String recruited,String heroID)
@@ -176,6 +185,21 @@ public class ETPublic extends BaseEntity {
         String[] jinJieLvArr = jinJieLvStr.split(";");
         String iinJieLv = jinJieLvArr[heroIndex];
         return  Integer.parseInt(iinJieLv);
+    }
+
+    //获取已经召唤的英雄
+    public String[] getCalledHero(List heroList)
+    {
+        String recruitedStr = (String) ((HashMap)heroList.get(0)).get("recruited");
+        String[] recruitedArr = recruitedStr.split(";");
+        return recruitedArr;
+    }
+
+    public String[] getXiuYangTime(List heroList)
+    {
+        String xiuYangStr = (String) ((HashMap)heroList.get(0)).get("xiuYangTime");
+        String[] xiuYangArr = xiuYangStr.split(";");
+        return xiuYangArr;
     }
 
 

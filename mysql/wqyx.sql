@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2017-10-27 18:20:07
+Date: 2017-11-03 17:11:55
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -48,13 +48,15 @@ CREATE TABLE `hero1` (
   `qiangHuaLv` varchar(255) DEFAULT NULL,
   `jinjieLv` varchar(255) DEFAULT NULL,
   `freeJieJiaoTime` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `exp` varchar(255) DEFAULT NULL,
+  `xiuYangTime` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of hero1
 -- ----------------------------
-INSERT INTO `hero1` VALUES ('10', '888888-1', '4003;4002;5003;5002;6003;5006;6003;4001;6002;5001;6006;6001', '1;1;1;1;1;1;1;1;1;1;1;1', '1;4;11;0;0;0;0;0;0;0;0;0', '1;1;1;0;0;0;0;0;0;0;0;0', '2017-10-27 18:13:00');
+INSERT INTO `hero1` VALUES ('10', '888888-1', '4003;4002', '1;1', '1;4', '1;1', '2017-11-01 17:13:08', '0;0', '0;0');
 
 -- ----------------------------
 -- Table structure for `heroequip1`

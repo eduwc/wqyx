@@ -27,7 +27,7 @@ function WMyHero:ctor()
 	WMyHero.super:ctor()
 
 	-- --可不调用，最好调用
-	self.mMyHero  = require ("module.hero.mMyHero"):create()
+	self.mMyHero  = require ("module.hero.MMyHero"):create()
 	self.mMyHero:connectView(self)
 
 	self.myheroView = cc.CSLoader:createNode(CSB_ADDRESS.."csb_hero/MyHero.csb")
@@ -117,11 +117,16 @@ function WMyHero:initHeroList(heroList)
 				        local ig_heroBigHead = G_ToolsManager:seekChildByName(self.myheroView,"ig_heroBigHead")
 						ig_heroBigHead:loadTexture("icon/hero/"..heroInfo["hero_img1"]..".png")
 
+
 						local tt_heroName = G_ToolsManager:seekChildByName(self.myheroView,"tt_heroName")
-						tt_heroName:setString(heroInfo["hero_name"])
+						tt_heroName:setTextColor(G_GameToolsManager:getColorByLV(tonumber(self.mMyHero:getQiangHuaInfo(tostring(k)))))
+						tt_heroName:setString(heroInfo["hero_name"].."+"..self.mMyHero:getQiangHuaInfo(tostring(k)))
+
+						
 
 						local tt_heroTitle = G_ToolsManager:seekChildByName(self.myheroView,"tt_heroTitle")
-						tt_heroTitle:setString(heroInfo["hero_title"])
+						tt_heroTitle:setTextColor(G_GameToolsManager:getColorByLV(tonumber(self.mMyHero:getJinJieInfo(tostring(k)))))
+						tt_heroTitle:setString(heroInfo["hero_title"].."+"..self.mMyHero:getJinJieInfo(tostring(k)))
 
 
 						local tt_zhuanjing = G_ToolsManager:seekChildByName(self.myheroView,"tt_zhuanjing")
@@ -139,7 +144,7 @@ function WMyHero:initHeroList(heroList)
 						tt_introduce:setString("介绍:"..heroInfo["hero_explain"])
 
 						local tt_heroLv = G_ToolsManager:seekChildByName(self.myheroView,"tt_heroLv")
-						tt_heroLv:setString("LV"..1)
+						tt_heroLv:setString("LV"..self.mMyHero:getLvInfo(tostring(k)))
 			
 						local tt_heroZhanLi = G_ToolsManager:seekChildByName(self.myheroView,"tt_heroZhanLi")
 						tt_heroZhanLi:setString("战力"..1)
@@ -157,11 +162,16 @@ function WMyHero:initHeroList(heroList)
 					local ig_heroBigHead = G_ToolsManager:seekChildByName(self.myheroView,"ig_heroBigHead")
 					ig_heroBigHead:loadTexture("icon/hero/"..heroInfo["hero_img1"]..".png")
 
+
 					local tt_heroName = G_ToolsManager:seekChildByName(self.myheroView,"tt_heroName")
-					tt_heroName:setString(heroInfo["hero_name"])
+					tt_heroName:setTextColor(G_GameToolsManager:getColorByLV(tonumber(self.mMyHero:getQiangHuaInfo(tostring(k)))))
+					tt_heroName:setString(heroInfo["hero_name"].."+"..self.mMyHero:getQiangHuaInfo(tostring(k)))
+
+
 
 					local tt_heroTitle = G_ToolsManager:seekChildByName(self.myheroView,"tt_heroTitle")
-					tt_heroTitle:setString(heroInfo["hero_title"])
+					tt_heroTitle:setTextColor(G_GameToolsManager:getColorByLV(tonumber(self.mMyHero:getJinJieInfo(tostring(k)))))
+					tt_heroTitle:setString(heroInfo["hero_title"].."+"..self.mMyHero:getJinJieInfo(tostring(k)))
 
 
 					local tt_zhuanjing = G_ToolsManager:seekChildByName(self.myheroView,"tt_zhuanjing")
@@ -179,7 +189,7 @@ function WMyHero:initHeroList(heroList)
 					tt_introduce:setString("介绍:"..heroInfo["hero_explain"])
 
 					local tt_heroLv = G_ToolsManager:seekChildByName(self.myheroView,"tt_heroLv")
-					tt_heroLv:setString("LV"..1)
+					tt_heroLv:setString("LV"..self.mMyHero:getLvInfo(tostring(k)))
 			
 					local tt_heroZhanLi = G_ToolsManager:seekChildByName(self.myheroView,"tt_heroZhanLi")
 					tt_heroZhanLi:setString("战力"..1)					

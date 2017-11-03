@@ -21,7 +21,32 @@ public class ETHeroView extends BaseEntity {
             recruited = (String) ((HashMap)heroList.get(0)).get("recruited");
         }
 
-
         return  recruited;
+    }
+
+
+    public String getQiangHuaLv()
+    {
+        return  (String) ((HashMap)heroList.get(0)).get("qiangHuaLv");
+    }
+
+    public String getJinJieLv()
+    {
+        return  (String) ((HashMap)heroList.get(0)).get("jinjieLv");
+    }
+
+    public String getExp()
+    {
+        return  (String) ((HashMap)heroList.get(0)).get("exp");
+    }
+
+    public String getLv()
+    {
+        return  (String) ((HashMap)heroList.get(0)).get("lv");
+    }
+
+    public String getXiuYangTime()
+    {
+        return  (String) ((HashMap)heroList.get(0)).get("xiuYangTime");
     }
 }
