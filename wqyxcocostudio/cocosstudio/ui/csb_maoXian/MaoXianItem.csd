@@ -9,7 +9,7 @@
           <AbstractNodeData Name="Image_1" ActionTag="849175435" Tag="87" IconVisible="False" LeftMargin="0.6372" RightMargin="-640.6372" TopMargin="-3.8952" BottomMargin="-366.1048" Scale9Width="640" Scale9Height="370" ctype="ImageViewObjectData">
             <Size X="640.0000" Y="370.0000" />
             <Children>
-              <AbstractNodeData Name="Image_2" ActionTag="-1240061616" Tag="88" IconVisible="False" LeftMargin="12.9773" RightMargin="207.0227" TopMargin="13.4281" BottomMargin="206.5719" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="ig_maoXianPic" ActionTag="-1240061616" Tag="88" IconVisible="False" LeftMargin="12.9773" RightMargin="207.0227" TopMargin="13.4281" BottomMargin="206.5719" Scale9Width="46" Scale9Height="46" ctype="ImageViewObjectData">
                 <Size X="420.0000" Y="150.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="222.9773" Y="281.5719" />
@@ -19,7 +19,7 @@
                 <PreSize X="0.6563" Y="0.4054" />
                 <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Panel_1" ActionTag="-14604657" Tag="89" IconVisible="False" LeftMargin="438.6528" RightMargin="1.3472" TopMargin="22.8883" BottomMargin="247.1117" TouchEnable="True" BackColorAlpha="102" ColorAngle="90.0000" ctype="PanelObjectData">
+              <AbstractNodeData Name="pl_maoXianCD" ActionTag="-14604657" Tag="89" IconVisible="False" LeftMargin="438.6528" RightMargin="1.3472" TopMargin="22.8883" BottomMargin="247.1117" TouchEnable="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="200.0000" Y="100.0000" />
                 <Children>
                   <AbstractNodeData Name="tt_maoXianState" ActionTag="-1282973685" Tag="90" IconVisible="False" LeftMargin="33.4189" RightMargin="92.5811" TopMargin="31.4795" BottomMargin="40.5205" FontSize="24" LabelText="冒险中" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -128,7 +128,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="tt_zhanLiJiaCheng" ActionTag="-404273103" Tag="101" IconVisible="False" LeftMargin="528.5266" RightMargin="31.4734" TopMargin="232.0677" BottomMargin="109.9324" IsCustomSize="True" FontSize="24" LabelText="10%" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="tt_zhanLiJiaCheng" ActionTag="-404273103" Tag="101" IconVisible="False" LeftMargin="528.5266" RightMargin="31.4734" TopMargin="232.0676" BottomMargin="109.9324" IsCustomSize="True" FontSize="24" LabelText="10%" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="80.0000" Y="28.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="568.5266" Y="123.9324" />
@@ -140,7 +140,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="pl_heroInfoBg" ActionTag="2025613428" Tag="102" IconVisible="False" LeftMargin="11.8234" RightMargin="28.1766" TopMargin="258.1763" BottomMargin="11.8237" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+              <AbstractNodeData Name="pl_heroInfoBg" ActionTag="2025613428" Tag="102" IconVisible="False" LeftMargin="11.8234" RightMargin="28.1766" TopMargin="258.1763" BottomMargin="11.8237" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="600.0000" Y="100.0000" />
                 <AnchorPoint />
                 <Position X="11.8234" Y="11.8237" />
@@ -148,6 +148,36 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.0185" Y="0.0320" />
                 <PreSize X="0.9375" Y="0.2703" />
+                <SingleColor A="255" R="150" G="200" B="255" />
+                <FirstColor A="255" R="150" G="200" B="255" />
+                <EndColor A="255" R="255" G="255" B="255" />
+                <ColorVector ScaleY="1.0000" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="pl_complete" ActionTag="768941582" Tag="84" IconVisible="False" LeftMargin="433.2290" RightMargin="6.7710" TopMargin="16.3041" BottomMargin="253.6959" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+                <Size X="200.0000" Y="100.0000" />
+                <Children>
+                  <AbstractNodeData Name="bt_complete" ActionTag="-830244467" Tag="85" IconVisible="False" LeftMargin="43.2831" RightMargin="24.7169" TopMargin="14.5629" BottomMargin="13.4371" TouchEnable="True" FontSize="14" ButtonText="Button" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="102" Scale9Height="50" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                    <Size X="132.0000" Y="72.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="109.2831" Y="49.4371" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.5464" Y="0.4944" />
+                    <PreSize X="0.6600" Y="0.7200" />
+                    <TextColor A="255" R="65" G="65" B="70" />
+                    <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                    <PressedFileData Type="Normal" Path="ui/hero/yizhaomu.png" Plist="" />
+                    <NormalFileData Type="Normal" Path="ui/hero/yizhaomu.png" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint />
+                <Position X="433.2290" Y="253.6959" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.6769" Y="0.6857" />
+                <PreSize X="0.3125" Y="0.2703" />
                 <SingleColor A="255" R="150" G="200" B="255" />
                 <FirstColor A="255" R="150" G="200" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />

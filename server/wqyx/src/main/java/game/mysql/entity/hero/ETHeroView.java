@@ -1,7 +1,10 @@
 package game.mysql.entity.hero;
 
 import game.mysql.entity.BaseEntity;
+import game.mysql.entity.ETPublic;
+import org.json.JSONObject;
 
+import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.List;
 
@@ -10,6 +13,7 @@ import java.util.List;
  */
 public class ETHeroView extends BaseEntity {
     public  List heroList = null;
+    private ETPublic etPublic = new ETPublic();
     public String searchcalled(String playerTag,String serverID)
     {
         String tbPlayerInfo = "hero"+serverID;
@@ -49,4 +53,30 @@ public class ETHeroView extends BaseEntity {
     {
         return  (String) ((HashMap)heroList.get(0)).get("xiuYangTime");
     }
+
+
+    public JSONObject getMaoXianInfo(String playerTag,String serverID)
+    {
+        JSONObject maoXianInfoMap = new JSONObject();
+        List maoXianList = etPublic.getMaoXianInfo(playerTag,serverID);
+        for(Object attribute : maoXianList) {
+            HashMap attributeMap = (HashMap)attribute;
+            JSONObject infoMap = new JSONObject();
+            String heroList = (String)attributeMap.get("heroList");
+            String maoXianID = (String)attributeMap.get("maoXianID");
+            Long endTime = (Long)attributeMap.get("endTime");
+
+            Integer listID = (Integer)attributeMap.get("listID");
+
+            infoMap.put("heroList",heroList);
+            infoMap.put("maoXianID",maoXianID);
+            infoMap.put("endTime",endTime);
+
+            maoXianInfoMap.put(listID.toString(),infoMap);
+
+        }
+
+        return  maoXianInfoMap;
+    }
+
 }

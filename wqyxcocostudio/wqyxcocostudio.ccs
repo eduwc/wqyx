@@ -314,6 +314,8 @@
             <Project Name="MaoXianView.csd" Type="Layer" />
             <Project Name="MaoXianHeroList.csd" Type="Layer" />
             <Project Name="MaoXianHeroListItem.csd" Type="Layer" />
+            <Project Name="MaoXianLockItem.csd" Type="Node" />
+            <Project Name="MaoXianHeroAddItem.csd" Type="Node" />
           </Folder>
           <Folder Name="duanZao">
             <Image Name="duanzao1.png" />
@@ -327,18 +329,6 @@
             <Image Name="yilan1.png" />
             <Image Name="yilan2.png" />
           </Folder>
-        </Folder>
-        <Folder Name="duanZao">
-          <Image Name="duanzao1.png" />
-          <Image Name="duanzao2.png" />
-          <Image Name="duanzao7.png" />
-          <Image Name="duanzaotisheng.png" />
-          <Image Name="quxiao7.png" />
-          <Image Name="shiyong7.png" />
-          <Image Name="tisheng.png" />
-          <Image Name="wancheng7.png" />
-          <Image Name="yilan1.png" />
-          <Image Name="yilan2.png" />
         </Folder>
       </RootFolder>
     </Group>

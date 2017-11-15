@@ -31,19 +31,18 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
-          <FilePathData Path="ui/csb_hero/MyHero.csd" />
-          <FilePathData Path="ui/csb_maoXian/MaoXianEmpty.csd" />
-          <FilePathData Path="ui/csb_maoXian/MaoXianItem.csd" />
-          <FilePathData Path="ui/csb_maoXian/MaoXianHeroItem.csd" />
-          <FilePathData Path="ui/csb_maoXian/MaoXianLingJiang.csd" />
-          <FilePathData Path="ui/csb_maoXian/MaoXianDuiLie.csd" />
-          <FilePathData Path="ui/csb_hero/CallHero.csd" />
           <FilePathData Path="ui/csb_maoXian/MaoXianView.csd" />
-          <FilePathData Path="ui/csb_home/Home.csd" />
-          <FilePathData Path="ui/csb_maoXian/MaoXianHeroList.csd" />
+          <FilePathData Path="ui/csb_maoXian/MaoXianDuiLie.csd" />
+          <FilePathData Path="ui/csb_maoXian/MaoXianEmpty.csd" />
+          <FilePathData Path="ui/csb_maoXian/MaoXianHeroAddItem.csd" />
+          <FilePathData Path="ui/csb_maoXian/MaoXianLockItem.csd" />
+          <FilePathData Path="ui/csb_maoXian/MaoXianHeroItem.csd" />
           <FilePathData Path="ui/csb_maoXian/MaoXianHeroListItem.csd" />
+          <FilePathData Path="ui/csb_maoXian/MaoXianHeroList.csd" />
+          <FilePathData Path="ui/csb_maoXian/MaoXianItem.csd" />
+          <FilePathData Path="ui/csb_maoXian/MaoXianLingJiang.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="ui/csb_maoXian/MaoXianHeroListItem.csd" />
+        <ActiveDocument Path="ui/csb_maoXian/MaoXianView.csd" />
       </Value>
     </Item>
   </Properties>

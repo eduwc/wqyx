@@ -35,7 +35,7 @@ public class Main {
             dataManager.initCsvData();
 
             //示例
-         //   GameExample ge = new GameExample();
+            GameExample ge = new GameExample();
 
             new WebSocketManager(9635).run();
 

@@ -10,7 +10,8 @@ G_DataManager	   = require ("data.DataManager"):getInstance()
 G_ModulePublic	   = require ("module.public.MPublic"):getInstance()
 G_GameToolsManager = require ("tools.GameToolsManager"):getInstance()					
 
-
+--********************时间************************
+G_CURRENTTIMEMILLIS = 0   --服务器当前时间的时间戳
 
 
 --****************普通变量*******************----

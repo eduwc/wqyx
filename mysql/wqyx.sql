@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2017-11-03 17:11:55
+Date: 2017-11-15 17:26:44
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -56,7 +56,7 @@ CREATE TABLE `hero1` (
 -- ----------------------------
 -- Records of hero1
 -- ----------------------------
-INSERT INTO `hero1` VALUES ('10', '888888-1', '4003;4002', '1;1', '1;4', '1;1', '2017-11-01 17:13:08', '0;0', '0;0');
+INSERT INTO `hero1` VALUES ('10', '888888-1', '4003;4002', '1;1', '1;4', '1;1', '2017-11-08 16:28:30', '0;0', '0;0');
 
 -- ----------------------------
 -- Table structure for `heroequip1`
@@ -108,6 +108,28 @@ CREATE TABLE `itemuntime1` (
 -- Records of itemuntime1
 -- ----------------------------
 INSERT INTO `itemuntime1` VALUES ('1', '888888-1', '100', '74');
+
+-- ----------------------------
+-- Table structure for `maoxian1`
+-- ----------------------------
+DROP TABLE IF EXISTS `maoxian1`;
+CREATE TABLE `maoxian1` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `playerTag` varchar(255) DEFAULT NULL,
+  `heroList` varchar(255) DEFAULT NULL,
+  `maoXianID` char(255) DEFAULT NULL,
+  `endTime` bigint(20) DEFAULT NULL,
+  `listID` smallint(5) unsigned DEFAULT NULL,
+  `maoXianLv` smallint(5) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of maoxian1
+-- ----------------------------
+INSERT INTO `maoxian1` VALUES ('33', '888888-1', '4003', '90001', '1510717562', '1', null);
+INSERT INTO `maoxian1` VALUES ('34', '888888-1', '4002', '90005', '1510738794', '3', null);
+INSERT INTO `maoxian1` VALUES ('35', '888888-1', '4003', '90006', '1510739169', '4', null);
 
 -- ----------------------------
 -- Table structure for `playerinfo1`

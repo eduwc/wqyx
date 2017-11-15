@@ -9,10 +9,10 @@
           <AbstractNodeData Name="Image_1" ActionTag="-2067731500" Tag="183" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="-15.9000" BottomMargin="633.9000" Scale9Width="640" Scale9Height="142" ctype="ImageViewObjectData">
             <Size X="640.0000" Y="142.0000" />
             <Children>
-              <AbstractNodeData Name="sv_myMaoXianPic" ActionTag="-1453769807" Tag="184" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="42.4684" RightMargin="47.5316" TopMargin="18.6409" BottomMargin="23.3591" TouchEnable="True" ClipAble="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ScrollDirectionType="Horizontal" ctype="ScrollViewObjectData">
+              <AbstractNodeData Name="sv_myMaoXianPic" ActionTag="-1453769807" Tag="184" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="42.4960" RightMargin="47.5040" TopMargin="18.6410" BottomMargin="23.3590" TouchEnable="True" ClipAble="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ScrollDirectionType="Horizontal" ctype="ScrollViewObjectData">
                 <Size X="550.0000" Y="100.0000" />
                 <AnchorPoint />
-                <Position X="42.4684" Y="23.3591" />
+                <Position X="42.4960" Y="23.3590" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.0664" Y="0.1645" />
@@ -116,7 +116,7 @@
             <PreSize X="0.3812" Y="0.0197" />
             <FileData Type="Normal" Path="ui/equip/shuliandu1.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="tt_diaoLuoInfo" ActionTag="1840792926" Tag="195" IconVisible="False" LeftMargin="219.9428" RightMargin="334.0572" TopMargin="358.8172" BottomMargin="375.1828" FontSize="22" LabelText="掉落:1-3" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="tt_diaoLuoInfo" ActionTag="1840792926" Tag="195" IconVisible="False" LeftMargin="219.9418" RightMargin="334.0582" TopMargin="358.8165" BottomMargin="375.1835" FontSize="22" LabelText="掉落:1-3" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="86.0000" Y="26.0000" />
             <AnchorPoint ScaleX="0.5465" ScaleY="0.3838" />
             <Position X="266.9408" Y="385.1623" />
@@ -138,7 +138,7 @@
             <PreSize X="0.0719" Y="0.0605" />
             <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="tt_zhanLiJiaCheng" ActionTag="-752327482" Tag="197" IconVisible="False" LeftMargin="530.1701" RightMargin="29.8299" TopMargin="431.7866" BottomMargin="300.2134" IsCustomSize="True" FontSize="24" LabelText="10%" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="tt_zhanLiJiaCheng" ActionTag="-752327482" Tag="197" IconVisible="False" LeftMargin="530.1701" RightMargin="29.8299" TopMargin="431.7866" BottomMargin="300.2134" IsCustomSize="True" FontSize="24" LabelText="0%" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="80.0000" Y="28.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="570.1701" Y="314.2134" />
@@ -198,58 +198,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Image_1_0" ActionTag="-2142557568" Tag="202" IconVisible="False" LeftMargin="249.5129" RightMargin="270.4871" TopMargin="489.2875" BottomMargin="125.7124" Scale9Width="120" Scale9Height="145" ctype="ImageViewObjectData">
-            <Size X="120.0000" Y="145.0000" />
-            <Children>
-              <AbstractNodeData Name="Image_2" ActionTag="-1391807954" Tag="203" IconVisible="False" LeftMargin="27.1168" RightMargin="28.8832" TopMargin="19.5947" BottomMargin="61.4053" Scale9Width="64" Scale9Height="64" ctype="ImageViewObjectData">
-                <Size X="64.0000" Y="64.0000" />
-                <Children>
-                  <AbstractNodeData Name="bt_maoXianAddHero" ActionTag="-53299849" Tag="207" IconVisible="False" LeftMargin="-13.0002" RightMargin="-8.9998" TopMargin="-9.9999" BottomMargin="-12.0001" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="56" Scale9Height="64" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="86.0000" Y="86.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="29.9998" Y="30.9999" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4687" Y="0.4844" />
-                    <PreSize X="1.3438" Y="1.3438" />
-                    <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                    <PressedFileData Type="Normal" Path="ui/home/zhuangbeijia0.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="ui/home/zhuangbeijia0.png" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                </Children>
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="59.1168" Y="93.4053" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.4926" Y="0.6442" />
-                <PreSize X="0.5333" Y="0.4414" />
-                <FileData Type="Normal" Path="ui/home/zhuangbeidi0.png" Plist="" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="tt_itemName1" ActionTag="757711744" Tag="205" IconVisible="False" LeftMargin="9.0686" RightMargin="10.9314" TopMargin="101.0075" BottomMargin="19.9925" IsCustomSize="True" FontSize="18" LabelText="添加" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Bottom" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="100.0000" Y="24.0000" />
-                <AnchorPoint />
-                <Position X="9.0686" Y="19.9925" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.0756" Y="0.1379" />
-                <PreSize X="0.8333" Y="0.1655" />
-                <FontResource Type="Normal" Path="ui/FZY4JW.TTF" Plist="" />
-                <OutlineColor A="255" R="0" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-            </Children>
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="309.5129" Y="198.2124" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.4836" Y="0.2608" />
-            <PreSize X="0.1875" Y="0.1908" />
-            <FileData Type="Normal" Path="ui/hero/qianghuakuang.png" Plist="" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Button_4" ActionTag="1422467013" Tag="208" IconVisible="False" LeftMargin="226.7409" RightMargin="248.2591" TopMargin="671.4075" BottomMargin="28.5925" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="135" Scale9Height="38" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="bt_beginMaoXian" ActionTag="1422467013" Tag="208" IconVisible="False" LeftMargin="226.7409" RightMargin="248.2591" TopMargin="671.4075" BottomMargin="28.5925" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="135" Scale9Height="38" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="165.0000" Y="60.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="309.2409" Y="58.5925" />
@@ -263,6 +212,19 @@
             <NormalFileData Type="Normal" Path="ui/maoXian/kaishimaoxian.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="pl_addHeroBg" ActionTag="1199264060" Tag="160" IconVisible="False" LeftMargin="9.5712" RightMargin="10.4288" TopMargin="485.8559" BottomMargin="124.1441" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+            <Size X="620.0000" Y="150.0000" />
+            <AnchorPoint />
+            <Position X="9.5712" Y="124.1441" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.0150" Y="0.1633" />
+            <PreSize X="0.9688" Y="0.1974" />
+            <SingleColor A="255" R="150" G="200" B="255" />
+            <FirstColor A="255" R="150" G="200" B="255" />
+            <EndColor A="255" R="255" G="255" B="255" />
+            <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

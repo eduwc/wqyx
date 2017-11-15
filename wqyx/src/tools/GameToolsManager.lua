@@ -9,7 +9,7 @@ function GameToolsManager:getInstance()
 	return self.instance
 end
 
-
+--**********************颜色******************************
 function GameToolsManager:getColor(colorType)
 	if colorType == "WHITE" then
 		return cc.c3b(255,255,255)
@@ -48,5 +48,8 @@ function GameToolsManager:getColorByLV(colorLv)
 		return self:getColor("WHITE")
 	end
 end
+
+--***************************英雄**********************************
+
 
 return GameToolsManager

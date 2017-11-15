@@ -55,7 +55,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Image_2" ActionTag="-1553450328" Tag="139" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-1.6264" RightMargin="1.6264" TopMargin="68.1769" BottomMargin="837.8231" Scale9Width="640" Scale9Height="54" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="Image_2" ActionTag="-1553450328" Tag="139" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-1.6000" RightMargin="1.6000" TopMargin="68.1769" BottomMargin="837.8231" Scale9Width="640" Scale9Height="54" ctype="ImageViewObjectData">
             <Size X="640.0000" Y="54.0000" />
             <Children>
               <AbstractNodeData Name="Text_2" ActionTag="-1134620526" Tag="140" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="47.1920" RightMargin="510.8080" TopMargin="14.4330" BottomMargin="15.5670" FontSize="20" LabelText="冒险队列" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -133,14 +133,14 @@
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="318.3736" Y="864.8231" />
+            <Position X="318.4000" Y="864.8231" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4975" Y="0.9009" />
             <PreSize X="1.0000" Y="0.0562" />
             <FileData Type="Normal" Path="ui/public/biaoti2.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="sv_duiLieBg" ActionTag="339782451" Tag="146" IconVisible="False" LeftMargin="2.2585" RightMargin="-2.2585" TopMargin="199.7245" BottomMargin="0.2755" TouchEnable="True" ClipAble="True" BackColorAlpha="102" ColorAngle="90.0000" ScrollDirectionType="Vertical" ctype="ScrollViewObjectData">
+          <AbstractNodeData Name="sv_duiLieBg" ActionTag="339782451" Tag="146" IconVisible="False" LeftMargin="2.2585" RightMargin="-2.2585" TopMargin="199.7245" BottomMargin="0.2755" TouchEnable="True" ClipAble="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ScrollDirectionType="Vertical" ctype="ScrollViewObjectData">
             <Size X="640.0000" Y="760.0000" />
             <AnchorPoint />
             <Position X="2.2585" Y="0.2755" />
@@ -154,10 +154,10 @@
             <ColorVector ScaleY="1.0000" />
             <InnerNodeSize Width="640" Height="891" />
           </AbstractNodeData>
-          <AbstractNodeData Name="bt_duiLiePage" ActionTag="1300683254" Tag="180" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="5.5520" RightMargin="484.4480" TopMargin="115.5109" BottomMargin="774.4891" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="120" Scale9Height="48" DisplayState="False" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="bt_duiLiePage" ActionTag="1300683254" Tag="180" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="5.5520" RightMargin="484.4480" TopMargin="115.5280" BottomMargin="774.4720" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="120" Scale9Height="48" DisplayState="False" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="150.0000" Y="70.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="80.5520" Y="809.4891" />
+            <Position X="80.5520" Y="809.4720" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.1259" Y="0.8432" />
@@ -169,10 +169,10 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="bt_maoXianPage" ActionTag="603065841" Tag="181" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="170.1736" RightMargin="319.8264" TopMargin="115.7457" BottomMargin="774.2543" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="120" Scale9Height="48" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="bt_maoXianPage" ActionTag="603065841" Tag="181" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="170.1736" RightMargin="319.8264" TopMargin="115.7200" BottomMargin="774.2800" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="120" Scale9Height="48" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="150.0000" Y="70.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="245.1736" Y="809.2543" />
+            <Position X="245.1736" Y="809.2800" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.3831" Y="0.8430" />

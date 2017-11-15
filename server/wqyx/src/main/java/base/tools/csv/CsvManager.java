@@ -118,4 +118,12 @@ public class CsvManager {
     }
 
 
+
+    //**************************冒险********************************
+    public int getMaoXianCd(String maoXianID)
+    {
+        HashMap riskMap = getCsvMap("risk");
+        return  Integer.parseInt((String) ((HashMap)riskMap.get(maoXianID)).get("risk_cd"))  ;
+    }
+
 }

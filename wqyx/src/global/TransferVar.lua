@@ -19,6 +19,7 @@ CS_DPItem 	= "CS_item.DPItem"     	--打开道具窗口
 
 --******************************冒险**********************************--
 CS_DPMaoXianDuiLie 	= "CS_maoXian.DPMaoXianDuiLie"     	--冒险队列
+CS_DPMaoXian		= "CS_maoXian.DPMaoXian"     	--开始冒险
 
 
 

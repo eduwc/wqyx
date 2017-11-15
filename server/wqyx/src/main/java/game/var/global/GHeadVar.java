@@ -30,7 +30,8 @@ public class GHeadVar {
 
 
     //*********************冒险******************************//
-    public static String SC_OPEN_MAOXIAN = "SC_OPEN_MAOXIAN";  //打开冒险界面
+    public static String SC_OPEN_MAOXIAN            = "SC_OPEN_MAOXIAN";  //打开冒险界面
+    public static String SC_UPDATE_BEGINMAOXIAN     = "SC_UPDATE_BEGINMAOXIAN";  //开始sd冒险
 
 
 }

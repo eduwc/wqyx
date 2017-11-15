@@ -30,6 +30,9 @@ public class DPMaoXianDuiLie implements DataPackage {
         jb.put("exp",etHeroView.getExp());
         jb.put("lv",etHeroView.getLv());
         jb.put("xiuYangTime",etHeroView.getXiuYangTime());
+        jb.put("currentTimeMillis",System.currentTimeMillis()/1000);
+        jb.put("maoXianInfo",etHeroView.getMaoXianInfo(playerTag,serverID));
+
         _chc.writeAndFlush(new TextWebSocketFrame(jb.toString()));
 
     }

@@ -6,7 +6,7 @@
       <ObjectData Name="Layer" Tag="248" ctype="GameLayerObjectData">
         <Size X="640.0000" Y="900.0000" />
         <Children>
-          <AbstractNodeData Name="sv_heroList" ActionTag="1025809193" Tag="249" IconVisible="False" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ScrollDirectionType="Vertical" ctype="ScrollViewObjectData">
+          <AbstractNodeData Name="sv_heroList" ActionTag="1025809193" Tag="249" IconVisible="False" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ScrollDirectionType="Vertical" ctype="ScrollViewObjectData">
             <Size X="640.0000" Y="900.0000" />
             <AnchorPoint />
             <Position />
@@ -14,7 +14,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />
             <PreSize X="1.0000" Y="1.0000" />
-            <SingleColor A="255" R="255" G="150" B="100" />
+            <SingleColor A="255" R="0" G="0" B="0" />
             <FirstColor A="255" R="255" G="150" B="100" />
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />

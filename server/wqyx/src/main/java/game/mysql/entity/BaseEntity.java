@@ -67,6 +67,23 @@ public class BaseEntity {
         return  true;
     }
 
+
+
+    public void insert(String sql)
+    {
+        Connection cc =  C3p0PoolManager.getInstance().getConnection();
+        try {
+            Statement stmt =  cc.createStatement();
+            stmt.execute(sql);
+            stmt.close();
+            cc.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     /**
      *
      * @param tableName  表名

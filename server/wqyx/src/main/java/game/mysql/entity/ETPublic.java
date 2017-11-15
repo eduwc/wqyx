@@ -329,4 +329,15 @@ public class ETPublic extends BaseEntity {
         //5是默认值
         return playerLvNumber+kuoRongValue+5;
     }
+
+
+    //********************冒险*************************//
+    public List getMaoXianInfo(String playerTag,String serverID)
+    {
+        String tbMaXian = "maoxian"+serverID;
+        String sql = "SELECT *FROM "+tbMaXian+" WHERE playerTag="+"'"+playerTag+"'";
+        return search(sql);
+    }
+
+
 }

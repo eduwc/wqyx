@@ -3,6 +3,7 @@ package game.example;
 import base.file.configuration.ConfigurationManager;
 import base.mysql.connectionpool.C3p0PoolManager;
 import base.tools.time.TimeManager;
+import game.mysql.entity.maoXian.ETMaoXian;
 import game.timer.TimingManager;
 
 
@@ -21,6 +22,11 @@ public class GameExample {
 
     public GameExample()
     {
+
+
+      /*  ETMaoXian etMaoXian = new ETMaoXian();
+        etMaoXian.beginMaoXian("888888-1","1","4001;4002","90001");*/
+
        /* ETHeroHuoRong ETHeroHuoRong2 = new ETHeroHuoRong();
         ETHeroHuoRong2.heroKuoRong("888888-1","1");*/
 
@@ -30,7 +36,7 @@ public class GameExample {
 
     /*   int xx =  etPublic.getMaxKuoRongNumber("888888-1","1","4");
         int xx2 = xx;*/
-        final  TimingManager timeManager = new TimingManager("1");
+     /*   final  TimingManager timeManager = new TimingManager("1");
 
 
 
@@ -64,12 +70,12 @@ public class GameExample {
         TimerTask task2 = new TimerTask() {
             @Override
             public void run() {
-                timeManager.deleteXiuYangItem("888888-1","1","4002");
-              /*  try {
+                timeManager.deleteXiuYangItem("888888-1","4002");
+              *//*  try {
                     Thread.sleep(5000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }*/
+                }*//*
             }
         };
         Timer timer2 = new Timer();
@@ -77,7 +83,7 @@ public class GameExample {
         long intevalPeriod2 = 5 * 1000;
         // schedules the task to be run in an interval
         timer2.scheduleAtFixedRate(task2, delay2, intevalPeriod2);
-
+*/
 
 
     }

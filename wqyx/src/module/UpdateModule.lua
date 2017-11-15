@@ -8,6 +8,8 @@ function UpdateModule:receiveData(head,jsondata)
 		G_ModuleManager:notify(jsondata,"MMyHero",head)
 	elseif head == "AODINGDAO" then	
 		G_ModuleManager:notify(jsondata,"MAoDingDao",head)
+	elseif head == "BEGINMAOXIAN" then	
+		G_ModuleManager:notify(jsondata,"MMaoXian",head)
 	end
 end
 
